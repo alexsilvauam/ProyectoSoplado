@@ -157,5 +157,53 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
 
             }
         }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            if (verificarBuscar() == false)
+            {
+                return;
+            }
+
+            int BuscarId = int.Parse(txtBusqueda.Text);
+
+            Miembro MiembroExistente = Lmiembros.FirstOrDefault(x => x.IdentificacionUsuario == BuscarId);
+            if (MiembroExistente != null)
+            {
+                using (FormEditarMiembro formEditar = new FormEditarMiembro(MiembroExistente))
+                {
+                    if (formEditar.ShowDialog() == DialogResult.OK)
+                    {
+                        actualizarGrid();
+                        txtBusqueda.Clear();
+
+                        MessageBox.Show("El miembro ha sido editado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show($"No se encontró ningún miembro con el ID {BuscarId}.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void btnBuscar_Click_1(object sender, EventArgs e)
+        {
+            if (verificarBuscar() == false)
+            {
+                return;
+            }
+            int searchText = int.Parse(txtBusqueda.Text);
+            Miembro MiembroExistente = Lmiembros.FirstOrDefault(x => x.IdentificacionUsuario == searchText);
+            if (MiembroExistente != null)
+            {
+                MessageBox.Show($"Se encontró el miembro con el ID {searchText}.", "Busqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show($"El usuario '{searchText}' no ha sido encontrado", "Búsqueda", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

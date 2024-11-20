@@ -53,7 +53,7 @@
             this.plLogo.Controls.Add(this.pictureBox2);
             this.plLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.plLogo.Location = new System.Drawing.Point(0, 0);
-            this.plLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.plLogo.Margin = new System.Windows.Forms.Padding(2);
             this.plLogo.Name = "plLogo";
             this.plLogo.Size = new System.Drawing.Size(363, 92);
             this.plLogo.TabIndex = 0;
@@ -63,7 +63,7 @@
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Image = global::ProyectoSoplado_1._0_.Properties.Resources._71732;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(363, 92);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -76,7 +76,7 @@
             this.plAdmin.Controls.Add(this.btnAdmin);
             this.plAdmin.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.plAdmin.Location = new System.Drawing.Point(0, 421);
-            this.plAdmin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.plAdmin.Margin = new System.Windows.Forms.Padding(2);
             this.plAdmin.Name = "plAdmin";
             this.plAdmin.Size = new System.Drawing.Size(363, 75);
             this.plAdmin.TabIndex = 1;
@@ -91,7 +91,7 @@
             this.btnAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdmin.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnAdmin.Location = new System.Drawing.Point(0, 0);
-            this.btnAdmin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdmin.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdmin.Name = "btnAdmin";
             this.btnAdmin.Size = new System.Drawing.Size(363, 28);
             this.btnAdmin.TabIndex = 0;
@@ -109,7 +109,7 @@
             this.plUsuario.Controls.Add(this.panel1);
             this.plUsuario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.plUsuario.Location = new System.Drawing.Point(0, 92);
-            this.plUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.plUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.plUsuario.Name = "plUsuario";
             this.plUsuario.Size = new System.Drawing.Size(363, 329);
             this.plUsuario.TabIndex = 2;
@@ -117,30 +117,33 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(182, 200);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(151)))), ((int)(((byte)(166)))));
+            this.button1.Location = new System.Drawing.Point(182, 197);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(158, 29);
+            this.button1.Size = new System.Drawing.Size(158, 32);
             this.button1.TabIndex = 4;
             this.button1.Text = "Escanear codigo de Barras";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // btnMarcar
             // 
+            this.btnMarcar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(151)))), ((int)(((byte)(166)))));
             this.btnMarcar.Location = new System.Drawing.Point(182, 145);
-            this.btnMarcar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMarcar.Margin = new System.Windows.Forms.Padding(2);
             this.btnMarcar.Name = "btnMarcar";
-            this.btnMarcar.Size = new System.Drawing.Size(158, 19);
+            this.btnMarcar.Size = new System.Drawing.Size(158, 29);
             this.btnMarcar.TabIndex = 3;
             this.btnMarcar.Text = "Marcar Asistencia";
-            this.btnMarcar.UseVisualStyleBackColor = true;
+            this.btnMarcar.UseVisualStyleBackColor = false;
             this.btnMarcar.Click += new System.EventHandler(this.btnMarcar_Click);
             // 
             // txtUsuarioLogin
             // 
+            this.txtUsuarioLogin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtUsuarioLogin.Location = new System.Drawing.Point(182, 108);
-            this.txtUsuarioLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsuarioLogin.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsuarioLogin.Name = "txtUsuarioLogin";
             this.txtUsuarioLogin.Size = new System.Drawing.Size(158, 20);
             this.txtUsuarioLogin.TabIndex = 2;
@@ -161,7 +164,7 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(160, 329);
             this.panel1.TabIndex = 0;
@@ -171,7 +174,7 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::ProyectoSoplado_1._0_.Properties.Resources.asistencia_icono1;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(160, 329);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -186,7 +189,7 @@
             this.Controls.Add(this.plUsuario);
             this.Controls.Add(this.plAdmin);
             this.Controls.Add(this.plLogo);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(379, 535);
             this.MinimizeBox = false;
