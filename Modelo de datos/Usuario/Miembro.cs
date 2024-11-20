@@ -8,9 +8,20 @@ namespace ProyectoSoplado_1._0_.Modelo_de_datos.Usuario
 {
     public class Miembro
     {
-        public string identificacion_usuario;
-        public string rol_usuario;
-        public bool solvencia_usuario;
-        public string nombre_usuario;
+        public int IdentificacionUsuario { get; set; }
+        public string RolUsuario { get; set; }
+        public string NombreUsuario { get; set; }
+
+        public string ApellidoUsuario { get; set; }
+        public bool SolvenciaUsuario { get; set; }
+
+
+        public Miembro(int identificacionUsuario, string rolUsuario, string nombreUsuario, string apellidoUsuario)
+        {
+            IdentificacionUsuario = identificacionUsuario;
+            RolUsuario = rolUsuario;
+            NombreUsuario = nombreUsuario;
+            ApellidoUsuario = apellidoUsuario;
+        }
     }
 }

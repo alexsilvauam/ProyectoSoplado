@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoSoplado_1._0_.Modelo_de_datos.Usuario;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,8 +11,11 @@ using System.Windows.Forms;
 
 namespace ProyectoSoplado_1._0_.Formularios.Admin
 {
+
     public partial class FormAdministrarUsua : Form
     {
+        public List<Miembro> Lmiembros = new List<Miembro>();
+
         public FormAdministrarUsua()
         {
             InitializeComponent();
@@ -27,8 +31,7 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            string searchText = txtBusqueda.Text;
-            MessageBox.Show($"El usuario '{searchText}' no ha sido encontrado", "Búsqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+           
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -43,6 +46,116 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
         private void lblBUsuario_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            if (verificarCampos() == false)
+            {
+                return;
+            }
+            string nombre = txtNombre.Text;
+            string apellido = txtApellido.Text;
+            string rolUsuario = cmbRolUsuario.SelectedItem.ToString();
+            int id = int.Parse(txtID.Text);
+
+            Lmiembros.Add(new Miembro(id, rolUsuario, nombre, apellido));
+
+            actualizarGrid();
+            LimpiarCampos();
+        }
+
+        public bool verificarCampos()
+        {
+            if (string.IsNullOrWhiteSpace(txtNombre.Text))
+            {
+                MessageBox.Show("El campo 'Nombre' no puede estar vacío.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtApellido.Text))
+            {
+                MessageBox.Show("El campo 'Apellido' no puede estar vacío.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtID.Text))
+            {
+                MessageBox.Show("El campo 'ID' no puede estar vacío.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            if (!int.TryParse(txtID.Text, out _))
+            {
+                MessageBox.Show("El campo 'ID' debe ser un número entero.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            if (cmbRolUsuario.SelectedIndex == -1)
+            {
+                MessageBox.Show("Debe seleccionar un rol de usuario.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            foreach (Miembro e in Lmiembros)
+            {
+                if (Convert.ToInt16(txtID.Text) == e.IdentificacionUsuario)
+                {
+                    MessageBox.Show("No puedes repetir un id.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        public void actualizarGrid()
+        {
+            dgvUsuarios.DataSource = null;
+            dgvUsuarios.DataSource = Lmiembros;
+        }
+        public void LimpiarCampos()
+        {
+            txtNombre.Clear();
+            txtApellido.Clear();
+            cmbRolUsuario.SelectedIndex = -1;
+            txtID.Clear();
+        }
+
+        public bool verificarBuscar()
+        {
+            if (string.IsNullOrEmpty(txtBusqueda.Text))
+            {
+                MessageBox.Show("El campo 'Buscar ID' no puede estar vacío.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if (!int.TryParse(txtBusqueda.Text, out _))
+            {
+                MessageBox.Show("El campo 'Buscar ID' debe ser un número entero.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
+        }
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (verificarBuscar() == false)
+            {
+                return;
+            }
+
+            int BuscarId = int.Parse(txtBusqueda.Text);
+
+            Miembro MiembroExistente = Lmiembros.FirstOrDefault(x => x.IdentificacionUsuario == BuscarId);
+            if (MiembroExistente != null)
+            {
+                Lmiembros.Remove(MiembroExistente);
+                actualizarGrid();
+                txtBusqueda.Clear();
+            }
+            else
+            {
+                MessageBox.Show($"No se encontró ningún miembro con el ID {BuscarId}.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
     }
 }
