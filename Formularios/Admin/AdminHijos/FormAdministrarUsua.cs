@@ -38,11 +38,6 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
         {
         }
 
-        private void btnRecepcionPago_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Estados de usuario actualizados correctamente (Función no implementada)", "Recepción de pago", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
         private void lblBUsuario_Click(object sender, EventArgs e)
         {
 
@@ -63,6 +58,8 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
 
             actualizarGrid();
             LimpiarCampos();
+            MessageBox.Show("Miembro agregado correctamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
 
         public bool verificarCampos()
@@ -150,6 +147,8 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
                 Lmiembros.Remove(MiembroExistente);
                 actualizarGrid();
                 txtBusqueda.Clear();
+                MessageBox.Show("Miembro eliminado correctamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
             else
             {
@@ -204,6 +203,16 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
             {
                 MessageBox.Show($"El usuario '{searchText}' no ha sido encontrado", "Búsqueda", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void FormAdministrarUsua_Load(object sender, EventArgs e)
+        {
+            actualizarGrid();
+        }
+
+        private void lblBUsuario_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

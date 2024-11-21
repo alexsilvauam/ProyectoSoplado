@@ -17,7 +17,6 @@
 
         private void InitializeComponent()
         {
-            this.btnRecepcionPago = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.lblBUsuario = new System.Windows.Forms.Label();
@@ -40,23 +39,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnRecepcionPago
-            // 
-            this.btnRecepcionPago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(151)))), ((int)(((byte)(166)))));
-            this.btnRecepcionPago.Location = new System.Drawing.Point(41, 11);
-            this.btnRecepcionPago.Name = "btnRecepcionPago";
-            this.btnRecepcionPago.Size = new System.Drawing.Size(132, 31);
-            this.btnRecepcionPago.TabIndex = 7;
-            this.btnRecepcionPago.Text = "Recepción de pago";
-            this.btnRecepcionPago.UseVisualStyleBackColor = false;
-            this.btnRecepcionPago.Click += new System.EventHandler(this.btnRecepcionPago_Click);
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btnBuscar);
             this.groupBox2.Controls.Add(this.lblBUsuario);
             this.groupBox2.Controls.Add(this.txtBusqueda);
-            this.groupBox2.Controls.Add(this.btnRecepcionPago);
             this.groupBox2.Controls.Add(this.btnEliminar);
             this.groupBox2.Controls.Add(this.btnEditar);
             this.groupBox2.Location = new System.Drawing.Point(29, 45);
@@ -69,7 +56,7 @@
             // btnBuscar
             // 
             this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(151)))), ((int)(((byte)(166)))));
-            this.btnBuscar.Location = new System.Drawing.Point(41, 85);
+            this.btnBuscar.Location = new System.Drawing.Point(34, 68);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(134, 29);
@@ -81,16 +68,17 @@
             // lblBUsuario
             // 
             this.lblBUsuario.AutoSize = true;
-            this.lblBUsuario.Location = new System.Drawing.Point(5, 70);
+            this.lblBUsuario.Location = new System.Drawing.Point(5, 37);
             this.lblBUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBUsuario.Name = "lblBUsuario";
             this.lblBUsuario.Size = new System.Drawing.Size(19, 13);
             this.lblBUsuario.TabIndex = 0;
             this.lblBUsuario.Text = "Id:";
+            this.lblBUsuario.Click += new System.EventHandler(this.lblBUsuario_Click_1);
             // 
             // txtBusqueda
             // 
-            this.txtBusqueda.Location = new System.Drawing.Point(41, 47);
+            this.txtBusqueda.Location = new System.Drawing.Point(34, 30);
             this.txtBusqueda.Margin = new System.Windows.Forms.Padding(2);
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(134, 20);
@@ -99,7 +87,7 @@
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(151)))), ((int)(((byte)(166)))));
-            this.btnEliminar.Location = new System.Drawing.Point(41, 118);
+            this.btnEliminar.Location = new System.Drawing.Point(34, 101);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(67, 28);
@@ -111,7 +99,7 @@
             // btnEditar
             // 
             this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(151)))), ((int)(((byte)(166)))));
-            this.btnEditar.Location = new System.Drawing.Point(113, 118);
+            this.btnEditar.Location = new System.Drawing.Point(106, 101);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(62, 28);
@@ -258,6 +246,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormAdministrarUsua";
             this.Text = "FormAdministrarUsua";
+            this.Load += new System.EventHandler(this.FormAdministrarUsua_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -268,7 +257,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnRecepcionPago;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label lblBUsuario;

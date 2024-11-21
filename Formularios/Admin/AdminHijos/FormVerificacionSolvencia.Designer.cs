@@ -31,7 +31,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.txtValor = new System.Windows.Forms.TextBox();
+            this.txtIDverificar = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtIdMiembro = new System.Windows.Forms.TextBox();
@@ -51,23 +51,23 @@
             // 
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.btnBuscar);
-            this.groupBox1.Controls.Add(this.txtValor);
+            this.groupBox1.Controls.Add(this.txtIDverificar);
             this.groupBox1.Location = new System.Drawing.Point(12, 253);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(307, 153);
             this.groupBox1.TabIndex = 27;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "BuscarCliente";
+            this.groupBox1.Text = "Vefivicar solvencia";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(72, 38);
+            this.label4.Location = new System.Drawing.Point(26, 38);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(20, 14);
+            this.label4.Size = new System.Drawing.Size(91, 14);
             this.label4.TabIndex = 10;
-            this.label4.Text = "ID:";
+            this.label4.Text = "ID de miembro:";
             // 
             // btnBuscar
             // 
@@ -80,13 +80,13 @@
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // txtValor
+            // txtIDverificar
             // 
-            this.txtValor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtValor.Location = new System.Drawing.Point(129, 32);
-            this.txtValor.Name = "txtValor";
-            this.txtValor.Size = new System.Drawing.Size(146, 20);
-            this.txtValor.TabIndex = 10;
+            this.txtIDverificar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtIDverificar.Location = new System.Drawing.Point(129, 32);
+            this.txtIDverificar.Name = "txtIDverificar";
+            this.txtIDverificar.Size = new System.Drawing.Size(146, 20);
+            this.txtIDverificar.TabIndex = 10;
             // 
             // label3
             // 
@@ -101,9 +101,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(334, 100);
+            this.dataGridView1.Location = new System.Drawing.Point(353, 102);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(274, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(280, 150);
             this.dataGridView1.TabIndex = 25;
             // 
             // txtIdMiembro
@@ -199,6 +199,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormVerificacionSolvencia";
             this.Text = "FormVerificacionSolvencia";
+            this.Load += new System.EventHandler(this.FormVerificacionSolvencia_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -214,7 +215,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.TextBox txtValor;
+        private System.Windows.Forms.TextBox txtIDverificar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox txtIdMiembro;
