@@ -154,5 +154,11 @@ namespace ProyectoSoplado_1._0_
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            RegistrarPago formresgistropagos = new RegistrarPago();
+            formresgistropagos.Show();
+        }
     }
 }

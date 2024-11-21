@@ -28,57 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnIngresar = new System.Windows.Forms.Button();
-            this.txtNombreUsuario = new System.Windows.Forms.TextBox();
-            this.lbl_InicioSesion = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnIngresar
+            // dataGridView1
             // 
-            this.btnIngresar.Location = new System.Drawing.Point(37, 90);
-            this.btnIngresar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(108, 34);
-            this.btnIngresar.TabIndex = 18;
-            this.btnIngresar.Text = "Ingresar";
-            this.btnIngresar.UseVisualStyleBackColor = true;
-            // 
-            // txtNombreUsuario
-            // 
-            this.txtNombreUsuario.Location = new System.Drawing.Point(37, 44);
-            this.txtNombreUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtNombreUsuario.Name = "txtNombreUsuario";
-            this.txtNombreUsuario.Size = new System.Drawing.Size(204, 22);
-            this.txtNombreUsuario.TabIndex = 17;
-            // 
-            // lbl_InicioSesion
-            // 
-            this.lbl_InicioSesion.AutoSize = true;
-            this.lbl_InicioSesion.Location = new System.Drawing.Point(33, 25);
-            this.lbl_InicioSesion.Name = "lbl_InicioSesion";
-            this.lbl_InicioSesion.Size = new System.Drawing.Size(106, 16);
-            this.lbl_InicioSesion.TabIndex = 16;
-            this.lbl_InicioSesion.Text = "Ingresar Usuario";
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(51, 58);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(637, 359);
+            this.dataGridView1.TabIndex = 16;
             // 
             // FormReporteSolvencia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(251, 147);
-            this.Controls.Add(this.btnIngresar);
-            this.Controls.Add(this.txtNombreUsuario);
-            this.Controls.Add(this.lbl_InicioSesion);
+            this.ClientSize = new System.Drawing.Size(700, 471);
+            this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormReporteSolvencia";
             this.Text = "FormReporteSolvencia";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnIngresar;
-        private System.Windows.Forms.TextBox txtNombreUsuario;
-        private System.Windows.Forms.Label lbl_InicioSesion;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

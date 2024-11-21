@@ -37,7 +37,6 @@
             this.panelUsuarios = new System.Windows.Forms.Panel();
             this.btnVerSolvencia = new System.Windows.Forms.Button();
             this.btnAdmUsuarios = new System.Windows.Forms.Button();
-            this.btnRegUsuarios = new System.Windows.Forms.Button();
             this.btnPanelUsuarios = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.PbUAMLogo = new System.Windows.Forms.PictureBox();
@@ -65,7 +64,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(312, 761);
+            this.panelMenu.Size = new System.Drawing.Size(312, 749);
             this.panelMenu.TabIndex = 5;
             this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
             // 
@@ -75,7 +74,7 @@
             this.lblAviso.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lblAviso.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAviso.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblAviso.Location = new System.Drawing.Point(0, 744);
+            this.lblAviso.Location = new System.Drawing.Point(0, 732);
             this.lblAviso.Name = "lblAviso";
             this.lblAviso.Size = new System.Drawing.Size(279, 17);
             this.lblAviso.TabIndex = 4;
@@ -88,7 +87,7 @@
             this.panelReportes.Controls.Add(this.btnRepSolvencia);
             this.panelReportes.Controls.Add(this.btnRepAsistencia);
             this.panelReportes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelReportes.Location = new System.Drawing.Point(0, 611);
+            this.panelReportes.Location = new System.Drawing.Point(0, 551);
             this.panelReportes.Name = "panelReportes";
             this.panelReportes.Size = new System.Drawing.Size(312, 111);
             this.panelReportes.TabIndex = 4;
@@ -131,7 +130,7 @@
             this.btnReportes.FlatAppearance.BorderSize = 0;
             this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReportes.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnReportes.Location = new System.Drawing.Point(0, 554);
+            this.btnReportes.Location = new System.Drawing.Point(0, 494);
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.btnReportes.Size = new System.Drawing.Size(312, 57);
@@ -146,11 +145,10 @@
             this.panelUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panelUsuarios.Controls.Add(this.btnVerSolvencia);
             this.panelUsuarios.Controls.Add(this.btnAdmUsuarios);
-            this.panelUsuarios.Controls.Add(this.btnRegUsuarios);
             this.panelUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelUsuarios.Location = new System.Drawing.Point(0, 394);
             this.panelUsuarios.Name = "panelUsuarios";
-            this.panelUsuarios.Size = new System.Drawing.Size(312, 160);
+            this.panelUsuarios.Size = new System.Drawing.Size(312, 100);
             this.panelUsuarios.TabIndex = 2;
             this.panelUsuarios.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -160,12 +158,12 @@
             this.btnVerSolvencia.FlatAppearance.BorderSize = 0;
             this.btnVerSolvencia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVerSolvencia.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnVerSolvencia.Location = new System.Drawing.Point(0, 100);
+            this.btnVerSolvencia.Location = new System.Drawing.Point(0, 50);
             this.btnVerSolvencia.Name = "btnVerSolvencia";
             this.btnVerSolvencia.Padding = new System.Windows.Forms.Padding(43, 0, 0, 0);
             this.btnVerSolvencia.Size = new System.Drawing.Size(312, 50);
             this.btnVerSolvencia.TabIndex = 2;
-            this.btnVerSolvencia.Text = "Verificacion de solvencia";
+            this.btnVerSolvencia.Text = "Administar pagos y solvencia";
             this.btnVerSolvencia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVerSolvencia.UseVisualStyleBackColor = true;
             this.btnVerSolvencia.Click += new System.EventHandler(this.button4_Click);
@@ -176,7 +174,7 @@
             this.btnAdmUsuarios.FlatAppearance.BorderSize = 0;
             this.btnAdmUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdmUsuarios.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnAdmUsuarios.Location = new System.Drawing.Point(0, 50);
+            this.btnAdmUsuarios.Location = new System.Drawing.Point(0, 0);
             this.btnAdmUsuarios.Name = "btnAdmUsuarios";
             this.btnAdmUsuarios.Padding = new System.Windows.Forms.Padding(43, 0, 0, 0);
             this.btnAdmUsuarios.Size = new System.Drawing.Size(312, 50);
@@ -185,22 +183,6 @@
             this.btnAdmUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAdmUsuarios.UseVisualStyleBackColor = true;
             this.btnAdmUsuarios.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // btnRegUsuarios
-            // 
-            this.btnRegUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRegUsuarios.FlatAppearance.BorderSize = 0;
-            this.btnRegUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegUsuarios.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnRegUsuarios.Location = new System.Drawing.Point(0, 0);
-            this.btnRegUsuarios.Name = "btnRegUsuarios";
-            this.btnRegUsuarios.Padding = new System.Windows.Forms.Padding(43, 0, 0, 0);
-            this.btnRegUsuarios.Size = new System.Drawing.Size(312, 50);
-            this.btnRegUsuarios.TabIndex = 0;
-            this.btnRegUsuarios.Text = "Registrar Usuarios";
-            this.btnRegUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegUsuarios.UseVisualStyleBackColor = true;
-            this.btnRegUsuarios.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnPanelUsuarios
             // 
@@ -250,7 +232,7 @@
             this.panelContenedorHijos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedorHijos.Location = new System.Drawing.Point(312, 0);
             this.panelContenedorHijos.Name = "panelContenedorHijos";
-            this.panelContenedorHijos.Size = new System.Drawing.Size(672, 761);
+            this.panelContenedorHijos.Size = new System.Drawing.Size(672, 749);
             this.panelContenedorHijos.TabIndex = 6;
             this.panelContenedorHijos.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             // 
@@ -258,7 +240,7 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = global::ProyectoSoplado_1._0_.Properties.Resources.universidad_americana_2020;
-            this.pictureBox1.Location = new System.Drawing.Point(110, 295);
+            this.pictureBox1.Location = new System.Drawing.Point(110, 289);
             this.pictureBox1.MaximumSize = new System.Drawing.Size(480, 171);
             this.pictureBox1.MinimumSize = new System.Drawing.Size(480, 171);
             this.pictureBox1.Name = "pictureBox1";
@@ -271,7 +253,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(206)))), ((int)(((byte)(214)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(312, 661);
+            this.panel1.Location = new System.Drawing.Point(312, 649);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(672, 100);
             this.panel1.TabIndex = 7;
@@ -281,13 +263,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(150)))), ((int)(((byte)(166)))));
-            this.ClientSize = new System.Drawing.Size(984, 761);
+            this.ClientSize = new System.Drawing.Size(984, 749);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelContenedorHijos);
             this.Controls.Add(this.panelMenu);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MinimumSize = new System.Drawing.Size(1000, 800);
+            this.MinimumSize = new System.Drawing.Size(1000, 718);
             this.Name = "FormAdmin";
             this.Text = "Modo Administrador";
             this.Load += new System.EventHandler(this.FormAdmin_Load_1);
@@ -313,7 +295,6 @@
         private System.Windows.Forms.Button btnPanelUsuarios;
         private System.Windows.Forms.Button btnVerSolvencia;
         private System.Windows.Forms.Button btnAdmUsuarios;
-        private System.Windows.Forms.Button btnRegUsuarios;
         private System.Windows.Forms.Panel panelReportes;
         private System.Windows.Forms.Button btnRepSolvencia;
         private System.Windows.Forms.Button btnRepAsistencia;
