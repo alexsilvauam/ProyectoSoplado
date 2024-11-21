@@ -28,58 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnIngresar = new System.Windows.Forms.Button();
-            this.txtNombreUsuario = new System.Windows.Forms.TextBox();
-            this.lbl_InicioSesion = new System.Windows.Forms.Label();
+            this.dgvReporteAsistencias = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReporteAsistencias)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnIngresar
+            // dgvReporteAsistencias
             // 
-            this.btnIngresar.Location = new System.Drawing.Point(34, 84);
-            this.btnIngresar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(108, 34);
-            this.btnIngresar.TabIndex = 15;
-            this.btnIngresar.Text = "Ingresar";
-            this.btnIngresar.UseVisualStyleBackColor = true;
+            this.dgvReporteAsistencias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvReporteAsistencias.Location = new System.Drawing.Point(48, 69);
+            this.dgvReporteAsistencias.Name = "dgvReporteAsistencias";
+            this.dgvReporteAsistencias.Size = new System.Drawing.Size(369, 280);
+            this.dgvReporteAsistencias.TabIndex = 0;
+            this.dgvReporteAsistencias.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // txtNombreUsuario
+            // label1
             // 
-            this.txtNombreUsuario.Location = new System.Drawing.Point(34, 38);
-            this.txtNombreUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtNombreUsuario.Name = "txtNombreUsuario";
-            this.txtNombreUsuario.Size = new System.Drawing.Size(204, 22);
-            this.txtNombreUsuario.TabIndex = 14;
-            // 
-            // lbl_InicioSesion
-            // 
-            this.lbl_InicioSesion.AutoSize = true;
-            this.lbl_InicioSesion.Location = new System.Drawing.Point(30, 19);
-            this.lbl_InicioSesion.Name = "lbl_InicioSesion";
-            this.lbl_InicioSesion.Size = new System.Drawing.Size(106, 16);
-            this.lbl_InicioSesion.TabIndex = 13;
-            this.lbl_InicioSesion.Text = "Ingresar Usuario";
-            this.lbl_InicioSesion.Click += new System.EventHandler(this.lbl_InicioSesion_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(125, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(220, 23);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Registro De Asistencias";
             // 
             // FormReporteAsistencia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(271, 136);
-            this.Controls.Add(this.btnIngresar);
-            this.Controls.Add(this.txtNombreUsuario);
-            this.Controls.Add(this.lbl_InicioSesion);
+            this.ClientSize = new System.Drawing.Size(473, 403);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dgvReporteAsistencias);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormReporteAsistencia";
             this.Text = "Reporte Asistencia";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReporteAsistencias)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button btnIngresar;
-        private System.Windows.Forms.TextBox txtNombreUsuario;
-        private System.Windows.Forms.Label lbl_InicioSesion;
+
+        private System.Windows.Forms.DataGridView dgvReporteAsistencias;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -8,12 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProyectoSoplado_1._0_.Formularios.Admin;
+using ProyectoSoplado_1._0_.Modelo_de_datos.Usuario;
 
 namespace ProyectoSoplado_1._0_.Formularios
 {
     public partial class FormPrincipal : Form
     {
-        public List<Asistencia> RegistroAsistencia = new List<Asistencia>();
+        public static List<Asistencia> RegistroAsistencia = new List<Asistencia>();
 
         public FormPrincipal()
         {
@@ -49,7 +51,7 @@ namespace ProyectoSoplado_1._0_.Formularios
         {
             FormIniciarAdmin formAdmin = new FormIniciarAdmin();
             formAdmin.Show();
-            this.Hide();
+           // this.Hide();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -71,11 +73,19 @@ namespace ProyectoSoplado_1._0_.Formularios
             string horaActual = DateTime.Now.ToString("HH:mm");
             //para la lista
             DateTime Date_FechaActual = DateTime.Now.Date;
-            DateTime Date_HoraActual = DateTime.Now;
+           
+                  Miembro MiembroExistente = FormAdministrarUsua.Lmiembros.FirstOrDefault(x => x.NombreUsuario == usuario);
+            if (MiembroExistente != null)
+            {
 
-            RegistroAsistencia.Add(new Asistencia(usuario, Date_FechaActual, Date_HoraActual));
+                RegistroAsistencia.Add(new Asistencia(usuario, Date_FechaActual, horaActual));
 
-            MessageBox.Show($"El usuario {usuario} inició sesión a las {horaActual} del {fechaActual}", "Registro de Entrada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"El usuario {usuario} inició sesión a las {horaActual} del {fechaActual}", "Registro de Entrada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show($"El usuario '{usuario}' no ha sido encontrado", "Búsqueda", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
 
         }

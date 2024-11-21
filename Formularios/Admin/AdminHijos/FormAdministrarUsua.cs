@@ -14,7 +14,7 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
 
     public partial class FormAdministrarUsua : Form
     {
-        public List<Miembro> Lmiembros = new List<Miembro>();
+        public static List<Miembro> Lmiembros = new List<Miembro>();
 
         public FormAdministrarUsua()
         {
