@@ -30,11 +30,22 @@ namespace ProyectoSoplado_1._0_
             {
                 return;
             }
+           
             int Idmiembro = int.Parse(txtIdMiembro.Text);
             int idpago = int.Parse(txtIdpago.Text);
             DateTime Date_FechaActual = DateTime.Now.Date;
             double montoPago = double.Parse(txtmontopago.Text);
 
+
+            Miembro MiembroExistente = FormAdministrarUsua.Lmiembros.FirstOrDefault(x => x.IdentificacionUsuario == int.Parse(txtIdMiembro.Text));
+            if (MiembroExistente == null)
+            {
+                MessageBox.Show($"No existe un miembro con el id {txtIdMiembro.Text}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+
+            }
+            else
+            {
                 Pago pago = new Pago();
 
                 pago.idMiembro = Idmiembro;
@@ -43,30 +54,30 @@ namespace ProyectoSoplado_1._0_
                 pago.monto_pago = montoPago;
                 RegistroPagos.Add(pago);
 
+                MiembroExistente.SolvenciaUsuario = true;
                 limpiarCampos();
-
-                dataGridView1.DataSource = null;
-                dataGridView1.DataSource = RegistroPagos;
-               MessageBox.Show("Pago registrado correctamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Pago registrado correctamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            
 
         }
         public bool VerificarCampos()
         {
             if (string.IsNullOrWhiteSpace(txtIdMiembro.Text))
             {
-                MessageBox.Show("El campo Id Miembro no puede estar vacío.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("El campo Id Miembro no puede estar vacío.", "Completa el campo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
             if (string.IsNullOrWhiteSpace(txtIdpago.Text))
             {
-                MessageBox.Show("El campo Id Pago no puede estar vacío.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("El campo Id Pago no puede estar vacío.", "Completa el campo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
             if (string.IsNullOrWhiteSpace(txtmontopago.Text))
             {
-                MessageBox.Show("El campo Monto Pago no puede estar vacío.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("El campo Monto Pago no puede estar vacío.", "Completa el campo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
@@ -97,13 +108,6 @@ namespace ProyectoSoplado_1._0_
                 }
             }
 
-            Miembro MiembroExistente = FormAdministrarUsua.Lmiembros.FirstOrDefault(x => x.IdentificacionUsuario == int.Parse(txtIdMiembro.Text));
-            if(MiembroExistente == null)
-            {
-                MessageBox.Show($"No existe un cliente con el id {txtIdMiembro.Text}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-
-            }
             return true;
         }
 
@@ -121,13 +125,13 @@ namespace ProyectoSoplado_1._0_
         {
             if (string.IsNullOrWhiteSpace(txtIDverificar.Text))
              {
-                MessageBox.Show("El campo Id Miembro no puede estar vacío.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El campo Id Miembro no puede estar vacío.", "Completa el campo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
 
             }
             if (!int.TryParse(txtIDverificar.Text, out int _))
             {
-                MessageBox.Show("El campo Id tiene que ser un número entero.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("El campo Id tiene que ser un número entero.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             Miembro MiembroExistente = FormAdministrarUsua.Lmiembros.FirstOrDefault(x => x.IdentificacionUsuario == int.Parse(txtIDverificar.Text));
@@ -162,8 +166,7 @@ namespace ProyectoSoplado_1._0_
 
         private void FormVerificacionSolvencia_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = null;
-            dataGridView1.DataSource = RegistroPagos;
+           
         }
     }
 } 

@@ -122,12 +122,12 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
         {
             if (string.IsNullOrEmpty(txtBusqueda.Text))
             {
-                MessageBox.Show("El campo 'Buscar ID' no puede estar vacío.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("El campo ID no puede estar vacío.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             if (!int.TryParse(txtBusqueda.Text, out _))
             {
-                MessageBox.Show("El campo 'Buscar ID' debe ser un número entero.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("El campo ID debe ser un número entero.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             return true;
@@ -201,7 +201,7 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
             }
             else
             {
-                MessageBox.Show($"El usuario '{searchText}' no ha sido encontrado", "Búsqueda", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"El usuario {searchText} no ha sido encontrado", "Búsqueda", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

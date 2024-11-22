@@ -151,12 +151,13 @@
             // lblIngrese
             // 
             this.lblIngrese.AutoSize = true;
+            this.lblIngrese.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIngrese.Location = new System.Drawing.Point(180, 82);
             this.lblIngrese.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblIngrese.Name = "lblIngrese";
-            this.lblIngrese.Size = new System.Drawing.Size(95, 13);
+            this.lblIngrese.Size = new System.Drawing.Size(97, 15);
             this.lblIngrese.TabIndex = 1;
-            this.lblIngrese.Text = "Ingrese su Usuario";
+            this.lblIngrese.Text = "Ingrese su nombre.";
             this.lblIngrese.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel1

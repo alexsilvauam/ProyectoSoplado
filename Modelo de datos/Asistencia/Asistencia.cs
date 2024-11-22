@@ -8,14 +8,13 @@ namespace ProyectoSoplado_1._0_.Modelo_de_datos.Asistencia
 {
     public class Asistencia
     {
-        public string CedulaAsistencia { get; set; }
+        public string NombreUsuario { get; set; }
         public DateTime FechaAcceso { get; set; }
         public string HoraAcceso { get; set; }
-        public bool EstadoEntrada { get; set; }
 
-        public Asistencia(string cedulaAsistencia, DateTime fechaAcceso, string horaAcceso)
+        public Asistencia(string nombreUsuario, DateTime fechaAcceso, string horaAcceso)
         {
-            CedulaAsistencia = cedulaAsistencia;
+            NombreUsuario = nombreUsuario;
             FechaAcceso = fechaAcceso;
             HoraAcceso = horaAcceso;
         }

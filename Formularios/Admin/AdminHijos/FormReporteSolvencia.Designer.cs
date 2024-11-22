@@ -28,33 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgvRegistroPagos = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRegistroPagos)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvRegistroPagos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(51, 58);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(637, 359);
-            this.dataGridView1.TabIndex = 16;
+            this.dgvRegistroPagos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRegistroPagos.Location = new System.Drawing.Point(175, 64);
+            this.dgvRegistroPagos.Name = "dgvRegistroPagos";
+            this.dgvRegistroPagos.Size = new System.Drawing.Size(331, 384);
+            this.dgvRegistroPagos.TabIndex = 16;
+            this.dgvRegistroPagos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(263, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(203, 27);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Registro de Pagos";
             // 
             // FormReporteSolvencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 471);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dgvRegistroPagos);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormReporteSolvencia";
             this.Text = "FormReporteSolvencia";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.FormReporteSolvencia_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRegistroPagos)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvRegistroPagos;
+        private System.Windows.Forms.Label label1;
     }
 }

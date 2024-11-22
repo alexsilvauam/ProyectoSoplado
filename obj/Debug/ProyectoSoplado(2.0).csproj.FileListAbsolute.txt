@@ -70,4 +70,3 @@ C:\Users\solis\OneDrive\Escritorio\REPOSITORIOFINAL\ProyectoSoplado\obj\Debug\Pr
 C:\Users\solis\OneDrive\Escritorio\REPOSITORIOFINAL\ProyectoSoplado\obj\Debug\ProyectoSoplado(1.0).exe
 C:\Users\solis\OneDrive\Escritorio\REPOSITORIOFINAL\ProyectoSoplado\obj\Debug\ProyectoSoplado(1.0).pdb
 C:\Users\solis\OneDrive\Escritorio\REPOSITORIOFINAL\ProyectoSoplado\obj\Debug\ProyectoSoplado_1._0_.Formularios.Admin.FormEditarMiembro.resources
-C:\Users\solis\OneDrive\Escritorio\REPOSITORIOFINAL\ProyectoSoplado\obj\Debug\ProyectoSoplado_1._0_.Formularios.RegistrarPago.resources

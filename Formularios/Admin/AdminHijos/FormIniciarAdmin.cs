@@ -65,7 +65,7 @@ namespace ProyectoSoplado_1._0_
 
                 formAdmin.FormClosed += (s, args) => formIniciarAdmin.Close();
                 formAdmin.Show();
-               // this.Hide();
+               this.Hide();
             }
             else
             {

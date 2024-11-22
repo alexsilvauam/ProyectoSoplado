@@ -10,6 +10,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProyectoSoplado_1._0_.Formularios.Admin;
 using ProyectoSoplado_1._0_.Modelo_de_datos.Usuario;
+using ProyectoSoplado_1._0_;
+using ProyectoSoplado_1._0_.Modelo_de_datos.Pago;
+
+
 
 namespace ProyectoSoplado_1._0_.Formularios
 {
@@ -63,7 +67,7 @@ namespace ProyectoSoplado_1._0_.Formularios
         {
             if (string.IsNullOrWhiteSpace(txtUsuarioLogin.Text))
             {
-                MessageBox.Show("El Campo Id o nombre de usuario no puede estar vacio.");
+                MessageBox.Show("El Nombre de usuario no puede estar vacio.","Complete el campo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -74,17 +78,26 @@ namespace ProyectoSoplado_1._0_.Formularios
             //para la lista
             DateTime Date_FechaActual = DateTime.Now.Date;
            
-                  Miembro MiembroExistente = FormAdministrarUsua.Lmiembros.FirstOrDefault(x => x.NombreUsuario == usuario);
+                Miembro MiembroExistente = FormAdministrarUsua.Lmiembros.FirstOrDefault(x => x.NombreUsuario == usuario);
             if (MiembroExistente != null)
             {
+                Pago PagoExistente = FormVerificacionSolvencia.RegistroPagos.FirstOrDefault(x => x.idMiembro == MiembroExistente.IdentificacionUsuario);
+                if(PagoExistente != null)
+                {
+                    RegistroAsistencia.Add(new Asistencia(usuario, Date_FechaActual, horaActual));
+                    MessageBox.Show($"El miembro {usuario} inició sesión a las {horaActual} del {fechaActual}", "Registro de Entrada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtUsuarioLogin.Clear();
+                }
+                else
+                {
+                    MessageBox.Show($"El miembro {usuario} no esta solvente", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                RegistroAsistencia.Add(new Asistencia(usuario, Date_FechaActual, horaActual));
+                }
 
-                MessageBox.Show($"El usuario {usuario} inició sesión a las {horaActual} del {fechaActual}", "Registro de Entrada", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show($"El usuario '{usuario}' no ha sido encontrado", "Búsqueda", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"El miembro {usuario} no ha sido encontrado", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 
