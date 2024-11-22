@@ -54,7 +54,11 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
             string rolUsuario = cmbRolUsuario.SelectedItem.ToString();
             int id = int.Parse(txtID.Text);
 
-            Lmiembros.Add(new Miembro(id, rolUsuario, nombre, apellido));
+            Random random = new Random();
+            int codigoQR = random.Next(1, 1000); 
+           
+
+            Lmiembros.Add(new Miembro(id, rolUsuario, nombre, apellido,codigoQR));
 
             actualizarGrid();
             LimpiarCampos();
@@ -66,25 +70,25 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
         {
             if (string.IsNullOrWhiteSpace(txtNombre.Text))
             {
-                MessageBox.Show("El campo 'Nombre' no puede estar vacío.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("El campo Nombre no puede estar vacío.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
             if (string.IsNullOrWhiteSpace(txtApellido.Text))
             {
-                MessageBox.Show("El campo 'Apellido' no puede estar vacío.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("El campo Apellido no puede estar vacío.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
             if (string.IsNullOrWhiteSpace(txtID.Text))
             {
-                MessageBox.Show("El campo 'ID' no puede estar vacío.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("El campo ID no puede estar vacío.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
             if (!int.TryParse(txtID.Text, out _))
             {
-                MessageBox.Show("El campo 'ID' debe ser un número entero.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("El campo ID debe ser un número entero.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
@@ -97,7 +101,7 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
             {
                 if (Convert.ToInt16(txtID.Text) == e.IdentificacionUsuario)
                 {
-                    MessageBox.Show("No puedes repetir un id.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("No puedes repetir un ID.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
             }
@@ -197,7 +201,7 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
             Miembro MiembroExistente = Lmiembros.FirstOrDefault(x => x.IdentificacionUsuario == searchText);
             if (MiembroExistente != null)
             {
-                MessageBox.Show($"Se encontró el miembro con el ID {searchText}.", "Busqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Se encontró el miembro con el ID {searchText} /n Nombre: {MiembroExistente.NombreUsuario} /n a.", "Busqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {

@@ -232,7 +232,7 @@
             this.dgvUsuarios.Name = "dgvUsuarios";
             this.dgvUsuarios.RowHeadersWidth = 51;
             this.dgvUsuarios.RowTemplate.Height = 24;
-            this.dgvUsuarios.Size = new System.Drawing.Size(424, 355);
+            this.dgvUsuarios.Size = new System.Drawing.Size(464, 355);
             this.dgvUsuarios.TabIndex = 23;
             // 
             // FormAdministrarUsua

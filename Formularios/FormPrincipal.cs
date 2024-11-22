@@ -81,8 +81,7 @@ namespace ProyectoSoplado_1._0_.Formularios
                 Miembro MiembroExistente = FormAdministrarUsua.Lmiembros.FirstOrDefault(x => x.NombreUsuario == usuario);
             if (MiembroExistente != null)
             {
-                Pago PagoExistente = FormVerificacionSolvencia.RegistroPagos.FirstOrDefault(x => x.idMiembro == MiembroExistente.IdentificacionUsuario);
-                if(PagoExistente != null)
+                if(MiembroExistente.SolvenciaUsuario)
                 {
                     RegistroAsistencia.Add(new Asistencia(usuario, Date_FechaActual, horaActual));
                     MessageBox.Show($"El miembro {usuario} inició sesión a las {horaActual} del {fechaActual}", "Registro de Entrada", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -107,7 +106,70 @@ namespace ProyectoSoplado_1._0_.Formularios
 
     private void button1_Click_1(object sender, EventArgs e)
         {
-            MessageBox.Show("Función no implementada", "Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            btnMarcar.Hide();
+            lblIngrese.Hide();
+            txtUsuarioLogin.Hide();
+            button1.Hide();
+            txtQR.Show();
+            lblQR.Show();
+            btncodigoQr.Show();
+            btnIngresarconusuario.Show();
+
+        }
+
+        private void btncodigoQr_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtQR.Text))
+            {
+                MessageBox.Show("El QR no puede estar vacio.", "Complete el campo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (!int.TryParse(txtQR.Text, out _))
+            {
+                MessageBox.Show("El QR debe ser un número entero.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            int QR = int.Parse(txtQR.Text);
+            string fechaActual = DateTime.Now.ToString("dd/MM/yyyy");
+            string horaActual = DateTime.Now.ToString("HH:mm");
+            //para la lista
+            DateTime Date_FechaActual = DateTime.Now.Date;
+
+            Miembro MiembroExistente = FormAdministrarUsua.Lmiembros.FirstOrDefault(x => x.CodigoQR == QR);
+            if (MiembroExistente != null)
+            {
+                if (MiembroExistente.SolvenciaUsuario)
+                {
+                    RegistroAsistencia.Add(new Asistencia(MiembroExistente.NombreUsuario, Date_FechaActual, horaActual));
+                    MessageBox.Show($"El miembro {MiembroExistente.NombreUsuario} inició sesión a las {horaActual} del {fechaActual}", "Registro de Entrada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtUsuarioLogin.Clear();
+                }
+                else
+                {
+                    MessageBox.Show($"El miembro {MiembroExistente.NombreUsuario} no esta solvente", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+
+            }
+            else
+            {
+                MessageBox.Show($"No hay un miembro con ese codigo QR.", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+        }
+
+        private void btnIngresarconusuario_Click(object sender, EventArgs e)
+        {
+            btnMarcar.Show();
+            lblIngrese.Show();
+            txtUsuarioLogin.Show();
+            button1.Show();
+            btnIngresarconusuario.Hide();
+            txtQR.Hide();
+            lblQR.Hide();
+            btncodigoQr.Hide();
+
         }
     }
 }

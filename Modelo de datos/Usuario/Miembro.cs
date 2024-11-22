@@ -13,15 +13,17 @@ namespace ProyectoSoplado_1._0_.Modelo_de_datos.Usuario
         public string NombreUsuario { get; set; }
 
         public string ApellidoUsuario { get; set; }
+        public int CodigoQR { get; set; }
         public bool SolvenciaUsuario { get; set; }
 
 
-        public Miembro(int identificacionUsuario, string rolUsuario, string nombreUsuario, string apellidoUsuario)
+        public Miembro(int identificacionUsuario, string rolUsuario, string nombreUsuario, string apellidoUsuario, int codigoQR)
         {
             IdentificacionUsuario = identificacionUsuario;
             RolUsuario = rolUsuario;
             NombreUsuario = nombreUsuario;
             ApellidoUsuario = apellidoUsuario;
+            CodigoQR = codigoQR;
         }
     }
 }

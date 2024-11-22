@@ -39,6 +39,10 @@
             this.lblIngrese = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblQR = new System.Windows.Forms.Label();
+            this.txtQR = new System.Windows.Forms.TextBox();
+            this.btncodigoQr = new System.Windows.Forms.Button();
+            this.btnIngresarconusuario = new System.Windows.Forms.Button();
             this.plLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.plAdmin.SuspendLayout();
@@ -102,6 +106,10 @@
             // plUsuario
             // 
             this.plUsuario.BackColor = System.Drawing.Color.White;
+            this.plUsuario.Controls.Add(this.btnIngresarconusuario);
+            this.plUsuario.Controls.Add(this.btncodigoQr);
+            this.plUsuario.Controls.Add(this.txtQR);
+            this.plUsuario.Controls.Add(this.lblQR);
             this.plUsuario.Controls.Add(this.button1);
             this.plUsuario.Controls.Add(this.btnMarcar);
             this.plUsuario.Controls.Add(this.txtUsuarioLogin);
@@ -142,7 +150,7 @@
             // txtUsuarioLogin
             // 
             this.txtUsuarioLogin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUsuarioLogin.Location = new System.Drawing.Point(182, 108);
+            this.txtUsuarioLogin.Location = new System.Drawing.Point(181, 111);
             this.txtUsuarioLogin.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsuarioLogin.Name = "txtUsuarioLogin";
             this.txtUsuarioLogin.Size = new System.Drawing.Size(158, 20);
@@ -181,6 +189,50 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // lblQR
+            // 
+            this.lblQR.AutoSize = true;
+            this.lblQR.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQR.Location = new System.Drawing.Point(180, 84);
+            this.lblQR.Name = "lblQR";
+            this.lblQR.Size = new System.Drawing.Size(73, 15);
+            this.lblQR.TabIndex = 5;
+            this.lblQR.Text = "Ingresa tu QR:";
+            this.lblQR.Visible = false;
+            // 
+            // txtQR
+            // 
+            this.txtQR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtQR.Location = new System.Drawing.Point(182, 102);
+            this.txtQR.Name = "txtQR";
+            this.txtQR.Size = new System.Drawing.Size(157, 20);
+            this.txtQR.TabIndex = 6;
+            this.txtQR.Visible = false;
+            // 
+            // btncodigoQr
+            // 
+            this.btncodigoQr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(151)))), ((int)(((byte)(166)))));
+            this.btncodigoQr.Location = new System.Drawing.Point(184, 145);
+            this.btncodigoQr.Name = "btncodigoQr";
+            this.btncodigoQr.Size = new System.Drawing.Size(156, 31);
+            this.btncodigoQr.TabIndex = 7;
+            this.btncodigoQr.Text = "Ingresar";
+            this.btncodigoQr.UseVisualStyleBackColor = false;
+            this.btncodigoQr.Visible = false;
+            this.btncodigoQr.Click += new System.EventHandler(this.btncodigoQr_Click);
+            // 
+            // btnIngresarconusuario
+            // 
+            this.btnIngresarconusuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(151)))), ((int)(((byte)(166)))));
+            this.btnIngresarconusuario.Location = new System.Drawing.Point(183, 197);
+            this.btnIngresarconusuario.Name = "btnIngresarconusuario";
+            this.btnIngresarconusuario.Size = new System.Drawing.Size(157, 31);
+            this.btnIngresarconusuario.TabIndex = 8;
+            this.btnIngresarconusuario.Text = "Ingresar con nombre";
+            this.btnIngresarconusuario.UseVisualStyleBackColor = false;
+            this.btnIngresarconusuario.Visible = false;
+            this.btnIngresarconusuario.Click += new System.EventHandler(this.btnIngresarconusuario_Click);
             // 
             // FormPrincipal
             // 
@@ -222,5 +274,9 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnMarcar;
+        private System.Windows.Forms.Button btncodigoQr;
+        private System.Windows.Forms.TextBox txtQR;
+        private System.Windows.Forms.Label lblQR;
+        private System.Windows.Forms.Button btnIngresarconusuario;
     }
 }
