@@ -52,13 +52,15 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
             string nombre = txtNombre.Text;
             string apellido = txtApellido.Text;
             string rolUsuario = cmbRolUsuario.SelectedItem.ToString();
+            string cifCed = txtCifCed.Text;
+     
             int id = int.Parse(txtID.Text);
 
             Random random = new Random();
             int codigoQR = random.Next(1, 1000); 
            
 
-            Lmiembros.Add(new Miembro(id, rolUsuario, nombre, apellido,codigoQR));
+            Lmiembros.Add(new Miembro(id, rolUsuario, nombre, apellido,codigoQR, cifCed));
 
             actualizarGrid();
             LimpiarCampos();
@@ -97,6 +99,28 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
                 MessageBox.Show("Debe seleccionar un rol de usuario.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
+
+            if (cmbCifCed.SelectedIndex == -1)
+            {
+                MessageBox.Show("Debe seleccionar una opción.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtCifCed.Text))
+            {
+                MessageBox.Show("El campo CIF/Cédula no puede estar vacío.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            string selectedType = cmbCifCed.SelectedItem.ToString();
+            int maxLength = selectedType == "CIF" ? 8 : 16;
+
+            if (txtCifCed.Text.Length != maxLength)
+            {
+                MessageBox.Show($"El campo {selectedType} debe tener {maxLength} caracteres.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
             foreach (Miembro e in Lmiembros)
             {
                 if (Convert.ToInt16(txtID.Text) == e.IdentificacionUsuario)
@@ -109,6 +133,7 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
             return true;
         }
 
+
         public void actualizarGrid()
         {
             dgvUsuarios.DataSource = null;
@@ -119,6 +144,7 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
             txtNombre.Clear();
             txtApellido.Clear();
             cmbRolUsuario.SelectedIndex = -1;
+            cmbCifCed.SelectedIndex = -1;
             txtID.Clear();
         }
 
@@ -233,5 +259,34 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
         {
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbCifCed_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtCifCed.Clear();
+
+        }
+
+        private void txtCifCed_TextChanged(object sender, EventArgs e)
+        {
+            if (cmbCifCed.SelectedItem == null)
+            {
+                return;
+            }
+
+            string selectedType = cmbCifCed.SelectedItem.ToString();
+            int maxLength = selectedType == "CIF" ? 8 : 16;
+
+            if (txtCifCed.Text.Length > maxLength)
+            {
+                txtCifCed.Text = txtCifCed.Text.Substring(0, maxLength);
+                txtCifCed.SelectionStart = txtCifCed.Text.Length;
+            }
+        }
+
     }
 }

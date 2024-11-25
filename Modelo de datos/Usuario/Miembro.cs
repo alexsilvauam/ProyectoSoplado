@@ -10,6 +10,7 @@ namespace ProyectoSoplado_1._0_.Modelo_de_datos.Usuario
     {
         public int IdentificacionUsuario { get; set; }
         public string RolUsuario { get; set; }
+        public string CifCed { get; set; }
         public string NombreUsuario { get; set; }
 
         public string ApellidoUsuario { get; set; }
@@ -17,13 +18,14 @@ namespace ProyectoSoplado_1._0_.Modelo_de_datos.Usuario
         public bool SolvenciaUsuario { get; set; }
 
 
-        public Miembro(int identificacionUsuario, string rolUsuario, string nombreUsuario, string apellidoUsuario, int codigoQR)
+        public Miembro(int identificacionUsuario, string rolUsuario,  string nombreUsuario, string apellidoUsuario, int codigoQR, string cifCed)
         {
             IdentificacionUsuario = identificacionUsuario;
             RolUsuario = rolUsuario;
             NombreUsuario = nombreUsuario;
             ApellidoUsuario = apellidoUsuario;
             CodigoQR = codigoQR;
+            CifCed = cifCed;
         }
     }
 }

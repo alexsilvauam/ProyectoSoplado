@@ -23,6 +23,7 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
             txtNombre.Text = miembro.NombreUsuario;
             txtApellido.Text = miembro.ApellidoUsuario;
             txtID.Text = miembro.IdentificacionUsuario.ToString();
+            txtCifCed.Text = miembro.CifCed;
             cmbRolUsuario.SelectedItem = miembro.RolUsuario;
 
             txtID.Enabled = false;

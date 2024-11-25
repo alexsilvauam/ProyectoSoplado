@@ -34,6 +34,9 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.lblID = new System.Windows.Forms.Label();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
+            this.cmbCifCed = new System.Windows.Forms.ComboBox();
+            this.lblCifCed = new System.Windows.Forms.Label();
+            this.txtCifCed = new System.Windows.Forms.TextBox();
             this.gbPanelControl.SuspendLayout();
             this.gbRegistro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
@@ -47,9 +50,9 @@
             this.gbPanelControl.Controls.Add(this.btnEliminar);
             this.gbPanelControl.Controls.Add(this.btnEditar);
             this.gbPanelControl.Location = new System.Drawing.Point(39, 55);
-            this.gbPanelControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbPanelControl.Margin = new System.Windows.Forms.Padding(4);
             this.gbPanelControl.Name = "gbPanelControl";
-            this.gbPanelControl.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbPanelControl.Padding = new System.Windows.Forms.Padding(4);
             this.gbPanelControl.Size = new System.Drawing.Size(265, 199);
             this.gbPanelControl.TabIndex = 25;
             this.gbPanelControl.TabStop = false;
@@ -111,6 +114,9 @@
             // 
             // gbRegistro
             // 
+            this.gbRegistro.Controls.Add(this.txtCifCed);
+            this.gbRegistro.Controls.Add(this.cmbCifCed);
+            this.gbRegistro.Controls.Add(this.lblCifCed);
             this.gbRegistro.Controls.Add(this.lblApellido);
             this.gbRegistro.Controls.Add(this.cmbRolUsuario);
             this.gbRegistro.Controls.Add(this.lblNombre);
@@ -121,10 +127,10 @@
             this.gbRegistro.Controls.Add(this.txtID);
             this.gbRegistro.Controls.Add(this.lblID);
             this.gbRegistro.Location = new System.Drawing.Point(5, 281);
-            this.gbRegistro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbRegistro.Margin = new System.Windows.Forms.Padding(4);
             this.gbRegistro.Name = "gbRegistro";
-            this.gbRegistro.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gbRegistro.Size = new System.Drawing.Size(335, 289);
+            this.gbRegistro.Padding = new System.Windows.Forms.Padding(4);
+            this.gbRegistro.Size = new System.Drawing.Size(335, 324);
             this.gbRegistro.TabIndex = 24;
             this.gbRegistro.TabStop = false;
             this.gbRegistro.Text = "Registro";
@@ -149,8 +155,8 @@
             "Estudiante",
             "Colaborador",
             "Externo"});
-            this.cmbRolUsuario.Location = new System.Drawing.Point(116, 158);
-            this.cmbRolUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbRolUsuario.Location = new System.Drawing.Point(117, 214);
+            this.cmbRolUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.cmbRolUsuario.Name = "cmbRolUsuario";
             this.cmbRolUsuario.Size = new System.Drawing.Size(199, 24);
             this.cmbRolUsuario.TabIndex = 17;
@@ -169,7 +175,7 @@
             // 
             this.lblRolUsua.AutoSize = true;
             this.lblRolUsua.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRolUsua.Location = new System.Drawing.Point(7, 162);
+            this.lblRolUsua.Location = new System.Drawing.Point(8, 218);
             this.lblRolUsua.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRolUsua.Name = "lblRolUsua";
             this.lblRolUsua.Size = new System.Drawing.Size(92, 16);
@@ -189,7 +195,7 @@
             // 
             this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(151)))), ((int)(((byte)(166)))));
             this.btnRegistrar.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.Location = new System.Drawing.Point(33, 217);
+            this.btnRegistrar.Location = new System.Drawing.Point(34, 252);
             this.btnRegistrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(283, 38);
@@ -240,6 +246,42 @@
             this.dgvUsuarios.TabIndex = 23;
             this.dgvUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellContentClick);
             // 
+            // cmbCifCed
+            // 
+            this.cmbCifCed.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCifCed.FormattingEnabled = true;
+            this.cmbCifCed.Items.AddRange(new object[] {
+            "CIF",
+            "Cedula"});
+            this.cmbCifCed.Location = new System.Drawing.Point(117, 156);
+            this.cmbCifCed.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbCifCed.Name = "cmbCifCed";
+            this.cmbCifCed.Size = new System.Drawing.Size(199, 24);
+            this.cmbCifCed.TabIndex = 19;
+            this.cmbCifCed.SelectedIndexChanged += new System.EventHandler(this.cmbCifCed_SelectedIndexChanged);
+            // 
+            // lblCifCed
+            // 
+            this.lblCifCed.AutoSize = true;
+            this.lblCifCed.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCifCed.Location = new System.Drawing.Point(8, 160);
+            this.lblCifCed.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCifCed.Name = "lblCifCed";
+            this.lblCifCed.Size = new System.Drawing.Size(87, 16);
+            this.lblCifCed.TabIndex = 18;
+            this.lblCifCed.Text = "CIF/Cedula:";
+            this.lblCifCed.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // txtCifCed
+            // 
+            this.txtCifCed.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCifCed.Location = new System.Drawing.Point(11, 186);
+            this.txtCifCed.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCifCed.Name = "txtCifCed";
+            this.txtCifCed.Size = new System.Drawing.Size(304, 22);
+            this.txtCifCed.TabIndex = 21;
+            this.txtCifCed.TextChanged += new System.EventHandler(this.txtCifCed_TextChanged);
+            // 
             // FormAdministrarUsua
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -279,5 +321,8 @@
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.DataGridView dgvUsuarios;
+        private System.Windows.Forms.ComboBox cmbCifCed;
+        private System.Windows.Forms.Label lblCifCed;
+        private System.Windows.Forms.TextBox txtCifCed;
     }
 }

@@ -38,11 +38,17 @@
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
             this.lblID = new System.Windows.Forms.Label();
+            this.cmbCifCed = new System.Windows.Forms.ComboBox();
+            this.lblCifCed = new System.Windows.Forms.Label();
+            this.txtCifCed = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtCifCed);
+            this.groupBox1.Controls.Add(this.cmbCifCed);
+            this.groupBox1.Controls.Add(this.lblCifCed);
             this.groupBox1.Controls.Add(this.lblApellido);
             this.groupBox1.Controls.Add(this.cmbRolUsuario);
             this.groupBox1.Controls.Add(this.lblNombre);
@@ -53,10 +59,10 @@
             this.groupBox1.Controls.Add(this.txtID);
             this.groupBox1.Controls.Add(this.lblID);
             this.groupBox1.Location = new System.Drawing.Point(16, 15);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(469, 361);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(469, 315);
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Edicion";
@@ -80,8 +86,8 @@
             "Estudiante",
             "Colaborador",
             "Externo"});
-            this.cmbRolUsuario.Location = new System.Drawing.Point(116, 158);
-            this.cmbRolUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbRolUsuario.Location = new System.Drawing.Point(116, 223);
+            this.cmbRolUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.cmbRolUsuario.Name = "cmbRolUsuario";
             this.cmbRolUsuario.Size = new System.Drawing.Size(323, 24);
             this.cmbRolUsuario.TabIndex = 17;
@@ -100,7 +106,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(5, 158);
+            this.label1.Location = new System.Drawing.Point(5, 223);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 18);
@@ -120,10 +126,10 @@
             // 
             this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(151)))), ((int)(((byte)(166)))));
             this.btnRegistrar.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.Location = new System.Drawing.Point(33, 217);
+            this.btnRegistrar.Location = new System.Drawing.Point(22, 253);
             this.btnRegistrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(407, 42);
+            this.btnRegistrar.Size = new System.Drawing.Size(430, 42);
             this.btnRegistrar.TabIndex = 15;
             this.btnRegistrar.Text = "Editar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
@@ -158,13 +164,46 @@
             this.lblID.TabIndex = 13;
             this.lblID.Text = "ID:";
             // 
+            // cmbCifCed
+            // 
+            this.cmbCifCed.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCifCed.FormattingEnabled = true;
+            this.cmbCifCed.Items.AddRange(new object[] {
+            "CIF",
+            "Cedula"});
+            this.cmbCifCed.Location = new System.Drawing.Point(116, 165);
+            this.cmbCifCed.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbCifCed.Name = "cmbCifCed";
+            this.cmbCifCed.Size = new System.Drawing.Size(323, 24);
+            this.cmbCifCed.TabIndex = 19;
+            // 
+            // lblCifCed
+            // 
+            this.lblCifCed.AutoSize = true;
+            this.lblCifCed.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCifCed.Location = new System.Drawing.Point(5, 165);
+            this.lblCifCed.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCifCed.Name = "lblCifCed";
+            this.lblCifCed.Size = new System.Drawing.Size(73, 18);
+            this.lblCifCed.TabIndex = 18;
+            this.lblCifCed.Text = "CIF/ Ced:";
+            // 
+            // txtCifCed
+            // 
+            this.txtCifCed.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCifCed.Location = new System.Drawing.Point(116, 195);
+            this.txtCifCed.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCifCed.Name = "txtCifCed";
+            this.txtCifCed.Size = new System.Drawing.Size(323, 22);
+            this.txtCifCed.TabIndex = 21;
+            // 
             // FormEditarMiembro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(577, 462);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormEditarMiembro";
             this.Text = "Editar Miembros";
             this.Load += new System.EventHandler(this.FormEditarMiembro_Load);
@@ -186,5 +225,8 @@
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.ComboBox cmbCifCed;
+        private System.Windows.Forms.Label lblCifCed;
+        private System.Windows.Forms.TextBox txtCifCed;
     }
 }

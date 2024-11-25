@@ -64,10 +64,10 @@
     <Compile Include="Formularios\Admin\AdminHijos\FormReporteSolvencia.Designer.cs">
       <DependentUpon>FormReporteSolvencia.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Admin\FormEditarMiembro.cs">
+    <Compile Include="Formularios\Admin\AdminHijos\FormEditarMiembro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Admin\FormEditarMiembro.Designer.cs">
+    <Compile Include="Formularios\Admin\AdminHijos\FormEditarMiembro.Designer.cs">
       <DependentUpon>FormEditarMiembro.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\FormPrincipal.cs">
@@ -112,7 +112,7 @@
     <EmbeddedResource Include="Formularios\Admin\AdminHijos\FormReporteSolvencia.resx">
       <DependentUpon>FormReporteSolvencia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Admin\FormEditarMiembro.resx">
+    <EmbeddedResource Include="Formularios\Admin\AdminHijos\FormEditarMiembro.resx">
       <DependentUpon>FormEditarMiembro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FormPrincipal.resx">
