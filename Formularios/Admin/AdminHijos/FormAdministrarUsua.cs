@@ -228,6 +228,7 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
             if (MiembroExistente != null)
             {
                 MessageBox.Show($"Se encontró el miembro con el ID {searchText} /n Nombre: {MiembroExistente.NombreUsuario} /n a.", "Busqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtBusqueda.Clear();
             }
             else
             {
