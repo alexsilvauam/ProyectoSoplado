@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormVerificacionSolvencia));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblIdMiembro = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -40,6 +41,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblModalidad = new System.Windows.Forms.Label();
+            this.cmbModalidad = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -50,9 +53,9 @@
             this.groupBox1.Controls.Add(this.btnBuscar);
             this.groupBox1.Controls.Add(this.txtIDverificar);
             this.groupBox1.Location = new System.Drawing.Point(31, 311);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(409, 188);
             this.groupBox1.TabIndex = 27;
             this.groupBox1.TabStop = false;
@@ -74,7 +77,7 @@
             // 
             this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(150)))), ((int)(((byte)(166)))));
             this.btnBuscar.Location = new System.Drawing.Point(172, 90);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(195, 37);
             this.btnBuscar.TabIndex = 10;
@@ -86,7 +89,7 @@
             // 
             this.txtIDverificar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtIDverificar.Location = new System.Drawing.Point(172, 39);
-            this.txtIDverificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIDverificar.Margin = new System.Windows.Forms.Padding(4);
             this.txtIDverificar.Name = "txtIDverificar";
             this.txtIDverificar.Size = new System.Drawing.Size(194, 22);
             this.txtIDverificar.TabIndex = 10;
@@ -95,7 +98,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(33, 133);
+            this.label3.Location = new System.Drawing.Point(34, 160);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(117, 16);
@@ -106,16 +109,17 @@
             // 
             this.txtIdMiembro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtIdMiembro.Location = new System.Drawing.Point(172, 30);
-            this.txtIdMiembro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIdMiembro.Margin = new System.Windows.Forms.Padding(4);
             this.txtIdMiembro.Name = "txtIdMiembro";
             this.txtIdMiembro.Size = new System.Drawing.Size(202, 22);
             this.txtIdMiembro.TabIndex = 24;
+            this.txtIdMiembro.TextChanged += new System.EventHandler(this.txtIdMiembro_TextChanged);
             // 
             // btnAgregar
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(150)))), ((int)(((byte)(166)))));
             this.btnAgregar.Location = new System.Drawing.Point(172, 183);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(203, 38);
             this.btnAgregar.TabIndex = 23;
@@ -126,17 +130,19 @@
             // txtmontopago
             // 
             this.txtmontopago.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtmontopago.Location = new System.Drawing.Point(172, 126);
-            this.txtmontopago.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtmontopago.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtmontopago.Location = new System.Drawing.Point(173, 153);
+            this.txtmontopago.Margin = new System.Windows.Forms.Padding(4);
             this.txtmontopago.Name = "txtmontopago";
-            this.txtmontopago.Size = new System.Drawing.Size(202, 22);
+            this.txtmontopago.Size = new System.Drawing.Size(202, 23);
             this.txtmontopago.TabIndex = 22;
+            this.txtmontopago.TextChanged += new System.EventHandler(this.txtmontopago_TextChanged);
             // 
             // txtIdpago
             // 
             this.txtIdpago.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtIdpago.Location = new System.Drawing.Point(172, 76);
-            this.txtIdpago.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIdpago.Margin = new System.Windows.Forms.Padding(4);
             this.txtIdpago.Name = "txtIdpago";
             this.txtIdpago.Size = new System.Drawing.Size(202, 22);
             this.txtIdpago.TabIndex = 21;
@@ -165,6 +171,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.lblModalidad);
+            this.groupBox2.Controls.Add(this.cmbModalidad);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label3);
@@ -173,13 +181,36 @@
             this.groupBox2.Controls.Add(this.txtIdMiembro);
             this.groupBox2.Controls.Add(this.btnAgregar);
             this.groupBox2.Location = new System.Drawing.Point(31, 15);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(409, 239);
             this.groupBox2.TabIndex = 28;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Registrar Pago";
+            // 
+            // lblModalidad
+            // 
+            this.lblModalidad.AutoSize = true;
+            this.lblModalidad.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblModalidad.Location = new System.Drawing.Point(63, 121);
+            this.lblModalidad.Name = "lblModalidad";
+            this.lblModalidad.Size = new System.Drawing.Size(84, 16);
+            this.lblModalidad.TabIndex = 28;
+            this.lblModalidad.Text = "Modalidad:";
+            // 
+            // cmbModalidad
+            // 
+            this.cmbModalidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbModalidad.FormattingEnabled = true;
+            this.cmbModalidad.Items.AddRange(new object[] {
+            "Mes",
+            "Dia"});
+            this.cmbModalidad.Location = new System.Drawing.Point(172, 114);
+            this.cmbModalidad.Name = "cmbModalidad";
+            this.cmbModalidad.Size = new System.Drawing.Size(202, 24);
+            this.cmbModalidad.TabIndex = 27;
+            this.cmbModalidad.SelectedIndexChanged += new System.EventHandler(this.cmbModalidad_SelectedIndexChanged);
             // 
             // FormVerificacionSolvencia
             // 
@@ -188,6 +219,7 @@
             this.ClientSize = new System.Drawing.Size(876, 545);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormVerificacionSolvencia";
             this.Text = "Verificacion Solvencia";
@@ -214,5 +246,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label lblModalidad;
+        private System.Windows.Forms.ComboBox cmbModalidad;
     }
 }

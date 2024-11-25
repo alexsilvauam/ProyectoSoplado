@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormReporteAsistencia));
             this.dgvReporteAsistencias = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReporteAsistencias)).BeginInit();
@@ -37,7 +38,7 @@
             // 
             this.dgvReporteAsistencias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvReporteAsistencias.Location = new System.Drawing.Point(293, 102);
-            this.dgvReporteAsistencias.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvReporteAsistencias.Margin = new System.Windows.Forms.Padding(4);
             this.dgvReporteAsistencias.Name = "dgvReporteAsistencias";
             this.dgvReporteAsistencias.RowHeadersWidth = 51;
             this.dgvReporteAsistencias.Size = new System.Drawing.Size(363, 464);
@@ -62,6 +63,7 @@
             this.ClientSize = new System.Drawing.Size(993, 581);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvReporteAsistencias);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormReporteAsistencia";
             this.Text = "Reporte Asistencia";

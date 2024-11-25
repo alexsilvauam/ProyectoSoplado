@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormReporteSolvencia));
             this.dgvRegistroPagos = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistroPagos)).BeginInit();
@@ -37,7 +38,7 @@
             // 
             this.dgvRegistroPagos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRegistroPagos.Location = new System.Drawing.Point(233, 79);
-            this.dgvRegistroPagos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvRegistroPagos.Margin = new System.Windows.Forms.Padding(4);
             this.dgvRegistroPagos.Name = "dgvRegistroPagos";
             this.dgvRegistroPagos.RowHeadersWidth = 51;
             this.dgvRegistroPagos.Size = new System.Drawing.Size(441, 473);
@@ -62,6 +63,7 @@
             this.ClientSize = new System.Drawing.Size(933, 580);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvRegistroPagos);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormReporteSolvencia";
             this.Text = "Reporte Solvencia";

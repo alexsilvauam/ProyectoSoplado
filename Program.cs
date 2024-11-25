@@ -18,7 +18,7 @@ namespace ProyectoSoplado_1._0_
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormAdministrarUsua());
+            Application.Run(new FormPrincipal());
         }
     }
 }

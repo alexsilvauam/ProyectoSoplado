@@ -18,6 +18,7 @@ namespace ProyectoSoplado_1._0_
         {
             InitializeComponent();
             personalizarDiseño();
+
         }
         // Diseños del submenu
         public void personalizarDiseño() {
@@ -123,7 +124,7 @@ namespace ProyectoSoplado_1._0_
 
         private void FormAdmin_Load_1(object sender, EventArgs e)
         {
-
+        
         }
 
         private void lblAviso_Click(object sender, EventArgs e)
@@ -153,6 +154,11 @@ namespace ProyectoSoplado_1._0_
         private void button1_Click(object sender, EventArgs e)
         {
           
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

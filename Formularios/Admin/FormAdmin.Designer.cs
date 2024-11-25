@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAdmin));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.lblAviso = new System.Windows.Forms.Label();
             this.panelReportes = new System.Windows.Forms.Panel();
             this.btnRepSolvencia = new System.Windows.Forms.Button();
@@ -55,6 +57,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(150)))), ((int)(((byte)(166)))));
+            this.panelMenu.Controls.Add(this.button1);
             this.panelMenu.Controls.Add(this.lblAviso);
             this.panelMenu.Controls.Add(this.panelReportes);
             this.panelMenu.Controls.Add(this.btnReportes);
@@ -67,6 +70,20 @@
             this.panelMenu.Size = new System.Drawing.Size(312, 749);
             this.panelMenu.TabIndex = 5;
             this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.Location = new System.Drawing.Point(0, 691);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(312, 38);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Cerrar sesión";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // lblAviso
             // 
@@ -232,7 +249,7 @@
             this.panelContenedorHijos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedorHijos.Location = new System.Drawing.Point(312, 0);
             this.panelContenedorHijos.Name = "panelContenedorHijos";
-            this.panelContenedorHijos.Size = new System.Drawing.Size(672, 749);
+            this.panelContenedorHijos.Size = new System.Drawing.Size(688, 749);
             this.panelContenedorHijos.TabIndex = 6;
             this.panelContenedorHijos.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             // 
@@ -255,7 +272,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(312, 649);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(672, 100);
+            this.panel1.Size = new System.Drawing.Size(688, 100);
             this.panel1.TabIndex = 7;
             // 
             // FormAdmin
@@ -263,14 +280,16 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(150)))), ((int)(((byte)(166)))));
-            this.ClientSize = new System.Drawing.Size(984, 749);
+            this.ClientSize = new System.Drawing.Size(1000, 749);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelContenedorHijos);
             this.Controls.Add(this.panelMenu);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MinimumSize = new System.Drawing.Size(1000, 718);
             this.Name = "FormAdmin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Modo Administrador";
             this.Load += new System.EventHandler(this.FormAdmin_Load_1);
             this.panelMenu.ResumeLayout(false);
@@ -303,5 +322,6 @@
         private System.Windows.Forms.Panel panelContenedorHijos;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button1;
     }
 }

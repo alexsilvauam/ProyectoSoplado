@@ -72,31 +72,32 @@ namespace ProyectoSoplado_1._0_.Formularios
             }
 
             string usuario = txtUsuarioLogin.Text;
+            
             //para el mensaje
             string fechaActual = DateTime.Now.ToString("dd/MM/yyyy");
             string horaActual = DateTime.Now.ToString("HH:mm");
             //para la lista
             DateTime Date_FechaActual = DateTime.Now.Date;
            
-                Miembro MiembroExistente = FormAdministrarUsua.Lmiembros.FirstOrDefault(x => x.NombreUsuario == usuario);
+                Miembro MiembroExistente = FormAdministrarUsua.Lmiembros.FirstOrDefault(x => x.CifCed == usuario);
             if (MiembroExistente != null)
             {
                 if(MiembroExistente.SolvenciaUsuario)
                 {
-                    RegistroAsistencia.Add(new Asistencia(usuario, Date_FechaActual, horaActual));
-                    MessageBox.Show($"El miembro {usuario} inició sesión a las {horaActual} del {fechaActual}", "Registro de Entrada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    RegistroAsistencia.Add(new Asistencia(MiembroExistente.NombreUsuario, Date_FechaActual, horaActual));
+                    MessageBox.Show($"El miembro {MiembroExistente.NombreUsuario} inició sesión a las {horaActual} del {fechaActual}", "Registro de Entrada", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtUsuarioLogin.Clear();
                 }
                 else
                 {
-                    MessageBox.Show($"El miembro {usuario} no esta solvente", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"El miembro {MiembroExistente.NombreUsuario} no esta solvente", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
 
             }
             else
             {
-                MessageBox.Show($"El miembro {usuario} no ha sido encontrado", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"El miembro {MiembroExistente.NombreUsuario} no ha sido encontrado", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 
@@ -169,6 +170,11 @@ namespace ProyectoSoplado_1._0_.Formularios
             txtQR.Hide();
             lblQR.Hide();
             btncodigoQr.Hide();
+
+        }
+
+        private void txtUsuarioLogin_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

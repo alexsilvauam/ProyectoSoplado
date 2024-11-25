@@ -28,21 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             this.plLogo = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.plAdmin = new System.Windows.Forms.Panel();
             this.btnAdmin = new System.Windows.Forms.Button();
             this.plUsuario = new System.Windows.Forms.Panel();
+            this.btnIngresarconusuario = new System.Windows.Forms.Button();
+            this.btncodigoQr = new System.Windows.Forms.Button();
+            this.txtQR = new System.Windows.Forms.TextBox();
+            this.lblQR = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.btnMarcar = new System.Windows.Forms.Button();
             this.txtUsuarioLogin = new System.Windows.Forms.TextBox();
             this.lblIngrese = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblQR = new System.Windows.Forms.Label();
-            this.txtQR = new System.Windows.Forms.TextBox();
-            this.btncodigoQr = new System.Windows.Forms.Button();
-            this.btnIngresarconusuario = new System.Windows.Forms.Button();
             this.plLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.plAdmin.SuspendLayout();
@@ -57,9 +58,9 @@
             this.plLogo.Controls.Add(this.pictureBox2);
             this.plLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.plLogo.Location = new System.Drawing.Point(0, 0);
-            this.plLogo.Margin = new System.Windows.Forms.Padding(2);
+            this.plLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.plLogo.Name = "plLogo";
-            this.plLogo.Size = new System.Drawing.Size(363, 92);
+            this.plLogo.Size = new System.Drawing.Size(481, 113);
             this.plLogo.TabIndex = 0;
             // 
             // pictureBox2
@@ -67,9 +68,9 @@
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Image = global::ProyectoSoplado_1._0_.Properties.Resources._71732;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(363, 92);
+            this.pictureBox2.Size = new System.Drawing.Size(481, 113);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -79,10 +80,10 @@
             this.plAdmin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(150)))), ((int)(((byte)(166)))));
             this.plAdmin.Controls.Add(this.btnAdmin);
             this.plAdmin.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.plAdmin.Location = new System.Drawing.Point(0, 421);
-            this.plAdmin.Margin = new System.Windows.Forms.Padding(2);
+            this.plAdmin.Location = new System.Drawing.Point(0, 509);
+            this.plAdmin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.plAdmin.Name = "plAdmin";
-            this.plAdmin.Size = new System.Drawing.Size(363, 75);
+            this.plAdmin.Size = new System.Drawing.Size(481, 92);
             this.plAdmin.TabIndex = 1;
             this.plAdmin.Paint += new System.Windows.Forms.PaintEventHandler(this.plAdmin_Paint);
             // 
@@ -95,9 +96,9 @@
             this.btnAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdmin.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnAdmin.Location = new System.Drawing.Point(0, 0);
-            this.btnAdmin.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAdmin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Size = new System.Drawing.Size(363, 28);
+            this.btnAdmin.Size = new System.Drawing.Size(481, 34);
             this.btnAdmin.TabIndex = 0;
             this.btnAdmin.Text = "Soy un administrador.";
             this.btnAdmin.UseVisualStyleBackColor = false;
@@ -116,20 +117,68 @@
             this.plUsuario.Controls.Add(this.lblIngrese);
             this.plUsuario.Controls.Add(this.panel1);
             this.plUsuario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.plUsuario.Location = new System.Drawing.Point(0, 92);
-            this.plUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.plUsuario.Location = new System.Drawing.Point(0, 113);
+            this.plUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.plUsuario.Name = "plUsuario";
-            this.plUsuario.Size = new System.Drawing.Size(363, 329);
+            this.plUsuario.Size = new System.Drawing.Size(481, 396);
             this.plUsuario.TabIndex = 2;
             this.plUsuario.Paint += new System.Windows.Forms.PaintEventHandler(this.plUsuario_Paint);
+            // 
+            // btnIngresarconusuario
+            // 
+            this.btnIngresarconusuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(151)))), ((int)(((byte)(166)))));
+            this.btnIngresarconusuario.Location = new System.Drawing.Point(244, 242);
+            this.btnIngresarconusuario.Margin = new System.Windows.Forms.Padding(4);
+            this.btnIngresarconusuario.Name = "btnIngresarconusuario";
+            this.btnIngresarconusuario.Size = new System.Drawing.Size(209, 38);
+            this.btnIngresarconusuario.TabIndex = 8;
+            this.btnIngresarconusuario.Text = "Ingresar con identificación";
+            this.btnIngresarconusuario.UseVisualStyleBackColor = false;
+            this.btnIngresarconusuario.Visible = false;
+            this.btnIngresarconusuario.Click += new System.EventHandler(this.btnIngresarconusuario_Click);
+            // 
+            // btncodigoQr
+            // 
+            this.btncodigoQr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(151)))), ((int)(((byte)(166)))));
+            this.btncodigoQr.Location = new System.Drawing.Point(245, 177);
+            this.btncodigoQr.Margin = new System.Windows.Forms.Padding(4);
+            this.btncodigoQr.Name = "btncodigoQr";
+            this.btncodigoQr.Size = new System.Drawing.Size(208, 38);
+            this.btncodigoQr.TabIndex = 7;
+            this.btncodigoQr.Text = "Ingresar";
+            this.btncodigoQr.UseVisualStyleBackColor = false;
+            this.btncodigoQr.Visible = false;
+            this.btncodigoQr.Click += new System.EventHandler(this.btncodigoQr_Click);
+            // 
+            // txtQR
+            // 
+            this.txtQR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtQR.Location = new System.Drawing.Point(243, 126);
+            this.txtQR.Margin = new System.Windows.Forms.Padding(4);
+            this.txtQR.Name = "txtQR";
+            this.txtQR.Size = new System.Drawing.Size(209, 22);
+            this.txtQR.TabIndex = 6;
+            this.txtQR.Visible = false;
+            // 
+            // lblQR
+            // 
+            this.lblQR.AutoSize = true;
+            this.lblQR.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQR.Location = new System.Drawing.Point(240, 103);
+            this.lblQR.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblQR.Name = "lblQR";
+            this.lblQR.Size = new System.Drawing.Size(85, 17);
+            this.lblQR.TabIndex = 5;
+            this.lblQR.Text = "Ingresa tu QR:";
+            this.lblQR.Visible = false;
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(151)))), ((int)(((byte)(166)))));
-            this.button1.Location = new System.Drawing.Point(182, 197);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(243, 242);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(158, 32);
+            this.button1.Size = new System.Drawing.Size(211, 39);
             this.button1.TabIndex = 4;
             this.button1.Text = "Escanear codigo de Barras";
             this.button1.UseVisualStyleBackColor = false;
@@ -138,10 +187,10 @@
             // btnMarcar
             // 
             this.btnMarcar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(151)))), ((int)(((byte)(166)))));
-            this.btnMarcar.Location = new System.Drawing.Point(182, 145);
-            this.btnMarcar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMarcar.Location = new System.Drawing.Point(243, 178);
+            this.btnMarcar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMarcar.Name = "btnMarcar";
-            this.btnMarcar.Size = new System.Drawing.Size(158, 29);
+            this.btnMarcar.Size = new System.Drawing.Size(211, 36);
             this.btnMarcar.TabIndex = 3;
             this.btnMarcar.Text = "Marcar Asistencia";
             this.btnMarcar.UseVisualStyleBackColor = false;
@@ -150,22 +199,22 @@
             // txtUsuarioLogin
             // 
             this.txtUsuarioLogin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUsuarioLogin.Location = new System.Drawing.Point(181, 111);
-            this.txtUsuarioLogin.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUsuarioLogin.Location = new System.Drawing.Point(241, 137);
+            this.txtUsuarioLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUsuarioLogin.Name = "txtUsuarioLogin";
-            this.txtUsuarioLogin.Size = new System.Drawing.Size(158, 20);
+            this.txtUsuarioLogin.Size = new System.Drawing.Size(210, 22);
             this.txtUsuarioLogin.TabIndex = 2;
+            this.txtUsuarioLogin.TextChanged += new System.EventHandler(this.txtUsuarioLogin_TextChanged);
             // 
             // lblIngrese
             // 
             this.lblIngrese.AutoSize = true;
             this.lblIngrese.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIngrese.Location = new System.Drawing.Point(180, 82);
-            this.lblIngrese.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblIngrese.Location = new System.Drawing.Point(240, 101);
             this.lblIngrese.Name = "lblIngrese";
-            this.lblIngrese.Size = new System.Drawing.Size(97, 15);
+            this.lblIngrese.Size = new System.Drawing.Size(141, 17);
             this.lblIngrese.TabIndex = 1;
-            this.lblIngrese.Text = "Ingrese su nombre.";
+            this.lblIngrese.Text = "Ingrese su identificación.";
             this.lblIngrese.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel1
@@ -173,9 +222,9 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(160, 329);
+            this.panel1.Size = new System.Drawing.Size(213, 396);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox1
@@ -183,70 +232,27 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::ProyectoSoplado_1._0_.Properties.Resources.asistencia_icono1;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(160, 329);
+            this.pictureBox1.Size = new System.Drawing.Size(213, 396);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // lblQR
-            // 
-            this.lblQR.AutoSize = true;
-            this.lblQR.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQR.Location = new System.Drawing.Point(180, 84);
-            this.lblQR.Name = "lblQR";
-            this.lblQR.Size = new System.Drawing.Size(73, 15);
-            this.lblQR.TabIndex = 5;
-            this.lblQR.Text = "Ingresa tu QR:";
-            this.lblQR.Visible = false;
-            // 
-            // txtQR
-            // 
-            this.txtQR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtQR.Location = new System.Drawing.Point(182, 102);
-            this.txtQR.Name = "txtQR";
-            this.txtQR.Size = new System.Drawing.Size(157, 20);
-            this.txtQR.TabIndex = 6;
-            this.txtQR.Visible = false;
-            // 
-            // btncodigoQr
-            // 
-            this.btncodigoQr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(151)))), ((int)(((byte)(166)))));
-            this.btncodigoQr.Location = new System.Drawing.Point(184, 145);
-            this.btncodigoQr.Name = "btncodigoQr";
-            this.btncodigoQr.Size = new System.Drawing.Size(156, 31);
-            this.btncodigoQr.TabIndex = 7;
-            this.btncodigoQr.Text = "Ingresar";
-            this.btncodigoQr.UseVisualStyleBackColor = false;
-            this.btncodigoQr.Visible = false;
-            this.btncodigoQr.Click += new System.EventHandler(this.btncodigoQr_Click);
-            // 
-            // btnIngresarconusuario
-            // 
-            this.btnIngresarconusuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(151)))), ((int)(((byte)(166)))));
-            this.btnIngresarconusuario.Location = new System.Drawing.Point(183, 197);
-            this.btnIngresarconusuario.Name = "btnIngresarconusuario";
-            this.btnIngresarconusuario.Size = new System.Drawing.Size(157, 31);
-            this.btnIngresarconusuario.TabIndex = 8;
-            this.btnIngresarconusuario.Text = "Ingresar con nombre";
-            this.btnIngresarconusuario.UseVisualStyleBackColor = false;
-            this.btnIngresarconusuario.Visible = false;
-            this.btnIngresarconusuario.Click += new System.EventHandler(this.btnIngresarconusuario_Click);
-            // 
             // FormPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(363, 496);
+            this.ClientSize = new System.Drawing.Size(481, 601);
             this.Controls.Add(this.plUsuario);
             this.Controls.Add(this.plAdmin);
             this.Controls.Add(this.plLogo);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(379, 535);
+            this.MaximumSize = new System.Drawing.Size(499, 648);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(379, 535);
+            this.MinimumSize = new System.Drawing.Size(499, 648);
             this.Name = "FormPrincipal";
             this.Text = "Sistema Jaguar";
             this.Load += new System.EventHandler(this.FormPrincipal_Load);
