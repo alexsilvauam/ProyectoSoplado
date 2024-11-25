@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblIdMiembro = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtIDverificar = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,32 +46,37 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.lblIdMiembro);
             this.groupBox1.Controls.Add(this.btnBuscar);
             this.groupBox1.Controls.Add(this.txtIDverificar);
-            this.groupBox1.Location = new System.Drawing.Point(23, 253);
+            this.groupBox1.Location = new System.Drawing.Point(31, 311);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(307, 153);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(409, 188);
             this.groupBox1.TabIndex = 27;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Vefivicar solvencia";
+            this.groupBox1.Text = "Verificar Solvencia";
             // 
-            // label4
+            // lblIdMiembro
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(26, 38);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 14);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "ID de miembro:";
+            this.lblIdMiembro.AutoSize = true;
+            this.lblIdMiembro.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdMiembro.Location = new System.Drawing.Point(37, 42);
+            this.lblIdMiembro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIdMiembro.Name = "lblIdMiembro";
+            this.lblIdMiembro.Size = new System.Drawing.Size(112, 16);
+            this.lblIdMiembro.TabIndex = 10;
+            this.lblIdMiembro.Text = "ID de miembro:";
+            this.lblIdMiembro.Click += new System.EventHandler(this.label4_Click);
             // 
             // btnBuscar
             // 
             this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(150)))), ((int)(((byte)(166)))));
-            this.btnBuscar.Location = new System.Drawing.Point(129, 73);
+            this.btnBuscar.Location = new System.Drawing.Point(172, 90);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(146, 30);
+            this.btnBuscar.Size = new System.Drawing.Size(195, 37);
             this.btnBuscar.TabIndex = 10;
             this.btnBuscar.Text = "Verificar";
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -80,63 +85,70 @@
             // txtIDverificar
             // 
             this.txtIDverificar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtIDverificar.Location = new System.Drawing.Point(129, 32);
+            this.txtIDverificar.Location = new System.Drawing.Point(172, 39);
+            this.txtIDverificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtIDverificar.Name = "txtIDverificar";
-            this.txtIDverificar.Size = new System.Drawing.Size(146, 20);
+            this.txtIDverificar.Size = new System.Drawing.Size(194, 22);
             this.txtIDverificar.TabIndex = 10;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(25, 108);
+            this.label3.Location = new System.Drawing.Point(33, 133);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 14);
+            this.label3.Size = new System.Drawing.Size(117, 16);
             this.label3.TabIndex = 26;
             this.label3.Text = "Monto de pago:";
             // 
             // txtIdMiembro
             // 
             this.txtIdMiembro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtIdMiembro.Location = new System.Drawing.Point(129, 24);
+            this.txtIdMiembro.Location = new System.Drawing.Point(172, 30);
+            this.txtIdMiembro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtIdMiembro.Name = "txtIdMiembro";
-            this.txtIdMiembro.Size = new System.Drawing.Size(152, 20);
+            this.txtIdMiembro.Size = new System.Drawing.Size(202, 22);
             this.txtIdMiembro.TabIndex = 24;
             // 
             // btnAgregar
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(150)))), ((int)(((byte)(166)))));
-            this.btnAgregar.Location = new System.Drawing.Point(129, 149);
+            this.btnAgregar.Location = new System.Drawing.Point(172, 183);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(152, 31);
+            this.btnAgregar.Size = new System.Drawing.Size(203, 38);
             this.btnAgregar.TabIndex = 23;
-            this.btnAgregar.Text = "Registar";
+            this.btnAgregar.Text = "Registrar";
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // txtmontopago
             // 
             this.txtmontopago.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtmontopago.Location = new System.Drawing.Point(129, 102);
+            this.txtmontopago.Location = new System.Drawing.Point(172, 126);
+            this.txtmontopago.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtmontopago.Name = "txtmontopago";
-            this.txtmontopago.Size = new System.Drawing.Size(152, 20);
+            this.txtmontopago.Size = new System.Drawing.Size(202, 22);
             this.txtmontopago.TabIndex = 22;
             // 
             // txtIdpago
             // 
             this.txtIdpago.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtIdpago.Location = new System.Drawing.Point(129, 62);
+            this.txtIdpago.Location = new System.Drawing.Point(172, 76);
+            this.txtIdpago.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtIdpago.Name = "txtIdpago";
-            this.txtIdpago.Size = new System.Drawing.Size(152, 20);
+            this.txtIdpago.Size = new System.Drawing.Size(202, 22);
             this.txtIdpago.TabIndex = 21;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(45, 64);
+            this.label2.Location = new System.Drawing.Point(60, 79);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 14);
+            this.label2.Size = new System.Drawing.Size(86, 16);
             this.label2.TabIndex = 20;
             this.label2.Text = "ID de pago:";
             // 
@@ -144,9 +156,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(18, 30);
+            this.label1.Location = new System.Drawing.Point(24, 37);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 14);
+            this.label1.Size = new System.Drawing.Size(116, 16);
             this.label1.TabIndex = 19;
             this.label1.Text = "ID  de miembro:";
             // 
@@ -159,23 +172,25 @@
             this.groupBox2.Controls.Add(this.txtmontopago);
             this.groupBox2.Controls.Add(this.txtIdMiembro);
             this.groupBox2.Controls.Add(this.btnAgregar);
-            this.groupBox2.Location = new System.Drawing.Point(23, 12);
+            this.groupBox2.Location = new System.Drawing.Point(31, 15);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(307, 194);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(409, 239);
             this.groupBox2.TabIndex = 28;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Registrar Pago";
             // 
             // FormVerificacionSolvencia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(657, 443);
+            this.ClientSize = new System.Drawing.Size(876, 545);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormVerificacionSolvencia";
-            this.Text = "FormVerificacionSolvencia";
+            this.Text = "Verificacion Solvencia";
             this.Load += new System.EventHandler(this.FormVerificacionSolvencia_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -188,7 +203,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblIdMiembro;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtIDverificar;
         private System.Windows.Forms.Label label3;

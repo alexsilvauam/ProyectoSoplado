@@ -68,11 +68,6 @@ namespace ProyectoSoplado_1._0_
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            abrirMinisForms(new FormRegistrarUsuario());
-            ocultarSubmenu();
-        }
 
         private void button4_Click(object sender, EventArgs e)
         {

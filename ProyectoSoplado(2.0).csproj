@@ -88,12 +88,6 @@
     <Compile Include="Formularios\Admin\AdminHijos\FormAdministrarUsua.Designer.cs">
       <DependentUpon>FormAdministrarUsua.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Admin\AdminHijos\FormRegistrarUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Admin\AdminHijos\FormRegistrarUsuario.Designer.cs">
-      <DependentUpon>FormRegistrarUsuario.cs</DependentUpon>
-    </Compile>
     <Compile Include="Formularios\Admin\AdminHijos\FormVerificacionSolvencia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,9 +123,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Admin\AdminHijos\FormAdministrarUsua.resx">
       <DependentUpon>FormAdministrarUsua.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Admin\AdminHijos\FormRegistrarUsuario.resx">
-      <DependentUpon>FormRegistrarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Admin\AdminHijos\FormVerificacionSolvencia.resx">
       <DependentUpon>FormVerificacionSolvencia.cs</DependentUpon>

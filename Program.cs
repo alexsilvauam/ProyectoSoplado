@@ -1,4 +1,5 @@
 ﻿using ProyectoSoplado_1._0_.Formularios;
+using ProyectoSoplado_1._0_.Formularios.Admin;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace ProyectoSoplado_1._0_
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormPrincipal());
+            Application.Run(new FormAdministrarUsua());
         }
     }
 }

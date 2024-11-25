@@ -168,6 +168,11 @@ namespace ProyectoSoplado_1._0_
         {
            
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 } 
 

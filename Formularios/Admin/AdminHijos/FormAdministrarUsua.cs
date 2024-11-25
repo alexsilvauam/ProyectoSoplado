@@ -218,5 +218,20 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
         {
 
         }
+
+        private void lblID_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void gbRegistro_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

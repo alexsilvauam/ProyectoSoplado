@@ -93,5 +93,10 @@ namespace ProyectoSoplado_1._0_
         {
 
         }
+
+        private void FormIniciarAdmin_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
