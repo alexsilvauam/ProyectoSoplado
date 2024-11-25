@@ -97,7 +97,7 @@ namespace ProyectoSoplado_1._0_.Formularios
             }
             else
             {
-                MessageBox.Show($"El miembro {MiembroExistente.NombreUsuario} no ha sido encontrado", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"El miembro no ha sido encontrado", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 
@@ -143,7 +143,7 @@ namespace ProyectoSoplado_1._0_.Formularios
                 {
                     RegistroAsistencia.Add(new Asistencia(MiembroExistente.NombreUsuario, Date_FechaActual, horaActual));
                     MessageBox.Show($"El miembro {MiembroExistente.NombreUsuario} inició sesión a las {horaActual} del {fechaActual}", "Registro de Entrada", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtUsuarioLogin.Clear();
+                    txtQR.Clear();
                 }
                 else
                 {

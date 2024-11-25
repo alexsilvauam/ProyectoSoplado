@@ -19,6 +19,8 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
         public FormAdministrarUsua()
         {
             InitializeComponent();
+            dgvUsuarios.CellFormatting += dgvUsuarios_CellFormatting;
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -227,7 +229,7 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
             Miembro MiembroExistente = Lmiembros.FirstOrDefault(x => x.IdentificacionUsuario == searchText);
             if (MiembroExistente != null)
             {
-                MessageBox.Show($"Se encontró el miembro con el ID {searchText} /n Nombre: {MiembroExistente.NombreUsuario} /n a.", "Busqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Se encontró el miembro con el ID {searchText}", "Busqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtBusqueda.Clear();
             }
             else
@@ -288,6 +290,22 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
                 txtCifCed.SelectionStart = txtCifCed.Text.Length;
             }
         }
-
+        private void dgvUsuarios_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dgvUsuarios.Columns[e.ColumnIndex].Name == "SolvenciaUsuario")
+            {
+                bool solvencia = (bool)e.Value;
+                if (solvencia)
+                {
+                    e.CellStyle.BackColor = Color.Green;
+                    e.CellStyle.ForeColor = Color.White;
+                }
+                else
+                {
+                    e.CellStyle.BackColor = Color.Red;
+                    e.CellStyle.ForeColor = Color.White;
+                }
+            }
+        }
     }
 }

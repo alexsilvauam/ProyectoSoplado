@@ -77,7 +77,7 @@
             this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(0, 691);
+            this.button1.Location = new System.Drawing.Point(0, 694);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(312, 38);
             this.button1.TabIndex = 5;
@@ -91,9 +91,9 @@
             this.lblAviso.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lblAviso.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAviso.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblAviso.Location = new System.Drawing.Point(0, 709);
+            this.lblAviso.Location = new System.Drawing.Point(0, 732);
             this.lblAviso.Name = "lblAviso";
-            this.lblAviso.Size = new System.Drawing.Size(332, 20);
+            this.lblAviso.Size = new System.Drawing.Size(279, 17);
             this.lblAviso.TabIndex = 4;
             this.lblAviso.Text = "Actualmente estas en modo Administrador*";
             this.lblAviso.Click += new System.EventHandler(this.lblAviso_Click);
@@ -277,7 +277,7 @@
             // 
             // FormAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(150)))), ((int)(((byte)(166)))));
             this.ClientSize = new System.Drawing.Size(1000, 749);

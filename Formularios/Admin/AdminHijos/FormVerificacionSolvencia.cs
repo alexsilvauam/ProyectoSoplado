@@ -80,6 +80,11 @@ namespace ProyectoSoplado_1._0_
                 MessageBox.Show("El campo Monto Pago no puede estar vacío.", "Completa el campo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
+            if (cmbModalidad.SelectedIndex == -1)
+            {
+                MessageBox.Show("Debe seleccionar una modalidad.", "Completa el campo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
 
             if (!int.TryParse(txtIdMiembro.Text, out int _))
             {
@@ -117,6 +122,7 @@ namespace ProyectoSoplado_1._0_
             txtIdMiembro.Clear();
             txtIdpago.Clear();
             txtmontopago.Clear();
+            cmbModalidad.SelectedIndex = -1;
         }
 
 
@@ -160,6 +166,7 @@ namespace ProyectoSoplado_1._0_
                 if (pago != null)
                 {
                     MessageBox.Show($"El miembro {miembroExistente.NombreUsuario} ya ha realizado el pago.", "Información de pago", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtIDverificar.Clear();
                 }
                 else
                 {
