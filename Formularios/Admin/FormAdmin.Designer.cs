@@ -249,7 +249,7 @@
             this.panelContenedorHijos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedorHijos.Location = new System.Drawing.Point(312, 0);
             this.panelContenedorHijos.Name = "panelContenedorHijos";
-            this.panelContenedorHijos.Size = new System.Drawing.Size(688, 749);
+            this.panelContenedorHijos.Size = new System.Drawing.Size(930, 749);
             this.panelContenedorHijos.TabIndex = 6;
             this.panelContenedorHijos.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             // 
@@ -257,7 +257,7 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = global::ProyectoSoplado_1._0_.Properties.Resources.universidad_americana_2020;
-            this.pictureBox1.Location = new System.Drawing.Point(110, 289);
+            this.pictureBox1.Location = new System.Drawing.Point(231, 289);
             this.pictureBox1.MaximumSize = new System.Drawing.Size(480, 171);
             this.pictureBox1.MinimumSize = new System.Drawing.Size(480, 171);
             this.pictureBox1.Name = "pictureBox1";
@@ -272,15 +272,16 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(312, 649);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(688, 100);
+            this.panel1.Size = new System.Drawing.Size(930, 100);
             this.panel1.TabIndex = 7;
             // 
             // FormAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(150)))), ((int)(((byte)(166)))));
-            this.ClientSize = new System.Drawing.Size(1000, 749);
+            this.ClientSize = new System.Drawing.Size(1242, 749);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelContenedorHijos);
             this.Controls.Add(this.panelMenu);
@@ -289,8 +290,9 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MinimumSize = new System.Drawing.Size(1000, 718);
             this.Name = "FormAdmin";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modo Administrador";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormAdmin_Load_1);
             this.panelMenu.ResumeLayout(false);
             this.panelMenu.PerformLayout();

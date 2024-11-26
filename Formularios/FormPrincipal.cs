@@ -177,5 +177,10 @@ namespace ProyectoSoplado_1._0_.Formularios
         {
 
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
