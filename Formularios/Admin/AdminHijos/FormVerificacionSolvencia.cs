@@ -30,11 +30,13 @@ namespace ProyectoSoplado_1._0_
             {
                 return;
             }
-           
+
             int Idmiembro = int.Parse(txtIdMiembro.Text);
             int idpago = int.Parse(txtIdpago.Text);
             DateTime Date_FechaActual = DateTime.Now.Date;
             double montoPago = double.Parse(txtmontopago.Text);
+
+
 
 
             Miembro MiembroExistente = FormAdministrarUsua.Lmiembros.FirstOrDefault(x => x.IDusuario == int.Parse(txtIdMiembro.Text));
@@ -51,14 +53,18 @@ namespace ProyectoSoplado_1._0_
                 pago.idMiembro = Idmiembro;
                 pago.id_pago = idpago;
                 pago.fecha_pago = Date_FechaActual;
+                pago.Fecha_Vencimiento = AsignarFecha();
                 pago.monto_pago = montoPago;
+               
+
+
                 RegistroPagos.Add(pago);
 
                 MiembroExistente.Solvencia = true;
                 limpiarCampos();
                 MessageBox.Show("Pago registrado correctamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            
+
 
         }
         public bool VerificarCampos()
@@ -75,11 +81,7 @@ namespace ProyectoSoplado_1._0_
                 return false;
             }
 
-            if (string.IsNullOrWhiteSpace(txtmontopago.Text))
-            {
-                MessageBox.Show("El campo Monto Pago no puede estar vacío.", "Completa el campo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
+            
             if (cmbModalidad.SelectedIndex == -1)
             {
                 MessageBox.Show("Debe seleccionar una modalidad.", "Completa el campo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -123,6 +125,9 @@ namespace ProyectoSoplado_1._0_
             txtIdpago.Clear();
             txtmontopago.Clear();
             cmbModalidad.SelectedIndex = -1;
+            txtFechaInicio.Clear();
+            txtFechaVencimieto.Clear();
+
         }
 
 
@@ -130,7 +135,7 @@ namespace ProyectoSoplado_1._0_
         public bool verificarId()
         {
             if (string.IsNullOrWhiteSpace(txtIDverificar.Text))
-             {
+            {
                 MessageBox.Show("El campo Id Miembro no puede estar vacío.", "Completa el campo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
 
@@ -182,7 +187,7 @@ namespace ProyectoSoplado_1._0_
 
         private void FormVerificacionSolvencia_Load(object sender, EventArgs e)
         {
-           
+
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -220,7 +225,7 @@ namespace ProyectoSoplado_1._0_
                 monto = 3.00;
             }
 
-            txtmontopago.Text = monto.ToString("F2"); 
+            txtmontopago.Text = monto.ToString("F2");
         }
         private void txtIdMiembro_TextChanged(object sender, EventArgs e)
         {
@@ -259,8 +264,27 @@ namespace ProyectoSoplado_1._0_
             {
                 string rolUsuario = miembroExistente.RolUsuario;
                 asignarMonto(rolUsuario, cmbModalidad.SelectedItem?.ToString());
+
+
+
+            }
+            txtFechaInicio.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            txtFechaVencimieto.Text = AsignarFecha().ToString("dd/MM/yyyy");
+
+        }
+
+        public DateTime AsignarFecha()
+        {
+            if (cmbModalidad.SelectedItem.ToString() == "Mes")
+            {
+                return DateTime.Now.AddMonths(1).Date;
+            }
+            else
+            {
+                return DateTime.Now.AddDays(1).Date;
             }
         }
+
     }
-} 
+}
 
