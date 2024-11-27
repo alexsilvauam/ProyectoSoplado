@@ -65,7 +65,7 @@
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(134, 29);
-            this.btnBuscar.TabIndex = 3;
+            this.btnBuscar.TabIndex = 9;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
@@ -88,7 +88,7 @@
             this.txtBusqueda.Margin = new System.Windows.Forms.Padding(2);
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(134, 20);
-            this.txtBusqueda.TabIndex = 1;
+            this.txtBusqueda.TabIndex = 8;
             // 
             // btnEliminar
             // 
@@ -98,7 +98,7 @@
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(67, 28);
-            this.btnEliminar.TabIndex = 5;
+            this.btnEliminar.TabIndex = 10;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -111,7 +111,7 @@
             this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(62, 28);
-            this.btnEditar.TabIndex = 4;
+            this.btnEditar.TabIndex = 11;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
@@ -145,7 +145,7 @@
             this.txtCifCed.Margin = new System.Windows.Forms.Padding(2);
             this.txtCifCed.Name = "txtCifCed";
             this.txtCifCed.Size = new System.Drawing.Size(131, 20);
-            this.txtCifCed.TabIndex = 21;
+            this.txtCifCed.TabIndex = 5;
             this.txtCifCed.TextChanged += new System.EventHandler(this.txtCifCed_TextChanged);
             // 
             // cmbCifCed
@@ -158,7 +158,7 @@
             this.cmbCifCed.Location = new System.Drawing.Point(82, 128);
             this.cmbCifCed.Name = "cmbCifCed";
             this.cmbCifCed.Size = new System.Drawing.Size(132, 21);
-            this.cmbCifCed.TabIndex = 19;
+            this.cmbCifCed.TabIndex = 4;
             this.cmbCifCed.SelectedIndexChanged += new System.EventHandler(this.cmbCifCed_SelectedIndexChanged);
             // 
             // lblCifCed
@@ -195,7 +195,7 @@
             this.cmbRolUsuario.Location = new System.Drawing.Point(82, 190);
             this.cmbRolUsuario.Name = "cmbRolUsuario";
             this.cmbRolUsuario.Size = new System.Drawing.Size(132, 21);
-            this.cmbRolUsuario.TabIndex = 17;
+            this.cmbRolUsuario.TabIndex = 6;
             // 
             // lblNombre
             // 
@@ -225,7 +225,7 @@
             this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(133, 20);
-            this.txtNombre.TabIndex = 10;
+            this.txtNombre.TabIndex = 2;
             // 
             // btnRegistrar
             // 
@@ -236,7 +236,7 @@
             this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(201, 31);
-            this.btnRegistrar.TabIndex = 15;
+            this.btnRegistrar.TabIndex = 7;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
@@ -248,7 +248,7 @@
             this.txtApellido.Margin = new System.Windows.Forms.Padding(2);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(133, 20);
-            this.txtApellido.TabIndex = 12;
+            this.txtApellido.TabIndex = 3;
             // 
             // txtID
             // 
@@ -257,7 +257,7 @@
             this.txtID.Margin = new System.Windows.Forms.Padding(2);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(133, 20);
-            this.txtID.TabIndex = 14;
+            this.txtID.TabIndex = 1;
             // 
             // lblID
             // 
@@ -274,15 +274,22 @@
             // 
             // dgvUsuarios
             // 
+            this.dgvUsuarios.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.dgvUsuarios.AllowUserToAddRows = false;
+            this.dgvUsuarios.AllowUserToDeleteRows = false;
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUsuarios.Enabled = false;
             this.dgvUsuarios.Location = new System.Drawing.Point(226, 62);
             this.dgvUsuarios.Margin = new System.Windows.Forms.Padding(2);
             this.dgvUsuarios.Name = "dgvUsuarios";
+            this.dgvUsuarios.ReadOnly = true;
             this.dgvUsuarios.RowHeadersWidth = 51;
             this.dgvUsuarios.RowTemplate.Height = 24;
+            this.dgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvUsuarios.Size = new System.Drawing.Size(563, 355);
-            this.dgvUsuarios.TabIndex = 23;
-            this.dgvUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellContentClick);
+            this.dgvUsuarios.TabIndex = 0;
+            this.dgvUsuarios.TabStop = false;
+            this.dgvUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // FormAdministrarUsua
             // 

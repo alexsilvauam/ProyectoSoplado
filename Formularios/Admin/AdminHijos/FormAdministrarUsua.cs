@@ -125,7 +125,7 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
 
             foreach (Miembro e in Lmiembros)
             {
-                if (Convert.ToInt16(txtID.Text) == e.IdentificacionUsuario)
+                if (Convert.ToInt16(txtID.Text) == e.IDusuario)
                 {
                     MessageBox.Show("No puedes repetir un ID.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
@@ -173,7 +173,7 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
 
             int BuscarId = int.Parse(txtBusqueda.Text);
 
-            Miembro MiembroExistente = Lmiembros.FirstOrDefault(x => x.IdentificacionUsuario == BuscarId);
+            Miembro MiembroExistente = Lmiembros.FirstOrDefault(x => x.IDusuario == BuscarId);
             if (MiembroExistente != null)
             {
                 Lmiembros.Remove(MiembroExistente);
@@ -198,7 +198,7 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
 
             int BuscarId = int.Parse(txtBusqueda.Text);
 
-            Miembro MiembroExistente = Lmiembros.FirstOrDefault(x => x.IdentificacionUsuario == BuscarId);
+            Miembro MiembroExistente = Lmiembros.FirstOrDefault(x => x.IDusuario == BuscarId);
             if (MiembroExistente != null)
             {
                 using (FormEditarMiembro formEditar = new FormEditarMiembro(MiembroExistente))
@@ -226,7 +226,7 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
                 return;
             }
             int searchText = int.Parse(txtBusqueda.Text);
-            Miembro MiembroExistente = Lmiembros.FirstOrDefault(x => x.IdentificacionUsuario == searchText);
+            Miembro MiembroExistente = Lmiembros.FirstOrDefault(x => x.IDusuario == searchText);
             if (MiembroExistente != null)
             {
                 MessageBox.Show($"Se encontró el miembro con el ID {searchText}", "Busqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -249,11 +249,6 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
         }
 
         private void lblID_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgvUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
@@ -292,7 +287,7 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
         }
         private void dgvUsuarios_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            if (dgvUsuarios.Columns[e.ColumnIndex].Name == "SolvenciaUsuario")
+            if (dgvUsuarios.Columns[e.ColumnIndex].Name == "Solvencia")
             {
                 bool solvencia = (bool)e.Value;
                 if (solvencia)

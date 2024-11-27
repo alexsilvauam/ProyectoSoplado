@@ -37,8 +37,10 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.plLogo = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAdmin = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.plLogo.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblID
@@ -57,11 +59,11 @@
             // 
             this.txtcontraseña.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtcontraseña.Location = new System.Drawing.Point(92, 227);
-            this.txtcontraseña.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtcontraseña.Margin = new System.Windows.Forms.Padding(2);
             this.txtcontraseña.Name = "txtcontraseña";
             this.txtcontraseña.PasswordChar = '*';
             this.txtcontraseña.Size = new System.Drawing.Size(189, 20);
-            this.txtcontraseña.TabIndex = 21;
+            this.txtcontraseña.TabIndex = 2;
             this.txtcontraseña.TextChanged += new System.EventHandler(this.txtcontraseña_TextChanged);
             // 
             // lblContraseña
@@ -82,10 +84,10 @@
             this.btnIngresar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresar.ForeColor = System.Drawing.Color.Transparent;
             this.btnIngresar.Location = new System.Drawing.Point(92, 264);
-            this.btnIngresar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnIngresar.Margin = new System.Windows.Forms.Padding(2);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(189, 34);
-            this.btnIngresar.TabIndex = 19;
+            this.btnIngresar.TabIndex = 3;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = false;
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click_1);
@@ -94,10 +96,10 @@
             // 
             this.txtNombreUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNombreUsuario.Location = new System.Drawing.Point(92, 169);
-            this.txtNombreUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombreUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombreUsuario.Name = "txtNombreUsuario";
             this.txtNombreUsuario.Size = new System.Drawing.Size(189, 20);
-            this.txtNombreUsuario.TabIndex = 18;
+            this.txtNombreUsuario.TabIndex = 1;
             this.txtNombreUsuario.TextChanged += new System.EventHandler(this.txtNombreUsuario_TextChanged);
             // 
             // pictureBox2
@@ -125,12 +127,30 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(150)))), ((int)(((byte)(166)))));
+            this.panel1.Controls.Add(this.btnAdmin);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 398);
+            this.panel1.Location = new System.Drawing.Point(0, 407);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(364, 95);
+            this.panel1.Size = new System.Drawing.Size(364, 86);
             this.panel1.TabIndex = 25;
+            // 
+            // btnAdmin
+            // 
+            this.btnAdmin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(150)))), ((int)(((byte)(166)))));
+            this.btnAdmin.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAdmin.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAdmin.FlatAppearance.BorderSize = 0;
+            this.btnAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdmin.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnAdmin.Location = new System.Drawing.Point(0, 0);
+            this.btnAdmin.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAdmin.Name = "btnAdmin";
+            this.btnAdmin.Size = new System.Drawing.Size(364, 28);
+            this.btnAdmin.TabIndex = 5;
+            this.btnAdmin.Text = "Cancelar";
+            this.btnAdmin.UseVisualStyleBackColor = false;
+            this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
             // 
             // FormIniciarAdmin
             // 
@@ -150,6 +170,7 @@
             this.Load += new System.EventHandler(this.FormIniciarAdmin_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.plLogo.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,5 +186,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel plLogo;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnAdmin;
     }
 }

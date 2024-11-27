@@ -37,7 +37,7 @@ namespace ProyectoSoplado_1._0_
             double montoPago = double.Parse(txtmontopago.Text);
 
 
-            Miembro MiembroExistente = FormAdministrarUsua.Lmiembros.FirstOrDefault(x => x.IdentificacionUsuario == int.Parse(txtIdMiembro.Text));
+            Miembro MiembroExistente = FormAdministrarUsua.Lmiembros.FirstOrDefault(x => x.IDusuario == int.Parse(txtIdMiembro.Text));
             if (MiembroExistente == null)
             {
                 MessageBox.Show($"No existe un miembro con el id {txtIdMiembro.Text}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -54,7 +54,7 @@ namespace ProyectoSoplado_1._0_
                 pago.monto_pago = montoPago;
                 RegistroPagos.Add(pago);
 
-                MiembroExistente.SolvenciaUsuario = true;
+                MiembroExistente.Solvencia = true;
                 limpiarCampos();
                 MessageBox.Show("Pago registrado correctamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -140,7 +140,7 @@ namespace ProyectoSoplado_1._0_
                 MessageBox.Show("El campo Id tiene que ser un número entero.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            Miembro MiembroExistente = FormAdministrarUsua.Lmiembros.FirstOrDefault(x => x.IdentificacionUsuario == int.Parse(txtIDverificar.Text));
+            Miembro MiembroExistente = FormAdministrarUsua.Lmiembros.FirstOrDefault(x => x.IDusuario == int.Parse(txtIDverificar.Text));
             if (MiembroExistente == null)
             {
                 MessageBox.Show($"No existe un miembro con el id {txtIDverificar.Text}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -158,19 +158,19 @@ namespace ProyectoSoplado_1._0_
             }
 
             int ID = int.Parse(txtIDverificar.Text);
-            Miembro miembroExistente = FormAdministrarUsua.Lmiembros.FirstOrDefault(x => x.IdentificacionUsuario == ID);
+            Miembro miembroExistente = FormAdministrarUsua.Lmiembros.FirstOrDefault(x => x.IDusuario == ID);
 
             if (miembroExistente != null)
             {
                 Pago pago = RegistroPagos.Find(item => item.idMiembro == ID);
                 if (pago != null)
                 {
-                    MessageBox.Show($"El miembro {miembroExistente.NombreUsuario} ya ha realizado el pago.", "Información de pago", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show($"El miembro {miembroExistente.Nombre} ya ha realizado el pago.", "Información de pago", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtIDverificar.Clear();
                 }
                 else
                 {
-                    MessageBox.Show($"El miembro {miembroExistente.NombreUsuario} no ha realizado el pago.", "Información de pago", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"El miembro {miembroExistente.Nombre} no ha realizado el pago.", "Información de pago", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
@@ -235,7 +235,7 @@ namespace ProyectoSoplado_1._0_
                 return;
             }
 
-            Miembro miembroExistente = FormAdministrarUsua.Lmiembros.FirstOrDefault(x => x.IdentificacionUsuario == id);
+            Miembro miembroExistente = FormAdministrarUsua.Lmiembros.FirstOrDefault(x => x.IDusuario == id);
             if (miembroExistente != null)
             {
                 string rolUsuario = miembroExistente.RolUsuario;
@@ -254,7 +254,7 @@ namespace ProyectoSoplado_1._0_
                 return;
             }
 
-            Miembro miembroExistente = FormAdministrarUsua.Lmiembros.FirstOrDefault(x => x.IdentificacionUsuario == id);
+            Miembro miembroExistente = FormAdministrarUsua.Lmiembros.FirstOrDefault(x => x.IDusuario == id);
             if (miembroExistente != null)
             {
                 string rolUsuario = miembroExistente.RolUsuario;

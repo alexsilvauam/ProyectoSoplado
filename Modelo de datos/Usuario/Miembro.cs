@@ -8,22 +8,22 @@ namespace ProyectoSoplado_1._0_.Modelo_de_datos.Usuario
 {
     public class Miembro
     {
-        public int IdentificacionUsuario { get; set; }
+        public int IDusuario{ get; set; }
         public string RolUsuario { get; set; }
         public string CifCed { get; set; }
-        public string NombreUsuario { get; set; }
+        public string Nombre { get; set; }
 
-        public string ApellidoUsuario { get; set; }
+        public string Apellido{ get; set; }
         public int CodigoQR { get; set; }
-        public bool SolvenciaUsuario { get; set; }
+        public bool Solvencia { get; set; }
 
 
-        public Miembro(int identificacionUsuario, string rolUsuario,  string nombreUsuario, string apellidoUsuario, int codigoQR, string cifCed)
+        public Miembro(int idUsuario, string rolUsuario,  string nombre, string apellido, int codigoQR, string cifCed)
         {
-            IdentificacionUsuario = identificacionUsuario;
+            IDusuario = idUsuario;
             RolUsuario = rolUsuario;
-            NombreUsuario = nombreUsuario;
-            ApellidoUsuario = apellidoUsuario;
+            Nombre = nombre;
+            Apellido = apellido;
             CodigoQR = codigoQR;
             CifCed = cifCed;
         }

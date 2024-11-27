@@ -78,7 +78,7 @@
             this.btnBuscar.Location = new System.Drawing.Point(129, 70);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(146, 30);
-            this.btnBuscar.TabIndex = 10;
+            this.btnBuscar.TabIndex = 7;
             this.btnBuscar.Text = "Verificar";
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -89,7 +89,7 @@
             this.txtIDverificar.Location = new System.Drawing.Point(129, 32);
             this.txtIDverificar.Name = "txtIDverificar";
             this.txtIDverificar.Size = new System.Drawing.Size(146, 20);
-            this.txtIDverificar.TabIndex = 10;
+            this.txtIDverificar.TabIndex = 6;
             // 
             // label3
             // 
@@ -107,7 +107,7 @@
             this.txtIdMiembro.Location = new System.Drawing.Point(129, 24);
             this.txtIdMiembro.Name = "txtIdMiembro";
             this.txtIdMiembro.Size = new System.Drawing.Size(152, 20);
-            this.txtIdMiembro.TabIndex = 24;
+            this.txtIdMiembro.TabIndex = 1;
             this.txtIdMiembro.TextChanged += new System.EventHandler(this.txtIdMiembro_TextChanged);
             // 
             // btnAgregar
@@ -118,7 +118,7 @@
             this.btnAgregar.Location = new System.Drawing.Point(129, 149);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(152, 31);
-            this.btnAgregar.TabIndex = 23;
+            this.btnAgregar.TabIndex = 5;
             this.btnAgregar.Text = "Registrar";
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -133,7 +133,7 @@
             this.txtmontopago.Name = "txtmontopago";
             this.txtmontopago.ReadOnly = true;
             this.txtmontopago.Size = new System.Drawing.Size(152, 20);
-            this.txtmontopago.TabIndex = 22;
+            this.txtmontopago.TabIndex = 4;
             this.txtmontopago.TextChanged += new System.EventHandler(this.txtmontopago_TextChanged);
             // 
             // txtIdpago
@@ -142,7 +142,7 @@
             this.txtIdpago.Location = new System.Drawing.Point(129, 62);
             this.txtIdpago.Name = "txtIdpago";
             this.txtIdpago.Size = new System.Drawing.Size(152, 20);
-            this.txtIdpago.TabIndex = 21;
+            this.txtIdpago.TabIndex = 2;
             // 
             // label2
             // 
@@ -201,10 +201,10 @@
             "Mes",
             "Dia"});
             this.cmbModalidad.Location = new System.Drawing.Point(129, 93);
-            this.cmbModalidad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbModalidad.Margin = new System.Windows.Forms.Padding(2);
             this.cmbModalidad.Name = "cmbModalidad";
             this.cmbModalidad.Size = new System.Drawing.Size(152, 21);
-            this.cmbModalidad.TabIndex = 27;
+            this.cmbModalidad.TabIndex = 3;
             this.cmbModalidad.SelectedIndexChanged += new System.EventHandler(this.cmbModalidad_SelectedIndexChanged);
             // 
             // FormVerificacionSolvencia
@@ -215,7 +215,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormVerificacionSolvencia";
             this.Text = "Verificacion Solvencia";
             this.Load += new System.EventHandler(this.FormVerificacionSolvencia_Load);

@@ -98,5 +98,10 @@ namespace ProyectoSoplado_1._0_
         {
 
         }
+
+        private void btnAdmin_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

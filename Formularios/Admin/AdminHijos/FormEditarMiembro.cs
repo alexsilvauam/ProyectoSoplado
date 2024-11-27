@@ -20,11 +20,19 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
             InitializeComponent();
             MiembroActual = miembro;
 
-            txtNombre.Text = miembro.NombreUsuario;
-            txtApellido.Text = miembro.ApellidoUsuario;
-            txtID.Text = miembro.IdentificacionUsuario.ToString();
+            txtNombre.Text = miembro.Nombre;
+            txtApellido.Text = miembro.Apellido;
+            txtID.Text = miembro.IDusuario.ToString();
             txtCifCed.Text = miembro.CifCed;
             cmbRolUsuario.SelectedItem = miembro.RolUsuario;
+            if (miembro.CifCed.Length == 8)
+            {
+                cmbCifCed.SelectedItem = "CIF";
+            }
+            else if (miembro.CifCed.Length == 16)
+            {
+                cmbCifCed.SelectedItem = "Cédula";
+            }
 
             txtID.Enabled = false;
         }
@@ -42,8 +50,8 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
                 return;
             }
 
-            MiembroActual.NombreUsuario = txtNombre.Text;
-            MiembroActual.ApellidoUsuario = txtApellido.Text;
+            MiembroActual.Nombre = txtNombre.Text;
+            MiembroActual.Apellido = txtApellido.Text;
             MiembroActual.RolUsuario = cmbRolUsuario.SelectedItem?.ToString();
             MiembroActual.CifCed = txtCifCed.Text;
 
@@ -76,6 +84,11 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
         private void cmbCifCed_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

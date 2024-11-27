@@ -42,6 +42,7 @@
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
             this.lblID = new System.Windows.Forms.Label();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,11 +56,10 @@
             this.groupBox1.Controls.Add(this.lblNombre);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtNombre);
-            this.groupBox1.Controls.Add(this.btnRegistrar);
             this.groupBox1.Controls.Add(this.txtApellido);
             this.groupBox1.Controls.Add(this.txtID);
             this.groupBox1.Controls.Add(this.lblID);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(24, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(352, 256);
             this.groupBox1.TabIndex = 23;
@@ -70,23 +70,24 @@
             // 
             this.txtCifCed.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCifCed.Location = new System.Drawing.Point(87, 158);
-            this.txtCifCed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCifCed.Margin = new System.Windows.Forms.Padding(2);
             this.txtCifCed.Name = "txtCifCed";
             this.txtCifCed.Size = new System.Drawing.Size(243, 20);
-            this.txtCifCed.TabIndex = 21;
+            this.txtCifCed.TabIndex = 18;
             this.txtCifCed.TextChanged += new System.EventHandler(this.txtCifCed_TextChanged);
             // 
             // cmbCifCed
             // 
             this.cmbCifCed.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCifCed.FormattingEnabled = true;
+            this.cmbCifCed.ItemHeight = 13;
             this.cmbCifCed.Items.AddRange(new object[] {
             "CIF",
             "Cedula"});
             this.cmbCifCed.Location = new System.Drawing.Point(87, 134);
             this.cmbCifCed.Name = "cmbCifCed";
             this.cmbCifCed.Size = new System.Drawing.Size(243, 21);
-            this.cmbCifCed.TabIndex = 19;
+            this.cmbCifCed.TabIndex = 17;
             this.cmbCifCed.SelectedIndexChanged += new System.EventHandler(this.cmbCifCed_SelectedIndexChanged);
             // 
             // lblCifCed
@@ -115,6 +116,7 @@
             // 
             this.cmbRolUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbRolUsuario.FormattingEnabled = true;
+            this.cmbRolUsuario.ItemHeight = 13;
             this.cmbRolUsuario.Items.AddRange(new object[] {
             "Estudiante",
             "Colaborador",
@@ -122,7 +124,7 @@
             this.cmbRolUsuario.Location = new System.Drawing.Point(87, 181);
             this.cmbRolUsuario.Name = "cmbRolUsuario";
             this.cmbRolUsuario.Size = new System.Drawing.Size(243, 21);
-            this.cmbRolUsuario.TabIndex = 17;
+            this.cmbRolUsuario.TabIndex = 19;
             this.cmbRolUsuario.SelectedIndexChanged += new System.EventHandler(this.cmbRolUsuario_SelectedIndexChanged);
             // 
             // lblNombre
@@ -150,21 +152,21 @@
             // 
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNombre.Location = new System.Drawing.Point(87, 57);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(243, 20);
-            this.txtNombre.TabIndex = 10;
+            this.txtNombre.TabIndex = 15;
             // 
             // btnRegistrar
             // 
             this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(151)))), ((int)(((byte)(166)))));
             this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrar.Location = new System.Drawing.Point(5, 207);
-            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegistrar.Location = new System.Drawing.Point(24, 273);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(325, 34);
-            this.btnRegistrar.TabIndex = 15;
+            this.btnRegistrar.Size = new System.Drawing.Size(183, 34);
+            this.btnRegistrar.TabIndex = 20;
             this.btnRegistrar.Text = "Editar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
@@ -173,16 +175,16 @@
             // 
             this.txtApellido.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtApellido.Location = new System.Drawing.Point(87, 90);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(2);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(243, 20);
-            this.txtApellido.TabIndex = 12;
+            this.txtApellido.TabIndex = 16;
             // 
             // txtID
             // 
             this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtID.Location = new System.Drawing.Point(87, 18);
-            this.txtID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtID.Margin = new System.Windows.Forms.Padding(2);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(243, 20);
             this.txtID.TabIndex = 14;
@@ -199,12 +201,28 @@
             this.lblID.TabIndex = 13;
             this.lblID.Text = "ID:";
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(151)))), ((int)(((byte)(166)))));
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Location = new System.Drawing.Point(219, 273);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(157, 34);
+            this.btnCancelar.TabIndex = 24;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
             // FormEditarMiembro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(433, 375);
+            this.ClientSize = new System.Drawing.Size(400, 375);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.btnRegistrar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormEditarMiembro";
             this.Text = "Editar Miembros";
@@ -230,5 +248,6 @@
         private System.Windows.Forms.ComboBox cmbCifCed;
         private System.Windows.Forms.Label lblCifCed;
         private System.Windows.Forms.TextBox txtCifCed;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }
