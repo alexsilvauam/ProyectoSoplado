@@ -4,10 +4,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace ProyectoSoplado_1._0_.Formularios.Admin
 {
@@ -300,6 +303,42 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
                     e.CellStyle.BackColor = Color.Red;
                     e.CellStyle.ForeColor = Color.White;
                 }
+            }
+        }
+
+        private void btnGuardarArchivo_Click(object sender, EventArgs e)
+        {
+            string directoryPath = Path.Combine(Directory.GetCurrentDirectory(), "ArchivosBIN");
+            if (!Directory.Exists(directoryPath))
+            {
+                Directory.CreateDirectory(directoryPath);
+            }
+            string filePath = Path.Combine(directoryPath, "Usuarios.bin");
+            BinaryFormatter formatter = new BinaryFormatter();
+            using (FileStream stream = new FileStream(filePath, FileMode.Create))
+            {
+                formatter.Serialize(stream, Lmiembros);
+            }
+            MessageBox.Show("Los datos se han guardado correctamente en el archivo.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btnLeerArchivo_Click(object sender, EventArgs e)
+        {
+            string directoryPath = Path.Combine(Directory.GetCurrentDirectory(), "ArchivosBIN");
+            string filePath = Path.Combine(directoryPath, "Usuarios.bin");
+            if (File.Exists(filePath))
+            {
+                BinaryFormatter formatter = new BinaryFormatter();
+                using (FileStream stream = new FileStream(filePath, FileMode.Open))
+                {
+                    Lmiembros = (List<Miembro>)formatter.Deserialize(stream);
+                }
+                actualizarGrid();
+                MessageBox.Show("Los datos se han cargado correctamente desde el archivo.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("No se encontró el archivo de usuarios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
