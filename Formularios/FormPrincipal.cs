@@ -12,6 +12,9 @@ using ProyectoSoplado_1._0_.Formularios.Admin;
 using ProyectoSoplado_1._0_.Modelo_de_datos.Usuario;
 using ProyectoSoplado_1._0_;
 using ProyectoSoplado_1._0_.Modelo_de_datos.Pago;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
+
 
 
 
@@ -28,7 +31,9 @@ namespace ProyectoSoplado_1._0_.Formularios
 
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
-
+            cargarMiembros();
+            cargarpagos();
+            cargarAsistencia();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -86,6 +91,7 @@ namespace ProyectoSoplado_1._0_.Formularios
                 {
                     RegistroAsistencia.Add(new Asistencia(MiembroExistente.Nombre, Date_FechaActual, horaActual));
                     MessageBox.Show($"El miembro {MiembroExistente.Nombre} inició sesión a las {horaActual} del {fechaActual}", "Registro de Entrada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    GuardarAsistencia();
                     txtUsuarioLogin.Clear();
                 }
                 else
@@ -143,6 +149,7 @@ namespace ProyectoSoplado_1._0_.Formularios
                 {
                     RegistroAsistencia.Add(new Asistencia(MiembroExistente.Nombre, Date_FechaActual, horaActual));
                     MessageBox.Show($"El miembro {MiembroExistente.Nombre} inició sesión a las {horaActual} del {fechaActual}", "Registro de Entrada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    GuardarAsistencia();
                     txtQR.Clear();
                 }
                 else
@@ -180,6 +187,114 @@ namespace ProyectoSoplado_1._0_.Formularios
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+
+        }
+
+        public void GuardarAsistencia()
+        {
+            try
+            {
+                string directoryPath = Path.Combine(Directory.GetCurrentDirectory(), "ArchivosBIN");
+                if (!Directory.Exists(directoryPath))
+                {
+                    Directory.CreateDirectory(directoryPath); 
+                }
+
+                string filePath = Path.Combine(directoryPath, "Asistencia.bin");
+
+                BinaryFormatter formatter = new BinaryFormatter();
+                using (FileStream stream = new FileStream(filePath, FileMode.Create))
+                {
+                    formatter.Serialize(stream, RegistroAsistencia); 
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        public void cargarAsistencia() {
+            try
+            {
+                string directoryPath = Path.Combine(Directory.GetCurrentDirectory(), "ArchivosBIN");
+                string filePath = Path.Combine(directoryPath, "Asistencia.bin");
+
+                if (File.Exists(filePath))
+                {
+                    BinaryFormatter formatter = new BinaryFormatter();
+                    using (FileStream stream = new FileStream(filePath, FileMode.Open))
+                    {
+                       RegistroAsistencia = (List<Asistencia>)formatter.Deserialize(stream);
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró el archivo de asistencia.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void cargarMiembros()
+        {
+            try
+            {
+                string directoryPath = Path.Combine(Directory.GetCurrentDirectory(), "ArchivosBIN");
+                string filePath = Path.Combine(directoryPath, "Usuarios.bin");
+
+                if (File.Exists(filePath))
+                {
+                    BinaryFormatter formatter = new BinaryFormatter();
+                    using (FileStream stream = new FileStream(filePath, FileMode.Open))
+                    {
+                        FormAdministrarUsua.Lmiembros = (List<Miembro>)formatter.Deserialize(stream);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró el archivo de usuarios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                
+                MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+        }
+        public void cargarpagos()
+        {
+            try
+            {
+                string directoryPath = Path.Combine(Directory.GetCurrentDirectory(), "ArchivosBIN");
+                string filePath = Path.Combine(directoryPath, "Pagos.bin");
+
+                if (File.Exists(filePath))
+                {
+                    BinaryFormatter formatter = new BinaryFormatter();
+                    using (FileStream stream = new FileStream(filePath, FileMode.Open))
+                    {
+                        FormVerificacionSolvencia.RegistroPagos = (List<Pago>)formatter.Deserialize(stream);
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró el archivo de pagos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
     }

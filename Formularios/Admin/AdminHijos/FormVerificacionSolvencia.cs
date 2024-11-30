@@ -9,9 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProyectoSoplado_1._0_.Modelo_de_datos.Usuario;
-
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using ProyectoSoplado_1._0_.Formularios.Admin;
+
 
 namespace ProyectoSoplado_1._0_
 {
@@ -285,6 +287,40 @@ namespace ProyectoSoplado_1._0_
             }
         }
 
+        private void btnguardar_Click(object sender, EventArgs e)
+        {
+            try
+        {
+            // Ruta del directorio
+            string directoryPath = Path.Combine(Directory.GetCurrentDirectory(), "ArchivosBIN");
+            
+            // Verificar o crear el directorio
+            if (!Directory.Exists(directoryPath))
+            {
+                Directory.CreateDirectory(directoryPath);
+            }
+
+            // Ruta del archivo
+            string filePath = Path.Combine(directoryPath, "Pagos.bin");
+
+            // Serializar la lista de pagos
+            BinaryFormatter formatter = new BinaryFormatter();
+            using (FileStream stream = new FileStream(filePath, FileMode.Create))
+            {
+                formatter.Serialize(stream, RegistroPagos);
+            }
+
+            // Notificar éxito al usuario
+            MessageBox.Show("Los pagos se han guardado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        catch (Exception ex)
+        {
+            // Manejar errores
+            MessageBox.Show($"Ocurrió un error al guardar los pagos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
     }
-}
+
+        }
+    }
+
 

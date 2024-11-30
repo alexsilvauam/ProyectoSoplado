@@ -325,22 +325,7 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
 
         private void btnLeerArchivo_Click(object sender, EventArgs e)
         {
-            string directoryPath = Path.Combine(Directory.GetCurrentDirectory(), "ArchivosBIN");
-            string filePath = Path.Combine(directoryPath, "Usuarios.bin");
-            if (File.Exists(filePath))
-            {
-                BinaryFormatter formatter = new BinaryFormatter();
-                using (FileStream stream = new FileStream(filePath, FileMode.Open))
-                {
-                    Lmiembros = (List<Miembro>)formatter.Deserialize(stream);
-                }
-                actualizarGrid();
-                MessageBox.Show("Los datos se han cargado correctamente desde el archivo.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("No se encontró el archivo de usuarios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            
         }
     }
 }
