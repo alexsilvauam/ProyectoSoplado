@@ -3,19 +3,19 @@
   "WorkspaceRootPath": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|c:\\users\\alex\\documents\\github\\proyectosoplado-1.0-\\reportes\\reporte.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}",
-      "RelativeMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|solutionrelative:reportes\\reporte.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\formularios\\admin\\adminhijos\\formverificacionsolvencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|c:\\users\\alex\\documents\\github\\proyectosoplado-1.0-\\formularios\\admin\\adminhijos\\formverificacionsolvencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|solutionrelative:formularios\\admin\\adminhijos\\formverificacionsolvencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|c:\\users\\alex\\documents\\github\\proyectosoplado-1.0-\\formularios\\admin\\adminhijos\\formadministrarusua.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|solutionrelative:formularios\\admin\\adminhijos\\formadministrarusua.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|c:\\users\\alex\\documents\\github\\proyectosoplado-1.0-\\formularios\\admin\\adminhijos\\formverificacionsolvencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|solutionrelative:formularios\\admin\\adminhijos\\formverificacionsolvencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\formularios\\admin\\adminhijos\\formreporteasistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|c:\\users\\alex\\documents\\github\\proyectosoplado-1.0-\\formularios\\admin\\adminhijos\\formreporteasistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|solutionrelative:formularios\\admin\\adminhijos\\formreporteasistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|c:\\users\\alex\\documents\\github\\proyectosoplado-1.0-\\formularios\\admin\\adminhijos\\formreporteasistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|solutionrelative:formularios\\admin\\adminhijos\\formreporteasistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -23,28 +23,56 @@
       "RelativeMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|solutionrelative:formularios\\admin\\adminhijos\\formreportesolvencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\formularios\\admin\\adminhijos\\formverificacionsolvencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|solutionrelative:formularios\\admin\\adminhijos\\formverificacionsolvencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|c:\\users\\alex\\documents\\github\\proyectosoplado-1.0-\\formularios\\admin\\adminhijos\\formreportesolvencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|solutionrelative:formularios\\admin\\adminhijos\\formreportesolvencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|c:\\users\\alex\\documents\\github\\proyectosoplado-1.0-\\formularios\\admin\\adminhijos\\formadministrarusua.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|solutionrelative:formularios\\admin\\adminhijos\\formadministrarusua.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|c:\\users\\alex\\documents\\github\\proyectosoplado-1.0-\\formularios\\admin\\adminhijos\\formeditarmiembro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|solutionrelative:formularios\\admin\\adminhijos\\formeditarmiembro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|c:\\users\\alex\\documents\\github\\proyectosoplado-1.0-\\formularios\\admin\\adminhijos\\formadministrarusua.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|solutionrelative:formularios\\admin\\adminhijos\\formadministrarusua.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|c:\\users\\alex\\documents\\github\\proyectosoplado-1.0-\\formularios\\admin\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|solutionrelative:formularios\\admin\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|c:\\users\\alex\\documents\\github\\proyectosoplado-1.0-\\formularios\\admin\\adminhijos\\forminiciaradmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|solutionrelative:formularios\\admin\\adminhijos\\forminiciaradmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|c:\\users\\alex\\documents\\github\\proyectosoplado-1.0-\\formularios\\formprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|solutionrelative:formularios\\formprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|c:\\users\\alex\\documents\\github\\proyectosoplado-1.0-\\formularios\\admin\\adminhijos\\formeditarmiembro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|solutionrelative:formularios\\admin\\adminhijos\\formeditarmiembro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|c:\\users\\alex\\documents\\github\\proyectosoplado-1.0-\\formularios\\admin\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|solutionrelative:formularios\\admin\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|c:\\users\\alex\\documents\\github\\proyectosoplado-1.0-\\reportes\\dsasistencias.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}",
+      "RelativeMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|solutionrelative:reportes\\dsasistencias.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|c:\\users\\alex\\documents\\github\\proyectosoplado-1.0-\\reportes\\reportesasistencia.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}",
+      "RelativeMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|solutionrelative:reportes\\reportesasistencia.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|c:\\users\\alex\\documents\\github\\proyectosoplado-1.0-\\reportes\\dsasistencias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|solutionrelative:reportes\\dsasistencias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|c:\\users\\alex\\documents\\github\\proyectosoplado-1.0-\\reportes\\dsasistencias.xss||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|solutionrelative:reportes\\dsasistencias.xss||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|c:\\users\\alex\\documents\\github\\proyectosoplado-1.0-\\modelo de datos\\asistencia\\asistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|solutionrelative:modelo de datos\\asistencia\\asistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|c:\\users\\alex\\documents\\github\\proyectosoplado-1.0-\\formularios\\admin\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|solutionrelative:formularios\\admin\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|c:\\users\\alex\\documents\\github\\proyectosoplado-1.0-\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,7 +82,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 311,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -78,15 +106,49 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormReporteAsistencia.cs",
+              "DocumentMoniker": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\Formularios\\Admin\\AdminHijos\\FormReporteAsistencia.cs",
+              "RelativeDocumentMoniker": "Formularios\\Admin\\AdminHijos\\FormReporteAsistencia.cs",
+              "ToolTip": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\Formularios\\Admin\\AdminHijos\\FormReporteAsistencia.cs",
+              "RelativeToolTip": "Formularios\\Admin\\AdminHijos\\FormReporteAsistencia.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T06:14:44.118Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormVerificacionSolvencia.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\Formularios\\Admin\\AdminHijos\\FormVerificacionSolvencia.cs",
+              "RelativeDocumentMoniker": "Formularios\\Admin\\AdminHijos\\FormVerificacionSolvencia.cs",
+              "ToolTip": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\Formularios\\Admin\\AdminHijos\\FormVerificacionSolvencia.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Formularios\\Admin\\AdminHijos\\FormVerificacionSolvencia.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T05:56:16.568Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormVerificacionSolvencia.cs",
+              "DocumentMoniker": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\Formularios\\Admin\\AdminHijos\\FormVerificacionSolvencia.cs",
+              "RelativeDocumentMoniker": "Formularios\\Admin\\AdminHijos\\FormVerificacionSolvencia.cs",
+              "ToolTip": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\Formularios\\Admin\\AdminHijos\\FormVerificacionSolvencia.cs",
+              "RelativeToolTip": "Formularios\\Admin\\AdminHijos\\FormVerificacionSolvencia.cs",
+              "ViewState": "AgIAAB0BAAAAAAAAAAAcwN0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T06:03:32.525Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -97,56 +159,7 @@
               "ToolTip": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\Formularios\\Admin\\AdminHijos\\FormReporteAsistencia.cs [Dise\u00F1o]",
               "RelativeToolTip": "Formularios\\Admin\\AdminHijos\\FormReporteAsistencia.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T04:09:14.053Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FormAdministrarUsua.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\Formularios\\Admin\\AdminHijos\\FormAdministrarUsua.cs",
-              "RelativeDocumentMoniker": "Formularios\\Admin\\AdminHijos\\FormAdministrarUsua.cs",
-              "ToolTip": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\Formularios\\Admin\\AdminHijos\\FormAdministrarUsua.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Formularios\\Admin\\AdminHijos\\FormAdministrarUsua.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T05:10:55.098Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FormVerificacionSolvencia.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\Formularios\\Admin\\AdminHijos\\FormVerificacionSolvencia.cs",
-              "RelativeDocumentMoniker": "Formularios\\Admin\\AdminHijos\\FormVerificacionSolvencia.cs",
-              "ToolTip": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\Formularios\\Admin\\AdminHijos\\FormVerificacionSolvencia.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Formularios\\Admin\\AdminHijos\\FormVerificacionSolvencia.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T03:27:41.721Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FormVerificacionSolvencia.cs",
-              "DocumentMoniker": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\Formularios\\Admin\\AdminHijos\\FormVerificacionSolvencia.cs",
-              "RelativeDocumentMoniker": "Formularios\\Admin\\AdminHijos\\FormVerificacionSolvencia.cs",
-              "ToolTip": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\Formularios\\Admin\\AdminHijos\\FormVerificacionSolvencia.cs",
-              "RelativeToolTip": "Formularios\\Admin\\AdminHijos\\FormVerificacionSolvencia.cs",
-              "ViewState": "AgIAAFMBAAAAAAAAAAAawGcBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T03:28:37.556Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Reporte.rdlc [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\Reportes\\Reporte.rdlc",
-              "RelativeDocumentMoniker": "Reportes\\Reporte.rdlc",
-              "ToolTip": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\Reportes\\Reporte.rdlc [Dise\u00F1o]*",
-              "RelativeToolTip": "Reportes\\Reporte.rdlc [Dise\u00F1o]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001755|",
-              "WhenOpened": "2024-12-01T05:09:49.339Z",
+              "WhenOpened": "2024-12-01T06:14:42.545Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
@@ -158,8 +171,21 @@
               "ToolTip": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\Formularios\\Admin\\AdminHijos\\FormReporteSolvencia.cs [Dise\u00F1o]",
               "RelativeToolTip": "Formularios\\Admin\\AdminHijos\\FormReporteSolvencia.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T05:10:50.739Z",
+              "WhenOpened": "2024-12-01T07:06:16.198Z",
               "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FormReporteSolvencia.cs",
+              "DocumentMoniker": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\Formularios\\Admin\\AdminHijos\\FormReporteSolvencia.cs",
+              "RelativeDocumentMoniker": "Formularios\\Admin\\AdminHijos\\FormReporteSolvencia.cs",
+              "ToolTip": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\Formularios\\Admin\\AdminHijos\\FormReporteSolvencia.cs",
+              "RelativeToolTip": "Formularios\\Admin\\AdminHijos\\FormReporteSolvencia.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAADAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T07:44:40.487Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -169,58 +195,147 @@
               "RelativeDocumentMoniker": "Formularios\\Admin\\AdminHijos\\FormAdministrarUsua.cs",
               "ToolTip": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\Formularios\\Admin\\AdminHijos\\FormAdministrarUsua.cs",
               "RelativeToolTip": "Formularios\\Admin\\AdminHijos\\FormAdministrarUsua.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAEwDUAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T05:15:18.908Z",
+              "WhenOpened": "2024-12-01T07:13:46.086Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "FormEditarMiembro.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\Formularios\\Admin\\AdminHijos\\FormEditarMiembro.cs",
-              "RelativeDocumentMoniker": "Formularios\\Admin\\AdminHijos\\FormEditarMiembro.cs",
-              "ToolTip": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\Formularios\\Admin\\AdminHijos\\FormEditarMiembro.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Formularios\\Admin\\AdminHijos\\FormEditarMiembro.cs [Dise\u00F1o]",
+              "Title": "FormAdministrarUsua.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\Formularios\\Admin\\AdminHijos\\FormAdministrarUsua.cs",
+              "RelativeDocumentMoniker": "Formularios\\Admin\\AdminHijos\\FormAdministrarUsua.cs",
+              "ToolTip": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\Formularios\\Admin\\AdminHijos\\FormAdministrarUsua.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Formularios\\Admin\\AdminHijos\\FormAdministrarUsua.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T05:10:55.706Z",
+              "WhenOpened": "2024-12-01T06:07:42.083Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "FormIniciarAdmin.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\Formularios\\Admin\\AdminHijos\\FormIniciarAdmin.cs",
-              "RelativeDocumentMoniker": "Formularios\\Admin\\AdminHijos\\FormIniciarAdmin.cs",
-              "ToolTip": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\Formularios\\Admin\\AdminHijos\\FormIniciarAdmin.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Formularios\\Admin\\AdminHijos\\FormIniciarAdmin.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T05:10:52.4Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "FormPrincipal.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\Formularios\\FormPrincipal.cs",
-              "RelativeDocumentMoniker": "Formularios\\FormPrincipal.cs",
-              "ToolTip": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\Formularios\\FormPrincipal.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Formularios\\FormPrincipal.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T05:10:46.084Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
               "Title": "FormAdmin.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\Formularios\\Admin\\FormAdmin.cs",
               "RelativeDocumentMoniker": "Formularios\\Admin\\FormAdmin.cs",
               "ToolTip": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\Formularios\\Admin\\FormAdmin.cs [Dise\u00F1o]",
               "RelativeToolTip": "Formularios\\Admin\\FormAdmin.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T05:10:47.944Z",
+              "WhenOpened": "2024-12-01T05:59:28.357Z",
               "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FormIniciarAdmin.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\Formularios\\Admin\\AdminHijos\\FormIniciarAdmin.cs",
+              "RelativeDocumentMoniker": "Formularios\\Admin\\AdminHijos\\FormIniciarAdmin.cs",
+              "ToolTip": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\Formularios\\Admin\\AdminHijos\\FormIniciarAdmin.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Formularios\\Admin\\AdminHijos\\FormIniciarAdmin.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T07:25:50.158Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FormEditarMiembro.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\Formularios\\Admin\\AdminHijos\\FormEditarMiembro.cs",
+              "RelativeDocumentMoniker": "Formularios\\Admin\\AdminHijos\\FormEditarMiembro.cs",
+              "ToolTip": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\Formularios\\Admin\\AdminHijos\\FormEditarMiembro.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Formularios\\Admin\\AdminHijos\\FormEditarMiembro.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T07:25:34.934Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DsAsistencias.xsd",
+              "DocumentMoniker": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\Reportes\\DsAsistencias.xsd",
+              "RelativeDocumentMoniker": "Reportes\\DsAsistencias.xsd",
+              "ToolTip": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\Reportes\\DsAsistencias.xsd",
+              "RelativeToolTip": "Reportes\\DsAsistencias.xsd",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003579|",
+              "WhenOpened": "2024-12-01T06:09:58.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "DsAsistencias.xss",
+              "DocumentMoniker": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\Reportes\\DsAsistencias.xss",
+              "RelativeDocumentMoniker": "Reportes\\DsAsistencias.xss",
+              "ToolTip": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\Reportes\\DsAsistencias.xss",
+              "RelativeToolTip": "Reportes\\DsAsistencias.xss",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAQAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMqSURBVDhPjZTfS9pRFMCPvzYmCZpKLsxZLtuIYgrVSKjR9qY9j\u002Bipwj1sERTU/oGg9hL9BfnUyyxo0ct6CZQiK1YrGpT90hmU\u002BYPy5/y5c6/XppmsDxz0nnPu\u002BZ577jkX/kd3d7cqEol8RLGHw\u002BEgSuaOnKFY7Ha7EbLZLIftuxez2WwYGBh4LxKJTMfHx9KNjY0nXq\u002BXz8yUpqamPyghuVx\u002B5PP5vpYNiMEe9fT0fFIqlYMHB4e1cpkcLi8vIRwJM48ciqoq4HA4kEqnogaD4bDoa4UYjUZBc3Oz0u1212JWoNfpoaGhgVmL\u002BbW/D64jtxD/vuLmVKV4PJ5MMBjMJJMp8Pt9mJ0XcA03NzdFgseEK98V/U8om\u002BHo6GgMnZKtra2wsrICzkMnZvgCxBIx88hxdnoKWN9bfVENu7q63o2MjHxmS6irq9OIxWL17u4uzMzMQDqdBj5fwKw5YrEoSoz4wtTUVHGGCoXiqV6vf7u0tASpVAqwfqBSqQBrCZlMBgKBAPMsT0kNQ6EQLCwsgNVqpbK2tsYsD6MkIJfLhcrKSjwaH4RCIVRUVDDLwygJWIV9NTExAVqtlrQO9Pf3M8vDoDUcHx//otFontfU1Kh4PB7NUCAQ0AxxSiCRSMDQ0BD9JSUgt14I2UP8CTRgR0fHG\u002Bz2FqfTCUQIZCrI7eJ40jWhvb2dXlIhEomE6nQ6XQSX\u002B7RtbDabY3Nzs2V1dbVkAyGZTNIPjY2N0SyXl5eZBaC6ujre2NgYwH0HLpfLyseii/AiaC3xK4B9SB2jCB6F9xjx\u002B/23\u002Bs7OTnKiFGaO7RfLYjt5UG3b2dn5ZjKZvvPx2XFg7Z45HA66Ic/w8PBgW1vba7yUD0x1Cwb7cX19PdjX1xfBrBKoisbjcTp7fBz4l7Ozs9nt7W06CRaLBXp7e8ks/66vr9eSo87NzdH\u002BXFxcpA0vlUrDk5OTP9fX15NEXwg96tbWFpyfn8PFxQWQTEngPGT4SW1J7fb29uDk5ATw9cnOz8\u002BXBCPQgHhkwGyoqNVq\u002Br7lIY2dtxGRyWTMcj\u002B0bbDgZR9anGPO9PQ0W\u002BW424f/APgLhKeOqUy7wgkAAAAASUVORK5CYII=",
+              "WhenOpened": "2024-12-01T06:19:15.016Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ReportesAsistencia.rdlc [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\Reportes\\ReportesAsistencia.rdlc",
+              "RelativeDocumentMoniker": "Reportes\\ReportesAsistencia.rdlc",
+              "ToolTip": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\Reportes\\ReportesAsistencia.rdlc [Dise\u00F1o]",
+              "RelativeToolTip": "Reportes\\ReportesAsistencia.rdlc [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001755|",
+              "WhenOpened": "2024-12-01T06:21:05.76Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Asistencia.cs",
+              "DocumentMoniker": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\Modelo de datos\\Asistencia\\Asistencia.cs",
+              "RelativeDocumentMoniker": "Modelo de datos\\Asistencia\\Asistencia.cs",
+              "ToolTip": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\Modelo de datos\\Asistencia\\Asistencia.cs",
+              "RelativeToolTip": "Modelo de datos\\Asistencia\\Asistencia.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T06:16:09.42Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DsAsistencias.cs",
+              "DocumentMoniker": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\Reportes\\DsAsistencias.cs",
+              "RelativeDocumentMoniker": "Reportes\\DsAsistencias.cs",
+              "ToolTip": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\Reportes\\DsAsistencias.cs",
+              "RelativeToolTip": "Reportes\\DsAsistencias.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T06:10:04.894Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T06:00:17.045Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "FormAdmin.cs",
+              "DocumentMoniker": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\Formularios\\Admin\\FormAdmin.cs",
+              "RelativeDocumentMoniker": "Formularios\\Admin\\FormAdmin.cs",
+              "ToolTip": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\Formularios\\Admin\\FormAdmin.cs",
+              "RelativeToolTip": "Formularios\\Admin\\FormAdmin.cs",
+              "ViewState": "AgIAAHsAAAAAAAAAAAAawJYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T05:58:53.977Z",
+              "EditorCaption": ""
             }
           ]
         },

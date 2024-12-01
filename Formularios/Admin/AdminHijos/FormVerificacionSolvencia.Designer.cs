@@ -41,13 +41,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnguardar = new System.Windows.Forms.Button();
             this.txtFechaInicio = new System.Windows.Forms.TextBox();
             this.txtFechaVencimieto = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblModalidad = new System.Windows.Forms.Label();
             this.cmbModalidad = new System.Windows.Forms.ComboBox();
-            this.btnguardar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -58,9 +58,9 @@
             this.groupBox1.Controls.Add(this.btnBuscar);
             this.groupBox1.Controls.Add(this.txtIDverificar);
             this.groupBox1.Location = new System.Drawing.Point(31, 401);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(409, 188);
             this.groupBox1.TabIndex = 27;
             this.groupBox1.TabStop = false;
@@ -84,7 +84,7 @@
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.Location = new System.Drawing.Point(172, 86);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(195, 37);
             this.btnBuscar.TabIndex = 10;
@@ -96,7 +96,7 @@
             // 
             this.txtIDverificar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtIDverificar.Location = new System.Drawing.Point(172, 39);
-            this.txtIDverificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIDverificar.Margin = new System.Windows.Forms.Padding(4);
             this.txtIDverificar.Name = "txtIDverificar";
             this.txtIDverificar.Size = new System.Drawing.Size(194, 22);
             this.txtIDverificar.TabIndex = 9;
@@ -105,7 +105,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(85, 234);
+            this.label3.Location = new System.Drawing.Point(103, 234);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(117, 16);
@@ -116,7 +116,7 @@
             // 
             this.txtIdMiembro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtIdMiembro.Location = new System.Drawing.Point(209, 32);
-            this.txtIdMiembro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIdMiembro.Margin = new System.Windows.Forms.Padding(4);
             this.txtIdMiembro.Name = "txtIdMiembro";
             this.txtIdMiembro.Size = new System.Drawing.Size(200, 22);
             this.txtIdMiembro.TabIndex = 1;
@@ -128,7 +128,7 @@
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
             this.btnAgregar.Location = new System.Drawing.Point(208, 261);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(201, 38);
             this.btnAgregar.TabIndex = 7;
@@ -143,7 +143,7 @@
             this.txtmontopago.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtmontopago.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.txtmontopago.Location = new System.Drawing.Point(209, 230);
-            this.txtmontopago.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtmontopago.Margin = new System.Windows.Forms.Padding(4);
             this.txtmontopago.Name = "txtmontopago";
             this.txtmontopago.ReadOnly = true;
             this.txtmontopago.Size = new System.Drawing.Size(200, 23);
@@ -154,7 +154,7 @@
             // 
             this.txtIdpago.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtIdpago.Location = new System.Drawing.Point(209, 74);
-            this.txtIdpago.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIdpago.Margin = new System.Windows.Forms.Padding(4);
             this.txtIdpago.Name = "txtIdpago";
             this.txtIdpago.Size = new System.Drawing.Size(200, 22);
             this.txtIdpago.TabIndex = 2;
@@ -163,7 +163,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(117, 76);
+            this.label2.Location = new System.Drawing.Point(126, 76);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 16);
@@ -174,7 +174,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(87, 36);
+            this.label1.Location = new System.Drawing.Point(98, 36);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(116, 16);
@@ -198,21 +198,35 @@
             this.groupBox2.Controls.Add(this.txtIdMiembro);
             this.groupBox2.Controls.Add(this.btnAgregar);
             this.groupBox2.Location = new System.Drawing.Point(31, 15);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox2.Size = new System.Drawing.Size(435, 357);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Size = new System.Drawing.Size(462, 378);
             this.groupBox2.TabIndex = 28;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Registrar Pago";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // btnguardar
+            // 
+            this.btnguardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(150)))), ((int)(((byte)(166)))));
+            this.btnguardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btnguardar.ForeColor = System.Drawing.Color.White;
+            this.btnguardar.Location = new System.Drawing.Point(208, 307);
+            this.btnguardar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnguardar.Name = "btnguardar";
+            this.btnguardar.Size = new System.Drawing.Size(201, 37);
+            this.btnguardar.TabIndex = 8;
+            this.btnguardar.Text = "Guardar";
+            this.btnguardar.UseVisualStyleBackColor = false;
+            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
             // 
             // txtFechaInicio
             // 
             this.txtFechaInicio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFechaInicio.Enabled = false;
             this.txtFechaInicio.Location = new System.Drawing.Point(209, 150);
-            this.txtFechaInicio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFechaInicio.Margin = new System.Windows.Forms.Padding(4);
             this.txtFechaInicio.Name = "txtFechaInicio";
             this.txtFechaInicio.ReadOnly = true;
             this.txtFechaInicio.Size = new System.Drawing.Size(200, 22);
@@ -223,7 +237,7 @@
             this.txtFechaVencimieto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFechaVencimieto.Enabled = false;
             this.txtFechaVencimieto.Location = new System.Drawing.Point(209, 191);
-            this.txtFechaVencimieto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFechaVencimieto.Margin = new System.Windows.Forms.Padding(4);
             this.txtFechaVencimieto.Name = "txtFechaVencimieto";
             this.txtFechaVencimieto.ReadOnly = true;
             this.txtFechaVencimieto.Size = new System.Drawing.Size(200, 22);
@@ -234,7 +248,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(37, 194);
+            this.label6.Location = new System.Drawing.Point(64, 193);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(167, 16);
             this.label6.TabIndex = 34;
@@ -244,7 +258,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(84, 153);
+            this.label4.Location = new System.Drawing.Point(102, 153);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(118, 16);
             this.label4.TabIndex = 33;
@@ -254,7 +268,7 @@
             // 
             this.lblModalidad.AutoSize = true;
             this.lblModalidad.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblModalidad.Location = new System.Drawing.Point(118, 116);
+            this.lblModalidad.Location = new System.Drawing.Point(127, 116);
             this.lblModalidad.Name = "lblModalidad";
             this.lblModalidad.Size = new System.Drawing.Size(84, 16);
             this.lblModalidad.TabIndex = 28;
@@ -274,25 +288,11 @@
             this.cmbModalidad.TabIndex = 3;
             this.cmbModalidad.SelectedIndexChanged += new System.EventHandler(this.cmbModalidad_SelectedIndexChanged);
             // 
-            // btnguardar
-            // 
-            this.btnguardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(150)))), ((int)(((byte)(166)))));
-            this.btnguardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.btnguardar.ForeColor = System.Drawing.Color.White;
-            this.btnguardar.Location = new System.Drawing.Point(208, 307);
-            this.btnguardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnguardar.Name = "btnguardar";
-            this.btnguardar.Size = new System.Drawing.Size(201, 37);
-            this.btnguardar.TabIndex = 8;
-            this.btnguardar.Text = "Guardar";
-            this.btnguardar.UseVisualStyleBackColor = false;
-            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
-            // 
             // FormVerificacionSolvencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(876, 587);
+            this.ClientSize = new System.Drawing.Size(1590, 700);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

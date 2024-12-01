@@ -52,9 +52,9 @@
             this.gbPanelControl.Controls.Add(this.btnEliminar);
             this.gbPanelControl.Controls.Add(this.btnEditar);
             this.gbPanelControl.Location = new System.Drawing.Point(29, 404);
-            this.gbPanelControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbPanelControl.Margin = new System.Windows.Forms.Padding(4);
             this.gbPanelControl.Name = "gbPanelControl";
-            this.gbPanelControl.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbPanelControl.Padding = new System.Windows.Forms.Padding(4);
             this.gbPanelControl.Size = new System.Drawing.Size(265, 199);
             this.gbPanelControl.TabIndex = 25;
             this.gbPanelControl.TabStop = false;
@@ -133,9 +133,9 @@
             this.gbRegistro.Controls.Add(this.txtID);
             this.gbRegistro.Controls.Add(this.lblID);
             this.gbRegistro.Location = new System.Drawing.Point(3, 31);
-            this.gbRegistro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbRegistro.Margin = new System.Windows.Forms.Padding(4);
             this.gbRegistro.Name = "gbRegistro";
-            this.gbRegistro.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbRegistro.Padding = new System.Windows.Forms.Padding(4);
             this.gbRegistro.Size = new System.Drawing.Size(292, 340);
             this.gbRegistro.TabIndex = 24;
             this.gbRegistro.TabStop = false;
@@ -160,7 +160,7 @@
             "CIF",
             "Cedula"});
             this.cmbCifCed.Location = new System.Drawing.Point(109, 158);
-            this.cmbCifCed.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbCifCed.Margin = new System.Windows.Forms.Padding(4);
             this.cmbCifCed.Name = "cmbCifCed";
             this.cmbCifCed.Size = new System.Drawing.Size(175, 24);
             this.cmbCifCed.TabIndex = 4;
@@ -198,7 +198,7 @@
             "Colaborador",
             "Externo"});
             this.cmbRolUsuario.Location = new System.Drawing.Point(109, 234);
-            this.cmbRolUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbRolUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.cmbRolUsuario.Name = "cmbRolUsuario";
             this.cmbRolUsuario.Size = new System.Drawing.Size(175, 24);
             this.cmbRolUsuario.TabIndex = 6;
@@ -259,7 +259,7 @@
             // txtID
             // 
             this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtID.Location = new System.Drawing.Point(107, 23);
+            this.txtID.Location = new System.Drawing.Point(107, 25);
             this.txtID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(177, 22);
@@ -270,7 +270,7 @@
             this.lblID.AutoSize = true;
             this.lblID.Cursor = System.Windows.Forms.Cursors.Cross;
             this.lblID.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(73, 26);
+            this.lblID.Location = new System.Drawing.Point(63, 27);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(25, 16);
             this.lblID.TabIndex = 13;

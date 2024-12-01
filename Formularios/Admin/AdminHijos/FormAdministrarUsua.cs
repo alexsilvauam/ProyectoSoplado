@@ -23,9 +23,39 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
         public FormAdministrarUsua()
         {
             InitializeComponent();
+            CargarDatos();
             dgvUsuarios.CellFormatting += dgvUsuarios_CellFormatting;
 
         }
+
+        private void CargarDatos()
+        {
+            try
+            {
+                string directoryPath = Path.Combine(Directory.GetCurrentDirectory(), "ArchivosBIN");
+                string filePath = Path.Combine(directoryPath, "Usuarios.bin");
+
+                if (File.Exists(filePath))
+                {
+                    BinaryFormatter formatter = new BinaryFormatter();
+                    using (FileStream stream = new FileStream(filePath, FileMode.Open))
+                    {
+                        Lmiembros = (List<Miembro>)formatter.Deserialize(stream);
+                    }
+                    actualizarGrid();
+                    MessageBox.Show("Los datos se han cargado correctamente desde el archivo.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró el archivo de datos.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocurrió un error al cargar los datos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -74,49 +104,32 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
 
         }
 
-        public bool verificarCampos()
+        private bool verificarCampos()
         {
-            if (string.IsNullOrWhiteSpace(txtNombre.Text))
+            if (string.IsNullOrWhiteSpace(txtNombre.Text) || string.IsNullOrWhiteSpace(txtApellido.Text) ||
+                string.IsNullOrWhiteSpace(txtID.Text) || cmbRolUsuario.SelectedIndex == -1 || cmbCifCed.SelectedIndex == -1 ||
+                string.IsNullOrWhiteSpace(txtCifCed.Text))
             {
-                MessageBox.Show("El campo Nombre no puede estar vacío.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Todos los campos deben estar completos.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
-            if (string.IsNullOrWhiteSpace(txtApellido.Text))
+            if (!int.TryParse(txtID.Text, out _) || (cmbCifCed.SelectedItem.ToString() == "CIF" && txtCifCed.Text.Length != 8) ||
+                (cmbCifCed.SelectedItem.ToString() == "Cédula" && txtCifCed.Text.Length != 16))
             {
-                MessageBox.Show("El campo Apellido no puede estar vacío.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Los campos no tienen el formato correcto.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
-            if (string.IsNullOrWhiteSpace(txtID.Text))
+            foreach (Miembro e in Lmiembros)
             {
-                MessageBox.Show("El campo ID no puede estar vacío.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
+                if (Convert.ToInt16(txtID.Text) == e.IDusuario)
+                {
+                    MessageBox.Show("No puedes repetir un ID.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
             }
 
-            if (!int.TryParse(txtID.Text, out _))
-            {
-                MessageBox.Show("El campo ID debe ser un número entero.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-
-            if (cmbRolUsuario.SelectedIndex == -1)
-            {
-                MessageBox.Show("Debe seleccionar un rol de usuario.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-
-            if (cmbCifCed.SelectedIndex == -1)
-            {
-                MessageBox.Show("Debe seleccionar una opción.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-
-            if (string.IsNullOrWhiteSpace(txtCifCed.Text))
-            {
-                MessageBox.Show("El campo CIF/Cédula no puede estar vacío.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
 
             string selectedType = cmbCifCed.SelectedItem.ToString();
             int maxLength = selectedType == "CIF" ? 8 : 16;
@@ -309,6 +322,17 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
 
         private void btnGuardarArchivo_Click(object sender, EventArgs e)
         {
+           guardardatos();
+        }
+
+       
+
+        private void btnLeerArchivo_Click(object sender, EventArgs e)
+        {
+            
+        }
+        private void guardardatos()
+        {
             string directoryPath = Path.Combine(Directory.GetCurrentDirectory(), "ArchivosBIN");
             if (!Directory.Exists(directoryPath))
             {
@@ -321,11 +345,6 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
                 formatter.Serialize(stream, Lmiembros);
             }
             MessageBox.Show("Los datos se han guardado correctamente en el archivo.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void btnLeerArchivo_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }
