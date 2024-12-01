@@ -39,6 +39,8 @@
             this.lblID = new System.Windows.Forms.Label();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
             this.btnGuardarArchivo = new System.Windows.Forms.Button();
+            this.rbtnId = new System.Windows.Forms.RadioButton();
+            this.rbtnCifCed = new System.Windows.Forms.RadioButton();
             this.gbPanelControl.SuspendLayout();
             this.gbRegistro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
@@ -46,14 +48,16 @@
             // 
             // gbPanelControl
             // 
+            this.gbPanelControl.Controls.Add(this.rbtnCifCed);
+            this.gbPanelControl.Controls.Add(this.rbtnId);
             this.gbPanelControl.Controls.Add(this.btnBuscar);
             this.gbPanelControl.Controls.Add(this.lblBUsuario);
             this.gbPanelControl.Controls.Add(this.txtBusqueda);
             this.gbPanelControl.Controls.Add(this.btnEliminar);
             this.gbPanelControl.Controls.Add(this.btnEditar);
-            this.gbPanelControl.Location = new System.Drawing.Point(22, 328);
+            this.gbPanelControl.Location = new System.Drawing.Point(7, 316);
             this.gbPanelControl.Name = "gbPanelControl";
-            this.gbPanelControl.Size = new System.Drawing.Size(199, 162);
+            this.gbPanelControl.Size = new System.Drawing.Size(209, 173);
             this.gbPanelControl.TabIndex = 25;
             this.gbPanelControl.TabStop = false;
             this.gbPanelControl.Text = "Panel de control";
@@ -62,7 +66,7 @@
             // 
             this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(151)))), ((int)(((byte)(166)))));
             this.btnBuscar.ForeColor = System.Drawing.Color.Transparent;
-            this.btnBuscar.Location = new System.Drawing.Point(34, 68);
+            this.btnBuscar.Location = new System.Drawing.Point(34, 92);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(134, 29);
@@ -74,18 +78,18 @@
             // lblBUsuario
             // 
             this.lblBUsuario.AutoSize = true;
-            this.lblBUsuario.Location = new System.Drawing.Point(14, 32);
+            this.lblBUsuario.Location = new System.Drawing.Point(31, 26);
             this.lblBUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBUsuario.Name = "lblBUsuario";
-            this.lblBUsuario.Size = new System.Drawing.Size(19, 13);
+            this.lblBUsuario.Size = new System.Drawing.Size(13, 13);
             this.lblBUsuario.TabIndex = 0;
-            this.lblBUsuario.Text = "Id:";
+            this.lblBUsuario.Text = "a";
             this.lblBUsuario.Click += new System.EventHandler(this.lblBUsuario_Click_1);
             // 
             // txtBusqueda
             // 
             this.txtBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtBusqueda.Location = new System.Drawing.Point(34, 30);
+            this.txtBusqueda.Location = new System.Drawing.Point(34, 41);
             this.txtBusqueda.Margin = new System.Windows.Forms.Padding(2);
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(134, 20);
@@ -95,7 +99,7 @@
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(151)))), ((int)(((byte)(166)))));
             this.btnEliminar.ForeColor = System.Drawing.Color.Transparent;
-            this.btnEliminar.Location = new System.Drawing.Point(34, 101);
+            this.btnEliminar.Location = new System.Drawing.Point(34, 125);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(67, 28);
@@ -108,7 +112,7 @@
             // 
             this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(151)))), ((int)(((byte)(166)))));
             this.btnEditar.ForeColor = System.Drawing.Color.Transparent;
-            this.btnEditar.Location = new System.Drawing.Point(106, 101);
+            this.btnEditar.Location = new System.Drawing.Point(106, 125);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(62, 28);
@@ -306,6 +310,28 @@
             this.btnGuardarArchivo.UseVisualStyleBackColor = false;
             this.btnGuardarArchivo.Click += new System.EventHandler(this.btnGuardarArchivo_Click);
             // 
+            // rbtnId
+            // 
+            this.rbtnId.AutoSize = true;
+            this.rbtnId.Checked = true;
+            this.rbtnId.Location = new System.Drawing.Point(51, 66);
+            this.rbtnId.Name = "rbtnId";
+            this.rbtnId.Size = new System.Drawing.Size(36, 17);
+            this.rbtnId.TabIndex = 12;
+            this.rbtnId.TabStop = true;
+            this.rbtnId.Text = "ID";
+            this.rbtnId.UseVisualStyleBackColor = true;
+            // 
+            // rbtnCifCed
+            // 
+            this.rbtnCifCed.AutoSize = true;
+            this.rbtnCifCed.Location = new System.Drawing.Point(93, 66);
+            this.rbtnCifCed.Name = "rbtnCifCed";
+            this.rbtnCifCed.Size = new System.Drawing.Size(61, 17);
+            this.rbtnCifCed.TabIndex = 13;
+            this.rbtnCifCed.Text = "Cif/Ced";
+            this.rbtnCifCed.UseVisualStyleBackColor = true;
+            // 
             // FormAdministrarUsua
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -351,5 +377,7 @@
         private System.Windows.Forms.Label lblCifCed;
         private System.Windows.Forms.TextBox txtCifCed;
         private System.Windows.Forms.Button btnGuardarArchivo;
+        private System.Windows.Forms.RadioButton rbtnCifCed;
+        private System.Windows.Forms.RadioButton rbtnId;
     }
 }
