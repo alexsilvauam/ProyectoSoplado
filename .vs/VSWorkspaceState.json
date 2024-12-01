@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Formularios",
+    "\\Formularios\\Admin",
+    "\\Formularios\\Admin\\AdminHijos"
   ],
-  "SelectedNode": "\\ProyectoSoplado(2.0).sln",
+  "SelectedNode": "\\Formularios\\Admin\\AdminHijos\\FormVerificacionSolvencia.cs",
   "PreviewInSolutionExplorer": false
 }
