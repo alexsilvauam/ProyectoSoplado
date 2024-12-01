@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Formularios"
   ],
-  "SelectedNode": "\\ProyectoSoplado(2.0).sln",
+  "SelectedNode": "\\Formularios\\FormPrincipal.cs",
   "PreviewInSolutionExplorer": false
 }

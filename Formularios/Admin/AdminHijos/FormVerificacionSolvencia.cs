@@ -64,7 +64,37 @@ namespace ProyectoSoplado_1._0_
 
                 MiembroExistente.Solvencia = true;
                 limpiarCampos();
-                MessageBox.Show("Pago registrado correctamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+               
+                try
+                {
+                    // Ruta del directorio
+                    string directoryPath = Path.Combine(Directory.GetCurrentDirectory(), "ArchivosBIN");
+
+                    // Verificar o crear el directorio
+                    if (!Directory.Exists(directoryPath))
+                    {
+                        Directory.CreateDirectory(directoryPath);
+                    }
+
+                    // Ruta del archivo
+                    string filePath = Path.Combine(directoryPath, "Pagos.bin");
+
+                    // Serializar la lista de pagos
+                    BinaryFormatter formatter = new BinaryFormatter();
+                    using (FileStream stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        formatter.Serialize(stream, RegistroPagos);
+                    }
+
+                    // Notificar éxito al usuario
+                    MessageBox.Show("Los pagos se han guardado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    // Manejar errores
+                    MessageBox.Show($"Ocurrió un error al guardar los pagos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
             }
 
 
@@ -320,7 +350,16 @@ namespace ProyectoSoplado_1._0_
         }
     }
 
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
         }
+
+        private void txtFechaVencimieto_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
     }
 
 
