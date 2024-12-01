@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace ProyectoSoplado_1._0_.Modelo_de_datos.Asistencia
 {
-    [Serializable]
     public class Asistencia
     {
         public string NombreUsuario { get; set; }

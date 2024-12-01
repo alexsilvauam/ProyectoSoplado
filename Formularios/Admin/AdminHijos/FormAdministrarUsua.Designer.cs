@@ -39,6 +39,7 @@
             this.lblID = new System.Windows.Forms.Label();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
             this.btnGuardarArchivo = new System.Windows.Forms.Button();
+            this.btnLeerArchivo = new System.Windows.Forms.Button();
             this.gbPanelControl.SuspendLayout();
             this.gbRegistro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
@@ -297,7 +298,7 @@
             this.btnGuardarArchivo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(151)))), ((int)(((byte)(166)))));
             this.btnGuardarArchivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnGuardarArchivo.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarArchivo.Location = new System.Drawing.Point(400, 429);
+            this.btnGuardarArchivo.Location = new System.Drawing.Point(383, 429);
             this.btnGuardarArchivo.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardarArchivo.Name = "btnGuardarArchivo";
             this.btnGuardarArchivo.Size = new System.Drawing.Size(201, 31);
@@ -306,11 +307,26 @@
             this.btnGuardarArchivo.UseVisualStyleBackColor = false;
             this.btnGuardarArchivo.Click += new System.EventHandler(this.btnGuardarArchivo_Click);
             // 
+            // btnLeerArchivo
+            // 
+            this.btnLeerArchivo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(151)))), ((int)(((byte)(166)))));
+            this.btnLeerArchivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btnLeerArchivo.ForeColor = System.Drawing.Color.White;
+            this.btnLeerArchivo.Location = new System.Drawing.Point(588, 429);
+            this.btnLeerArchivo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLeerArchivo.Name = "btnLeerArchivo";
+            this.btnLeerArchivo.Size = new System.Drawing.Size(201, 31);
+            this.btnLeerArchivo.TabIndex = 26;
+            this.btnLeerArchivo.Text = "Cargar";
+            this.btnLeerArchivo.UseVisualStyleBackColor = false;
+            this.btnLeerArchivo.Click += new System.EventHandler(this.btnLeerArchivo_Click);
+            // 
             // FormAdministrarUsua
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(919, 516);
+            this.Controls.Add(this.btnLeerArchivo);
             this.Controls.Add(this.btnGuardarArchivo);
             this.Controls.Add(this.gbPanelControl);
             this.Controls.Add(this.gbRegistro);
@@ -351,5 +367,6 @@
         private System.Windows.Forms.Label lblCifCed;
         private System.Windows.Forms.TextBox txtCifCed;
         private System.Windows.Forms.Button btnGuardarArchivo;
+        private System.Windows.Forms.Button btnLeerArchivo;
     }
 }

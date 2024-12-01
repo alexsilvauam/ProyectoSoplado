@@ -41,13 +41,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtFechaInicio = new System.Windows.Forms.TextBox();
-            this.txtFechaVencimieto = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.lblModalidad = new System.Windows.Forms.Label();
             this.cmbModalidad = new System.Windows.Forms.ComboBox();
-            this.btnguardar = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtFechaVencimieto = new System.Windows.Forms.TextBox();
+            this.txtFechaInicio = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -191,48 +190,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Registrar Pago";
             // 
-            // txtFechaInicio
-            // 
-            this.txtFechaInicio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtFechaInicio.Enabled = false;
-            this.txtFechaInicio.Location = new System.Drawing.Point(155, 122);
-            this.txtFechaInicio.Name = "txtFechaInicio";
-            this.txtFechaInicio.ReadOnly = true;
-            this.txtFechaInicio.Size = new System.Drawing.Size(152, 20);
-            this.txtFechaInicio.TabIndex = 37;
-            // 
-            // txtFechaVencimieto
-            // 
-            this.txtFechaVencimieto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtFechaVencimieto.Enabled = false;
-            this.txtFechaVencimieto.Location = new System.Drawing.Point(155, 155);
-            this.txtFechaVencimieto.Name = "txtFechaVencimieto";
-            this.txtFechaVencimieto.ReadOnly = true;
-            this.txtFechaVencimieto.Size = new System.Drawing.Size(152, 20);
-            this.txtFechaVencimieto.TabIndex = 36;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(5, 155);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(130, 14);
-            this.label6.TabIndex = 34;
-            this.label6.Text = "Fecha de vencimiento:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(45, 124);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 14);
-            this.label4.TabIndex = 33;
-            this.label4.Text = "Fecha de inicio:";
-            // 
             // lblModalidad
             // 
             this.lblModalidad.AutoSize = true;
@@ -258,25 +215,53 @@
             this.cmbModalidad.TabIndex = 3;
             this.cmbModalidad.SelectedIndexChanged += new System.EventHandler(this.cmbModalidad_SelectedIndexChanged);
             // 
-            // btnguardar
+            // label4
             // 
-            this.btnguardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(150)))), ((int)(((byte)(166)))));
-            this.btnguardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.btnguardar.ForeColor = System.Drawing.Color.White;
-            this.btnguardar.Location = new System.Drawing.Point(408, 396);
-            this.btnguardar.Name = "btnguardar";
-            this.btnguardar.Size = new System.Drawing.Size(146, 30);
-            this.btnguardar.TabIndex = 11;
-            this.btnguardar.Text = "Guardar";
-            this.btnguardar.UseVisualStyleBackColor = false;
-            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(45, 124);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(91, 14);
+            this.label4.TabIndex = 33;
+            this.label4.Text = "Fecha de inicio:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(5, 155);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(130, 14);
+            this.label6.TabIndex = 34;
+            this.label6.Text = "Fecha de vencimiento:";
+            // 
+            // txtFechaVencimieto
+            // 
+            this.txtFechaVencimieto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtFechaVencimieto.Enabled = false;
+            this.txtFechaVencimieto.Location = new System.Drawing.Point(155, 155);
+            this.txtFechaVencimieto.Name = "txtFechaVencimieto";
+            this.txtFechaVencimieto.ReadOnly = true;
+            this.txtFechaVencimieto.Size = new System.Drawing.Size(152, 20);
+            this.txtFechaVencimieto.TabIndex = 36;
+            // 
+            // txtFechaInicio
+            // 
+            this.txtFechaInicio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtFechaInicio.Enabled = false;
+            this.txtFechaInicio.Location = new System.Drawing.Point(155, 122);
+            this.txtFechaInicio.Name = "txtFechaInicio";
+            this.txtFechaInicio.ReadOnly = true;
+            this.txtFechaInicio.Size = new System.Drawing.Size(152, 20);
+            this.txtFechaInicio.TabIndex = 37;
             // 
             // FormVerificacionSolvencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(657, 477);
-            this.Controls.Add(this.btnguardar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -312,6 +297,5 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtFechaVencimieto;
         private System.Windows.Forms.TextBox txtFechaInicio;
-        private System.Windows.Forms.Button btnguardar;
     }
 }

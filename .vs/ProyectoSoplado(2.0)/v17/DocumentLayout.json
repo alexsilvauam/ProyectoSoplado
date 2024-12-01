@@ -1,5 +1,6 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "WorkspaceRootPath": "C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\",
   "Documents": [
     {
@@ -45,6 +46,13 @@
     {
       "AbsoluteMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|C:\\Users\\Alex\\Documents\\GitHub\\ProyectoSoplado-1.0-\\formularios\\admin\\adminhijos\\formadministrarusua.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|solutionrelative:formularios\\admin\\adminhijos\\formadministrarusua.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+=======
+  "WorkspaceRootPath": "C:\\Users\\asus\\Documents\\GitHub\\ProyectoSoplado\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|c:\\users\\asus\\documents\\github\\proyectosoplado\\reporte.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}",
+      "RelativeMoniker": "D:0:0:{469D2D10-16C6-485A-961D-F46CCE4C0DF8}|ProyectoSoplado(2.0).csproj|solutionrelative:reporte.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}"
+>>>>>>> parent of 0130ebc (Archivos binarios completos)
     }
   ],
   "DocumentGroupContainers": [
@@ -54,6 +62,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 311,
+<<<<<<< HEAD
           "SelectedChildIndex": 11,
           "Children": [
             {
@@ -235,6 +244,21 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+=======
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Reporte.rdlc [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\asus\\Documents\\GitHub\\ProyectoSoplado\\Reporte.rdlc",
+              "RelativeDocumentMoniker": "Reporte.rdlc",
+              "ToolTip": "C:\\Users\\asus\\Documents\\GitHub\\ProyectoSoplado\\Reporte.rdlc [Dise\u00F1o]",
+              "RelativeToolTip": "Reporte.rdlc [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001755|",
+              "WhenOpened": "2024-11-29T05:21:22.707Z",
+              "EditorCaption": " [Dise\u00F1o]"
+>>>>>>> parent of 0130ebc (Archivos binarios completos)
             }
           ]
         }
