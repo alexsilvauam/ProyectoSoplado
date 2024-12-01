@@ -40,7 +40,7 @@
             this.dgvRegistroPagos.Location = new System.Drawing.Point(151, 64);
             this.dgvRegistroPagos.Name = "dgvRegistroPagos";
             this.dgvRegistroPagos.RowHeadersWidth = 51;
-            this.dgvRegistroPagos.Size = new System.Drawing.Size(429, 384);
+            this.dgvRegistroPagos.Size = new System.Drawing.Size(376, 384);
             this.dgvRegistroPagos.TabIndex = 16;
             this.dgvRegistroPagos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 

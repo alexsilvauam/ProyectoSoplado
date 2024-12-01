@@ -20,12 +20,44 @@ namespace ProyectoSoplado_1._0_
     public partial class FormVerificacionSolvencia : Form
     {
         public static List<Pago> RegistroPagos = new List<Pago>();
+        Miembro MiembroExistente;
 
         public FormVerificacionSolvencia()
         {
             InitializeComponent();
         }
 
+        public Miembro buscarMiembro()
+        {
+            if (rbtnCifCed.Checked)
+            {
+                string cifced = txtBuscarMiembro.Text;
+                Miembro Miembro = FormAdministrarUsua.Lmiembros.FirstOrDefault(x => x.CifCed == cifced);
+                return Miembro;
+            }
+            else
+            {
+                int id = int.Parse(txtBuscarMiembro.Text);
+                Miembro Miembro = FormAdministrarUsua.Lmiembros.FirstOrDefault(x => x.IDusuario == id);
+                return Miembro;
+            }
+        }
+
+        public Miembro buscarVerificarMiembro()
+        {
+            if (rbtnVerificarCifCed.Checked)
+            {
+                string cifced = txtverificar.Text;
+                Miembro Miembro = FormAdministrarUsua.Lmiembros.FirstOrDefault(x => x.CifCed == cifced);
+                return Miembro;
+            }
+            else
+            {
+                int id = int.Parse(txtverificar.Text);
+                Miembro Miembro = FormAdministrarUsua.Lmiembros.FirstOrDefault(x => x.IDusuario == id);
+                return Miembro;
+            }
+        }
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             if (!VerificarCampos())
@@ -33,26 +65,28 @@ namespace ProyectoSoplado_1._0_
                 return;
             }
 
-            int Idmiembro = int.Parse(txtIdMiembro.Text);
-            int idpago = int.Parse(txtIdpago.Text);
-            DateTime Date_FechaActual = DateTime.Now.Date;
-            double montoPago = double.Parse(txtmontopago.Text);
+            
 
 
 
 
-            Miembro MiembroExistente = FormAdministrarUsua.Lmiembros.FirstOrDefault(x => x.IDusuario == int.Parse(txtIdMiembro.Text));
+            MiembroExistente = buscarMiembro();
             if (MiembroExistente == null)
             {
-                MessageBox.Show($"No existe un miembro con el id {txtIdMiembro.Text}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"No existe un miembro con el id {txtBuscarMiembro.Text}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
 
             }
             else
             {
                 Pago pago = new Pago();
+                
+                int Idmiembro = int.Parse(txtBuscarMiembro.Text);
+                int idpago = int.Parse(txtIdpago.Text);
+                DateTime Date_FechaActual = DateTime.Now.Date;
+                double montoPago = double.Parse(txtmontopago.Text);
 
-                pago.idMiembro = Idmiembro;
+                
                 pago.id_pago = idpago;
                 pago.fecha_pago = Date_FechaActual;
                 pago.Fecha_Vencimiento = AsignarFecha();
@@ -71,9 +105,9 @@ namespace ProyectoSoplado_1._0_
         }
         public bool VerificarCampos()
         {
-            if (string.IsNullOrWhiteSpace(txtIdMiembro.Text))
+            if (string.IsNullOrWhiteSpace(txtBuscarMiembro.Text))
             {
-                MessageBox.Show("El campo Id Miembro no puede estar vacío.", "Completa el campo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("El campo Buscar Miembro no puede estar vacío.", "Completa el campo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
 
@@ -90,10 +124,13 @@ namespace ProyectoSoplado_1._0_
                 return false;
             }
 
-            if (!int.TryParse(txtIdMiembro.Text, out int _))
+            if (rbtnID.Checked)
             {
-                MessageBox.Show("El campo Id Miembro tiene que ser un número entero.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
+                if (!int.TryParse(txtBuscarMiembro.Text, out int _))
+                {
+                    MessageBox.Show("El Id de Miembro tiene que ser un número entero.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
             }
 
             if (!int.TryParse(txtIdpago.Text, out int _))
@@ -123,7 +160,7 @@ namespace ProyectoSoplado_1._0_
 
         public void limpiarCampos()
         {
-            txtIdMiembro.Clear();
+            txtBuscarMiembro.Clear();
             txtIdpago.Clear();
             txtmontopago.Clear();
             cmbModalidad.SelectedIndex = -1;
@@ -134,55 +171,52 @@ namespace ProyectoSoplado_1._0_
 
 
 
-        public bool verificarId()
+        public bool verificar()
         {
-            if (string.IsNullOrWhiteSpace(txtIDverificar.Text))
+            if (string.IsNullOrWhiteSpace(txtverificar.Text))
             {
-                MessageBox.Show("El campo Id Miembro no puede estar vacío.", "Completa el campo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("El campo de buscar miembro no puede estar vacío.", "Completa el campo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
 
             }
-            if (!int.TryParse(txtIDverificar.Text, out int _))
+            if (rbtnVerificarID.Checked)
             {
-                MessageBox.Show("El campo Id tiene que ser un número entero.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
+                if (!int.TryParse(txtverificar.Text, out int _))
+                {
+                    MessageBox.Show("El  Id tiene que ser un número entero.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
             }
-            Miembro MiembroExistente = FormAdministrarUsua.Lmiembros.FirstOrDefault(x => x.IDusuario == int.Parse(txtIDverificar.Text));
-            if (MiembroExistente == null)
-            {
-                MessageBox.Show($"No existe un miembro con el id {txtIDverificar.Text}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-
-            }
+       
             return true;
 
         }
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            if (!verificarId())
+            if (!verificar())
             {
                 return;
             }
 
-            int ID = int.Parse(txtIDverificar.Text);
-            Miembro miembroExistente = FormAdministrarUsua.Lmiembros.FirstOrDefault(x => x.IDusuario == ID);
+            int ID = int.Parse(txtverificar.Text);
+            MiembroExistente = buscarVerificarMiembro();
 
-            if (miembroExistente != null)
+            if (MiembroExistente != null)
             {
-                Pago pago = RegistroPagos.Find(item => item.idMiembro == ID);
-                if (pago != null)
+                
+                if (MiembroExistente.Solvencia)
                 {
-                    MessageBox.Show($"El miembro {miembroExistente.Nombre} ya ha realizado el pago.", "Información de pago", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtIDverificar.Clear();
+                    MessageBox.Show($"El miembro {MiembroExistente.Nombre} {MiembroExistente.Apellido} ya ha realizado el pago.", "Información de pago", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtverificar.Clear();
                 }
                 else
                 {
-                    MessageBox.Show($"El miembro {miembroExistente.Nombre} no ha realizado el pago.", "Información de pago", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"El miembro {MiembroExistente.Nombre} {MiembroExistente.Apellido} no ha realizado el pago.", "Información de pago", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show($"No existe un miembro con el id {ID}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"No existe un miembro con la busqueda {ID}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -231,21 +265,21 @@ namespace ProyectoSoplado_1._0_
         }
         private void txtIdMiembro_TextChanged(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtIdMiembro.Text))
+            if (string.IsNullOrWhiteSpace(txtBuscarMiembro.Text))
             {
                 return;
             }
 
-            if (!int.TryParse(txtIdMiembro.Text, out int id))
-            {
-                MessageBox.Show("El campo Id Miembro tiene que ser un número entero.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+            //if (!int.TryParse(txtBuscarMiembro.Text, out int id))
+          //  {
+            //    MessageBox.Show("El campo Id Miembro tiene que ser un número entero.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+             //   return;
+            //}
 
-            Miembro miembroExistente = FormAdministrarUsua.Lmiembros.FirstOrDefault(x => x.IDusuario == id);
-            if (miembroExistente != null)
+            MiembroExistente = buscarMiembro();
+            if (MiembroExistente != null)
             {
-                string rolUsuario = miembroExistente.RolUsuario;
+                string rolUsuario = MiembroExistente.RolUsuario;
                 asignarMonto(rolUsuario, cmbModalidad.SelectedItem?.ToString());
             }
             else
@@ -256,15 +290,15 @@ namespace ProyectoSoplado_1._0_
 
         private void cmbModalidad_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtIdMiembro.Text) || !int.TryParse(txtIdMiembro.Text, out int id))
+            if (string.IsNullOrWhiteSpace(txtBuscarMiembro.Text))
             {
                 return;
             }
 
-            Miembro miembroExistente = FormAdministrarUsua.Lmiembros.FirstOrDefault(x => x.IDusuario == id);
-            if (miembroExistente != null)
+           
+            if (MiembroExistente != null)
             {
-                string rolUsuario = miembroExistente.RolUsuario;
+                string rolUsuario = MiembroExistente.RolUsuario;
                 asignarMonto(rolUsuario, cmbModalidad.SelectedItem?.ToString());
 
 

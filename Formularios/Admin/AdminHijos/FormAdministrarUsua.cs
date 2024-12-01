@@ -179,14 +179,7 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
             {
                 return;
             }
-            if (rbtnId.Checked)
-            {
-                MiembroExistente = buscarxid();
-            }
-            else
-            {
-                MiembroExistente = buscarXcifced();
-            }
+            MiembroExistente = buscarMiembro();
 
             string BuscarId = txtBusqueda.Text;
 
@@ -211,15 +204,8 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
             {
                 return;
             }
-            
-            if (rbtnId.Checked)
-            {
-                MiembroExistente = buscarxid();
-            }
-            else
-            {
-                MiembroExistente = buscarXcifced();
-            }
+
+            MiembroExistente = buscarMiembro();
 
            string BuscarId = txtBusqueda.Text;
 
@@ -242,21 +228,23 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
             }
 
         }
-        public Miembro buscarxid()
+        
+      
+
+        public Miembro buscarMiembro()
         {
-            int id = int.Parse(txtBusqueda.Text);
-            Miembro Miembro = Lmiembros.FirstOrDefault(x => x.IDusuario == id);
-            return Miembro;
-
-
-        }
-        public Miembro buscarXcifced()
-        {
-            string cifced = txtBusqueda.Text;
-            Miembro Miembro = Lmiembros.FirstOrDefault(x => x.CifCed == cifced);
-            return Miembro;
-
-
+            if (rbtnCifCed.Checked)
+            {
+                string cifced = txtBusqueda.Text;
+                Miembro Miembro = Lmiembros.FirstOrDefault(x => x.CifCed == cifced);
+                return Miembro;
+            }
+            else
+            {
+                int id = int.Parse(txtBusqueda.Text);
+                Miembro Miembro = Lmiembros.FirstOrDefault(x => x.IDusuario == id);
+                return Miembro;
+            }
         }
 
 
@@ -267,15 +255,8 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
                 return;
             }
             string searchText = txtBusqueda.Text;
-            
-            if (rbtnId.Checked)
-            {
-                MiembroExistente = buscarxid();
-            }
-            else
-            {
-                MiembroExistente = buscarXcifced();
-            }
+
+            MiembroExistente = buscarMiembro();
             if (MiembroExistente != null)
             {
                 MessageBox.Show($"Se encontró el miembro con la busqueda {searchText}", "Busqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -283,7 +264,7 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
             }
             else
             {
-                MessageBox.Show($"El no se encontro el miembro con la busqueda {searchText}.", "Búsqueda", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"No se encontro el miembro con la busqueda {searchText}.", "Búsqueda", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -9,7 +9,7 @@ namespace ProyectoSoplado_1._0_.Modelo_de_datos.Pago
     [Serializable]
     public class Pago
     {
-        public int idMiembro { get; set; }
+        
         public int id_pago { get; set; }
         public DateTime fecha_pago { get; set; }
         public DateTime Fecha_Vencimiento { get; set; }

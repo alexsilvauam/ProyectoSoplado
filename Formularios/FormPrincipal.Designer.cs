@@ -217,9 +217,9 @@
             this.lblIngrese.Location = new System.Drawing.Point(180, 82);
             this.lblIngrese.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblIngrese.Name = "lblIngrese";
-            this.lblIngrese.Size = new System.Drawing.Size(123, 15);
+            this.lblIngrese.Size = new System.Drawing.Size(118, 15);
             this.lblIngrese.TabIndex = 1;
-            this.lblIngrese.Text = "Ingrese su identificación.";
+            this.lblIngrese.Text = "Ingrese su Cif o Cedula:";
             this.lblIngrese.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel1

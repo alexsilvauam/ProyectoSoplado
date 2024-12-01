@@ -87,16 +87,18 @@ namespace ProyectoSoplado_1._0_.Formularios
                 Miembro MiembroExistente = FormAdministrarUsua.Lmiembros.FirstOrDefault(x => x.CifCed == usuario);
             if (MiembroExistente != null)
             {
-                if(MiembroExistente.Solvencia)
+                string Nombreusuario = MiembroExistente.Nombre + " " + MiembroExistente.Apellido;
+
+                if (MiembroExistente.Solvencia)
                 {
-                    RegistroAsistencia.Add(new Asistencia(MiembroExistente.Nombre, Date_FechaActual, horaActual));
-                    MessageBox.Show($"El miembro {MiembroExistente.Nombre} inició sesión a las {horaActual} del {fechaActual}", "Registro de Entrada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    RegistroAsistencia.Add(new Asistencia(Nombreusuario, Date_FechaActual, horaActual));
+                    MessageBox.Show($"El miembro {Nombreusuario} inició sesión a las {horaActual} del {fechaActual}", "Registro de Entrada", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     GuardarAsistencia();
                     txtUsuarioLogin.Clear();
                 }
                 else
                 {
-                    MessageBox.Show($"El miembro {MiembroExistente.Nombre} no esta solvente", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"El miembro {Nombreusuario} no esta solvente", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
 
@@ -145,16 +147,18 @@ namespace ProyectoSoplado_1._0_.Formularios
             Miembro MiembroExistente = FormAdministrarUsua.Lmiembros.FirstOrDefault(x => x.CodigoQR == QR);
             if (MiembroExistente != null)
             {
+                string usuario = MiembroExistente.Nombre + " " + MiembroExistente.Apellido;
+
                 if (MiembroExistente.Solvencia)
                 {
-                    RegistroAsistencia.Add(new Asistencia(MiembroExistente.Nombre, Date_FechaActual, horaActual));
-                    MessageBox.Show($"El miembro {MiembroExistente.Nombre} inició sesión a las {horaActual} del {fechaActual}", "Registro de Entrada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    RegistroAsistencia.Add(new Asistencia(usuario, Date_FechaActual, horaActual));
+                    MessageBox.Show($"El miembro {usuario} inició sesión a las {horaActual} del {fechaActual}", "Registro de Entrada", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     GuardarAsistencia();
                     txtQR.Clear();
                 }
                 else
                 {
-                    MessageBox.Show($"El miembro {MiembroExistente.Nombre} no esta solvente", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"El miembro {usuario} {MiembroExistente.Apellido} no esta solvente", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
 
