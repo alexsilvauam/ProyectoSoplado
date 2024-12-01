@@ -12,6 +12,9 @@ using ProyectoSoplado_1._0_.Formularios.Admin;
 using ProyectoSoplado_1._0_.Modelo_de_datos.Usuario;
 using ProyectoSoplado_1._0_;
 using ProyectoSoplado_1._0_.Modelo_de_datos.Pago;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
+
 
 
 
@@ -28,7 +31,9 @@ namespace ProyectoSoplado_1._0_.Formularios
 
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
-
+            cargarMiembros();
+            cargarpagos();
+            cargarAsistencia();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -86,6 +91,7 @@ namespace ProyectoSoplado_1._0_.Formularios
                 {
                     RegistroAsistencia.Add(new Asistencia(MiembroExistente.Nombre, Date_FechaActual, horaActual));
                     MessageBox.Show($"El miembro {MiembroExistente.Nombre} inició sesión a las {horaActual} del {fechaActual}", "Registro de Entrada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    GuardarAsistencia();
                     txtUsuarioLogin.Clear();
                 }
                 else
@@ -143,6 +149,7 @@ namespace ProyectoSoplado_1._0_.Formularios
                 {
                     RegistroAsistencia.Add(new Asistencia(MiembroExistente.Nombre, Date_FechaActual, horaActual));
                     MessageBox.Show($"El miembro {MiembroExistente.Nombre} inició sesión a las {horaActual} del {fechaActual}", "Registro de Entrada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    GuardarAsistencia();
                     txtQR.Clear();
                 }
                 else
@@ -182,7 +189,6 @@ namespace ProyectoSoplado_1._0_.Formularios
         {
 
         }
-<<<<<<< HEAD
 
         public void GuardarAsistencia()
         {
@@ -278,6 +284,7 @@ namespace ProyectoSoplado_1._0_.Formularios
                     {
                         FormVerificacionSolvencia.RegistroPagos = (List<Pago>)formatter.Deserialize(stream);
                     }
+
                 }
                 else
                 {
@@ -290,7 +297,5 @@ namespace ProyectoSoplado_1._0_.Formularios
             }
 
         }
-=======
->>>>>>> parent of 0130ebc (Archivos binarios completos)
     }
 }
