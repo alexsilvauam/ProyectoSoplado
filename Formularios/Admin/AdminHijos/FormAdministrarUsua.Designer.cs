@@ -51,11 +51,9 @@
             this.gbPanelControl.Controls.Add(this.txtBusqueda);
             this.gbPanelControl.Controls.Add(this.btnEliminar);
             this.gbPanelControl.Controls.Add(this.btnEditar);
-            this.gbPanelControl.Location = new System.Drawing.Point(29, 404);
-            this.gbPanelControl.Margin = new System.Windows.Forms.Padding(4);
+            this.gbPanelControl.Location = new System.Drawing.Point(22, 328);
             this.gbPanelControl.Name = "gbPanelControl";
-            this.gbPanelControl.Padding = new System.Windows.Forms.Padding(4);
-            this.gbPanelControl.Size = new System.Drawing.Size(265, 199);
+            this.gbPanelControl.Size = new System.Drawing.Size(199, 162);
             this.gbPanelControl.TabIndex = 25;
             this.gbPanelControl.TabStop = false;
             this.gbPanelControl.Text = "Panel de control";
@@ -64,10 +62,10 @@
             // 
             this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(151)))), ((int)(((byte)(166)))));
             this.btnBuscar.ForeColor = System.Drawing.Color.Transparent;
-            this.btnBuscar.Location = new System.Drawing.Point(45, 84);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBuscar.Location = new System.Drawing.Point(34, 68);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(179, 36);
+            this.btnBuscar.Size = new System.Drawing.Size(134, 29);
             this.btnBuscar.TabIndex = 9;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -76,30 +74,31 @@
             // lblBUsuario
             // 
             this.lblBUsuario.AutoSize = true;
-            this.lblBUsuario.Location = new System.Drawing.Point(19, 39);
+            this.lblBUsuario.Location = new System.Drawing.Point(14, 32);
+            this.lblBUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBUsuario.Name = "lblBUsuario";
-            this.lblBUsuario.Size = new System.Drawing.Size(23, 16);
+            this.lblBUsuario.Size = new System.Drawing.Size(19, 13);
             this.lblBUsuario.TabIndex = 0;
-            this.lblBUsuario.Text = "ID:";
+            this.lblBUsuario.Text = "Id:";
             this.lblBUsuario.Click += new System.EventHandler(this.lblBUsuario_Click_1);
             // 
             // txtBusqueda
             // 
             this.txtBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtBusqueda.Location = new System.Drawing.Point(45, 37);
-            this.txtBusqueda.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBusqueda.Location = new System.Drawing.Point(34, 30);
+            this.txtBusqueda.Margin = new System.Windows.Forms.Padding(2);
             this.txtBusqueda.Name = "txtBusqueda";
-            this.txtBusqueda.Size = new System.Drawing.Size(178, 22);
+            this.txtBusqueda.Size = new System.Drawing.Size(134, 20);
             this.txtBusqueda.TabIndex = 8;
             // 
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(151)))), ((int)(((byte)(166)))));
             this.btnEliminar.ForeColor = System.Drawing.Color.Transparent;
-            this.btnEliminar.Location = new System.Drawing.Point(45, 124);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEliminar.Location = new System.Drawing.Point(34, 101);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(89, 34);
+            this.btnEliminar.Size = new System.Drawing.Size(67, 28);
             this.btnEliminar.TabIndex = 10;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -109,10 +108,10 @@
             // 
             this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(151)))), ((int)(((byte)(166)))));
             this.btnEditar.ForeColor = System.Drawing.Color.Transparent;
-            this.btnEditar.Location = new System.Drawing.Point(141, 124);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEditar.Location = new System.Drawing.Point(106, 101);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(83, 34);
+            this.btnEditar.Size = new System.Drawing.Size(62, 28);
             this.btnEditar.TabIndex = 11;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
@@ -132,11 +131,9 @@
             this.gbRegistro.Controls.Add(this.txtApellido);
             this.gbRegistro.Controls.Add(this.txtID);
             this.gbRegistro.Controls.Add(this.lblID);
-            this.gbRegistro.Location = new System.Drawing.Point(3, 31);
-            this.gbRegistro.Margin = new System.Windows.Forms.Padding(4);
+            this.gbRegistro.Location = new System.Drawing.Point(2, 25);
             this.gbRegistro.Name = "gbRegistro";
-            this.gbRegistro.Padding = new System.Windows.Forms.Padding(4);
-            this.gbRegistro.Size = new System.Drawing.Size(292, 340);
+            this.gbRegistro.Size = new System.Drawing.Size(219, 276);
             this.gbRegistro.TabIndex = 24;
             this.gbRegistro.TabStop = false;
             this.gbRegistro.Text = "Registro";
@@ -145,10 +142,10 @@
             // txtCifCed
             // 
             this.txtCifCed.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCifCed.Location = new System.Drawing.Point(109, 203);
-            this.txtCifCed.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCifCed.Location = new System.Drawing.Point(82, 165);
+            this.txtCifCed.Margin = new System.Windows.Forms.Padding(2);
             this.txtCifCed.Name = "txtCifCed";
-            this.txtCifCed.Size = new System.Drawing.Size(174, 22);
+            this.txtCifCed.Size = new System.Drawing.Size(131, 20);
             this.txtCifCed.TabIndex = 5;
             this.txtCifCed.TextChanged += new System.EventHandler(this.txtCifCed_TextChanged);
             // 
@@ -159,10 +156,9 @@
             this.cmbCifCed.Items.AddRange(new object[] {
             "CIF",
             "Cedula"});
-            this.cmbCifCed.Location = new System.Drawing.Point(109, 158);
-            this.cmbCifCed.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbCifCed.Location = new System.Drawing.Point(82, 128);
             this.cmbCifCed.Name = "cmbCifCed";
-            this.cmbCifCed.Size = new System.Drawing.Size(175, 24);
+            this.cmbCifCed.Size = new System.Drawing.Size(132, 21);
             this.cmbCifCed.TabIndex = 4;
             this.cmbCifCed.SelectedIndexChanged += new System.EventHandler(this.cmbCifCed_SelectedIndexChanged);
             // 
@@ -170,10 +166,9 @@
             // 
             this.lblCifCed.AutoSize = true;
             this.lblCifCed.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCifCed.Location = new System.Drawing.Point(16, 161);
-            this.lblCifCed.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCifCed.Location = new System.Drawing.Point(12, 131);
             this.lblCifCed.Name = "lblCifCed";
-            this.lblCifCed.Size = new System.Drawing.Size(87, 16);
+            this.lblCifCed.Size = new System.Drawing.Size(68, 14);
             this.lblCifCed.TabIndex = 18;
             this.lblCifCed.Text = "CIF/Cedula:";
             this.lblCifCed.Click += new System.EventHandler(this.label1_Click);
@@ -183,9 +178,10 @@
             this.lblApellido.AutoSize = true;
             this.lblApellido.Cursor = System.Windows.Forms.Cursors.Cross;
             this.lblApellido.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellido.Location = new System.Drawing.Point(29, 114);
+            this.lblApellido.Location = new System.Drawing.Point(22, 93);
+            this.lblApellido.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(68, 16);
+            this.lblApellido.Size = new System.Drawing.Size(55, 14);
             this.lblApellido.TabIndex = 11;
             this.lblApellido.Text = "Apellido:";
             // 
@@ -197,19 +193,19 @@
             "Estudiante",
             "Colaborador",
             "Externo"});
-            this.cmbRolUsuario.Location = new System.Drawing.Point(109, 234);
-            this.cmbRolUsuario.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbRolUsuario.Location = new System.Drawing.Point(82, 190);
             this.cmbRolUsuario.Name = "cmbRolUsuario";
-            this.cmbRolUsuario.Size = new System.Drawing.Size(175, 24);
+            this.cmbRolUsuario.Size = new System.Drawing.Size(132, 21);
             this.cmbRolUsuario.TabIndex = 6;
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(29, 74);
+            this.lblNombre.Location = new System.Drawing.Point(22, 60);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(66, 16);
+            this.lblNombre.Size = new System.Drawing.Size(54, 14);
             this.lblNombre.TabIndex = 9;
             this.lblNombre.Text = "Nombre:";
             // 
@@ -217,20 +213,19 @@
             // 
             this.lblRolUsua.AutoSize = true;
             this.lblRolUsua.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRolUsua.Location = new System.Drawing.Point(11, 238);
-            this.lblRolUsua.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblRolUsua.Location = new System.Drawing.Point(8, 193);
             this.lblRolUsua.Name = "lblRolUsua";
-            this.lblRolUsua.Size = new System.Drawing.Size(92, 16);
+            this.lblRolUsua.Size = new System.Drawing.Size(72, 14);
             this.lblRolUsua.TabIndex = 16;
             this.lblRolUsua.Text = "Rol Usuario:";
             // 
             // txtNombre
             // 
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNombre.Location = new System.Drawing.Point(107, 71);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNombre.Location = new System.Drawing.Point(80, 58);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(177, 22);
+            this.txtNombre.Size = new System.Drawing.Size(133, 20);
             this.txtNombre.TabIndex = 2;
             // 
             // btnRegistrar
@@ -238,10 +233,10 @@
             this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(151)))), ((int)(((byte)(166)))));
             this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrar.Location = new System.Drawing.Point(17, 266);
-            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRegistrar.Location = new System.Drawing.Point(13, 216);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(268, 38);
+            this.btnRegistrar.Size = new System.Drawing.Size(201, 31);
             this.btnRegistrar.TabIndex = 7;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
@@ -250,19 +245,19 @@
             // txtApellido
             // 
             this.txtApellido.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtApellido.Location = new System.Drawing.Point(107, 112);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtApellido.Location = new System.Drawing.Point(80, 91);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(2);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(177, 22);
+            this.txtApellido.Size = new System.Drawing.Size(133, 20);
             this.txtApellido.TabIndex = 3;
             // 
             // txtID
             // 
             this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtID.Location = new System.Drawing.Point(107, 25);
-            this.txtID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtID.Location = new System.Drawing.Point(80, 19);
+            this.txtID.Margin = new System.Windows.Forms.Padding(2);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(177, 22);
+            this.txtID.Size = new System.Drawing.Size(133, 20);
             this.txtID.TabIndex = 1;
             // 
             // lblID
@@ -270,9 +265,10 @@
             this.lblID.AutoSize = true;
             this.lblID.Cursor = System.Windows.Forms.Cursors.Cross;
             this.lblID.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(63, 27);
+            this.lblID.Location = new System.Drawing.Point(55, 21);
+            this.lblID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(25, 16);
+            this.lblID.Size = new System.Drawing.Size(20, 14);
             this.lblID.TabIndex = 13;
             this.lblID.Text = "ID:";
             this.lblID.Click += new System.EventHandler(this.lblID_Click);
@@ -284,14 +280,14 @@
             this.dgvUsuarios.AllowUserToDeleteRows = false;
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUsuarios.Enabled = false;
-            this.dgvUsuarios.Location = new System.Drawing.Point(301, 76);
-            this.dgvUsuarios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvUsuarios.Location = new System.Drawing.Point(226, 62);
+            this.dgvUsuarios.Margin = new System.Windows.Forms.Padding(2);
             this.dgvUsuarios.Name = "dgvUsuarios";
             this.dgvUsuarios.ReadOnly = true;
             this.dgvUsuarios.RowHeadersWidth = 51;
             this.dgvUsuarios.RowTemplate.Height = 24;
             this.dgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgvUsuarios.Size = new System.Drawing.Size(751, 437);
+            this.dgvUsuarios.Size = new System.Drawing.Size(563, 355);
             this.dgvUsuarios.TabIndex = 0;
             this.dgvUsuarios.TabStop = false;
             this.dgvUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -301,10 +297,10 @@
             this.btnGuardarArchivo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(151)))), ((int)(((byte)(166)))));
             this.btnGuardarArchivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnGuardarArchivo.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarArchivo.Location = new System.Drawing.Point(533, 528);
-            this.btnGuardarArchivo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnGuardarArchivo.Location = new System.Drawing.Point(400, 429);
+            this.btnGuardarArchivo.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardarArchivo.Name = "btnGuardarArchivo";
-            this.btnGuardarArchivo.Size = new System.Drawing.Size(268, 38);
+            this.btnGuardarArchivo.Size = new System.Drawing.Size(201, 31);
             this.btnGuardarArchivo.TabIndex = 19;
             this.btnGuardarArchivo.Text = "Guardar";
             this.btnGuardarArchivo.UseVisualStyleBackColor = false;
@@ -312,15 +308,15 @@
             // 
             // FormAdministrarUsua
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1225, 635);
+            this.ClientSize = new System.Drawing.Size(919, 516);
             this.Controls.Add(this.btnGuardarArchivo);
             this.Controls.Add(this.gbPanelControl);
             this.Controls.Add(this.gbRegistro);
             this.Controls.Add(this.dgvUsuarios);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormAdministrarUsua";
             this.Text = "Administrar Usuarios";
             this.Load += new System.EventHandler(this.FormAdministrarUsua_Load);

@@ -67,7 +67,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(488, 948);
+            this.panelMenu.Size = new System.Drawing.Size(312, 749);
             this.panelMenu.TabIndex = 5;
             this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
             // 
@@ -77,9 +77,9 @@
             this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(0, 890);
+            this.button1.Location = new System.Drawing.Point(0, 694);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(488, 38);
+            this.button1.Size = new System.Drawing.Size(312, 38);
             this.button1.TabIndex = 5;
             this.button1.Text = "Cerrar sesión";
             this.button1.UseVisualStyleBackColor = false;
@@ -91,9 +91,9 @@
             this.lblAviso.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lblAviso.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAviso.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblAviso.Location = new System.Drawing.Point(0, 928);
+            this.lblAviso.Location = new System.Drawing.Point(0, 732);
             this.lblAviso.Name = "lblAviso";
-            this.lblAviso.Size = new System.Drawing.Size(332, 20);
+            this.lblAviso.Size = new System.Drawing.Size(279, 17);
             this.lblAviso.TabIndex = 4;
             this.lblAviso.Text = "Actualmente estas en modo Administrador*";
             this.lblAviso.Click += new System.EventHandler(this.lblAviso_Click);
@@ -106,7 +106,7 @@
             this.panelReportes.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelReportes.Location = new System.Drawing.Point(0, 551);
             this.panelReportes.Name = "panelReportes";
-            this.panelReportes.Size = new System.Drawing.Size(488, 111);
+            this.panelReportes.Size = new System.Drawing.Size(312, 111);
             this.panelReportes.TabIndex = 4;
             // 
             // btnRepSolvencia
@@ -118,7 +118,7 @@
             this.btnRepSolvencia.Location = new System.Drawing.Point(0, 50);
             this.btnRepSolvencia.Name = "btnRepSolvencia";
             this.btnRepSolvencia.Padding = new System.Windows.Forms.Padding(43, 0, 0, 0);
-            this.btnRepSolvencia.Size = new System.Drawing.Size(488, 50);
+            this.btnRepSolvencia.Size = new System.Drawing.Size(312, 50);
             this.btnRepSolvencia.TabIndex = 1;
             this.btnRepSolvencia.Text = "Reportes de solvencia";
             this.btnRepSolvencia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -134,7 +134,7 @@
             this.btnRepAsistencia.Location = new System.Drawing.Point(0, 0);
             this.btnRepAsistencia.Name = "btnRepAsistencia";
             this.btnRepAsistencia.Padding = new System.Windows.Forms.Padding(43, 0, 0, 0);
-            this.btnRepAsistencia.Size = new System.Drawing.Size(488, 50);
+            this.btnRepAsistencia.Size = new System.Drawing.Size(312, 50);
             this.btnRepAsistencia.TabIndex = 0;
             this.btnRepAsistencia.Text = "Reportes de asistencia";
             this.btnRepAsistencia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -150,7 +150,7 @@
             this.btnReportes.Location = new System.Drawing.Point(0, 494);
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnReportes.Size = new System.Drawing.Size(488, 57);
+            this.btnReportes.Size = new System.Drawing.Size(312, 57);
             this.btnReportes.TabIndex = 3;
             this.btnReportes.Text = "Reportes";
             this.btnReportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -165,7 +165,7 @@
             this.panelUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelUsuarios.Location = new System.Drawing.Point(0, 394);
             this.panelUsuarios.Name = "panelUsuarios";
-            this.panelUsuarios.Size = new System.Drawing.Size(488, 100);
+            this.panelUsuarios.Size = new System.Drawing.Size(312, 100);
             this.panelUsuarios.TabIndex = 2;
             this.panelUsuarios.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -178,7 +178,7 @@
             this.btnVerSolvencia.Location = new System.Drawing.Point(0, 50);
             this.btnVerSolvencia.Name = "btnVerSolvencia";
             this.btnVerSolvencia.Padding = new System.Windows.Forms.Padding(43, 0, 0, 0);
-            this.btnVerSolvencia.Size = new System.Drawing.Size(488, 50);
+            this.btnVerSolvencia.Size = new System.Drawing.Size(312, 50);
             this.btnVerSolvencia.TabIndex = 2;
             this.btnVerSolvencia.Text = "Administar pagos y solvencia";
             this.btnVerSolvencia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -194,7 +194,7 @@
             this.btnAdmUsuarios.Location = new System.Drawing.Point(0, 0);
             this.btnAdmUsuarios.Name = "btnAdmUsuarios";
             this.btnAdmUsuarios.Padding = new System.Windows.Forms.Padding(43, 0, 0, 0);
-            this.btnAdmUsuarios.Size = new System.Drawing.Size(488, 50);
+            this.btnAdmUsuarios.Size = new System.Drawing.Size(312, 50);
             this.btnAdmUsuarios.TabIndex = 1;
             this.btnAdmUsuarios.Text = "Administrar Usuarios";
             this.btnAdmUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -210,7 +210,7 @@
             this.btnPanelUsuarios.Location = new System.Drawing.Point(0, 337);
             this.btnPanelUsuarios.Name = "btnPanelUsuarios";
             this.btnPanelUsuarios.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnPanelUsuarios.Size = new System.Drawing.Size(488, 57);
+            this.btnPanelUsuarios.Size = new System.Drawing.Size(312, 57);
             this.btnPanelUsuarios.TabIndex = 1;
             this.btnPanelUsuarios.Text = "Panel Usuarios";
             this.btnPanelUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -224,7 +224,7 @@
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(488, 337);
+            this.panelLogo.Size = new System.Drawing.Size(312, 337);
             this.panelLogo.TabIndex = 0;
             this.panelLogo.Paint += new System.Windows.Forms.PaintEventHandler(this.PlLogo_Paint);
             // 
@@ -247,9 +247,9 @@
             this.panelContenedorHijos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
             this.panelContenedorHijos.Controls.Add(this.pictureBox1);
             this.panelContenedorHijos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedorHijos.Location = new System.Drawing.Point(488, 0);
+            this.panelContenedorHijos.Location = new System.Drawing.Point(312, 0);
             this.panelContenedorHijos.Name = "panelContenedorHijos";
-            this.panelContenedorHijos.Size = new System.Drawing.Size(1214, 792);
+            this.panelContenedorHijos.Size = new System.Drawing.Size(930, 749);
             this.panelContenedorHijos.TabIndex = 6;
             this.panelContenedorHijos.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             // 
@@ -257,7 +257,7 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = global::ProyectoSoplado_1._0_.Properties.Resources.universidad_americana_2020;
-            this.pictureBox1.Location = new System.Drawing.Point(337, 304);
+            this.pictureBox1.Location = new System.Drawing.Point(231, 289);
             this.pictureBox1.MaximumSize = new System.Drawing.Size(480, 171);
             this.pictureBox1.MinimumSize = new System.Drawing.Size(480, 171);
             this.pictureBox1.Name = "pictureBox1";
@@ -270,20 +270,20 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(206)))), ((int)(((byte)(214)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(488, 792);
+            this.panel1.Location = new System.Drawing.Point(312, 649);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1214, 156);
+            this.panel1.Size = new System.Drawing.Size(930, 100);
             this.panel1.TabIndex = 7;
             // 
             // FormAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(150)))), ((int)(((byte)(166)))));
-            this.ClientSize = new System.Drawing.Size(1702, 948);
-            this.Controls.Add(this.panelContenedorHijos);
+            this.ClientSize = new System.Drawing.Size(1242, 749);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelContenedorHijos);
             this.Controls.Add(this.panelMenu);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

@@ -23,7 +23,6 @@ namespace ProyectoSoplado_1._0_.Formularios
         private void Form1_Load(object sender, EventArgs e)
         {
             ActualizarAsistencia();
-            this.reportViewer1.RefreshReport();
         }
         private void FormReporteAsistencia_Load(object sender, EventArgs e)
         {
@@ -47,9 +46,5 @@ namespace ProyectoSoplado_1._0_.Formularios
 
         }
 
-        private void reportViewer1_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

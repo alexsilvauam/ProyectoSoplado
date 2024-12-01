@@ -57,44 +57,14 @@ namespace ProyectoSoplado_1._0_
                 pago.fecha_pago = Date_FechaActual;
                 pago.Fecha_Vencimiento = AsignarFecha();
                 pago.monto_pago = montoPago;
-
+               
 
 
                 RegistroPagos.Add(pago);
 
                 MiembroExistente.Solvencia = true;
                 limpiarCampos();
-
-                try
-                {
-                    // Ruta del directorio
-                    string directoryPath = Path.Combine(Directory.GetCurrentDirectory(), "ArchivosBIN");
-
-                    // Verificar o crear el directorio
-                    if (!Directory.Exists(directoryPath))
-                    {
-                        Directory.CreateDirectory(directoryPath);
-                    }
-
-                    // Ruta del archivo
-                    string filePath = Path.Combine(directoryPath, "Pagos.bin");
-
-                    // Serializar la lista de pagos
-                    BinaryFormatter formatter = new BinaryFormatter();
-                    using (FileStream stream = new FileStream(filePath, FileMode.Create))
-                    {
-                        formatter.Serialize(stream, RegistroPagos);
-                    }
-
-                    // Notificar éxito al usuario
-                    MessageBox.Show("Los pagos se han guardado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch (Exception ex)
-                {
-                    // Manejar errores
-                    MessageBox.Show($"Ocurrió un error al guardar los pagos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
+                MessageBox.Show("Pago registrado correctamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
 
@@ -113,7 +83,7 @@ namespace ProyectoSoplado_1._0_
                 return false;
             }
 
-
+            
             if (cmbModalidad.SelectedIndex == -1)
             {
                 MessageBox.Show("Debe seleccionar una modalidad.", "Completa el campo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -320,46 +290,37 @@ namespace ProyectoSoplado_1._0_
         private void btnguardar_Click(object sender, EventArgs e)
         {
             try
-            {
-                // Ruta del directorio
-                string directoryPath = Path.Combine(Directory.GetCurrentDirectory(), "ArchivosBIN");
-
-                // Verificar o crear el directorio
-                if (!Directory.Exists(directoryPath))
-                {
-                    Directory.CreateDirectory(directoryPath);
-                }
-
-                // Ruta del archivo
-                string filePath = Path.Combine(directoryPath, "Pagos.bin");
-
-                // Serializar la lista de pagos
-                BinaryFormatter formatter = new BinaryFormatter();
-                using (FileStream stream = new FileStream(filePath, FileMode.Create))
-                {
-                    formatter.Serialize(stream, RegistroPagos);
-                }
-
-                // Notificar éxito al usuario
-                MessageBox.Show("Los pagos se han guardado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (Exception ex)
-            {
-                // Manejar errores
-                MessageBox.Show($"Ocurrió un error al guardar los pagos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
         {
+            // Ruta del directorio
+            string directoryPath = Path.Combine(Directory.GetCurrentDirectory(), "ArchivosBIN");
+            
+            // Verificar o crear el directorio
+            if (!Directory.Exists(directoryPath))
+            {
+                Directory.CreateDirectory(directoryPath);
+            }
 
+            // Ruta del archivo
+            string filePath = Path.Combine(directoryPath, "Pagos.bin");
+
+            // Serializar la lista de pagos
+            BinaryFormatter formatter = new BinaryFormatter();
+            using (FileStream stream = new FileStream(filePath, FileMode.Create))
+            {
+                formatter.Serialize(stream, RegistroPagos);
+            }
+
+            // Notificar éxito al usuario
+            MessageBox.Show("Los pagos se han guardado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
-        private void txtFechaVencimieto_TextChanged(object sender, EventArgs e)
+        catch (Exception ex)
         {
+            // Manejar errores
+            MessageBox.Show($"Ocurrió un error al guardar los pagos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+    }
 
         }
     }
-}
 
 

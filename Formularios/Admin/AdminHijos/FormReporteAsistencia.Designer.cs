@@ -31,14 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormReporteAsistencia));
             this.dgvReporteAsistencias = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReporteAsistencias)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvReporteAsistencias
             // 
             this.dgvReporteAsistencias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvReporteAsistencias.Location = new System.Drawing.Point(569, 95);
+            this.dgvReporteAsistencias.Location = new System.Drawing.Point(293, 102);
             this.dgvReporteAsistencias.Margin = new System.Windows.Forms.Padding(4);
             this.dgvReporteAsistencias.Name = "dgvReporteAsistencias";
             this.dgvReporteAsistencias.RowHeadersWidth = 51;
@@ -57,22 +56,11 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Registro De Asistencias";
             // 
-            // reportViewer1
-            // 
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "ProyectoSoplado_1._0_.Reportes.ReportesAsistencia.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(33, 143);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(463, 253);
-            this.reportViewer1.TabIndex = 2;
-            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
-            // 
             // FormReporteAsistencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(993, 581);
-            this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvReporteAsistencias);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -90,6 +78,5 @@
 
         private System.Windows.Forms.DataGridView dgvReporteAsistencias;
         private System.Windows.Forms.Label label1;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }

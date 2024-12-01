@@ -284,7 +284,6 @@ namespace ProyectoSoplado_1._0_.Formularios
                     {
                         FormVerificacionSolvencia.RegistroPagos = (List<Pago>)formatter.Deserialize(stream);
                     }
-
                 }
                 else
                 {
