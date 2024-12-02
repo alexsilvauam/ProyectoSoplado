@@ -76,10 +76,7 @@ namespace ProyectoSoplado_1._0_.Formularios
                     }
 
                 }
-                else
-                {
-                    MessageBox.Show("No se encontró el archivo de asistencia.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                
             }
             catch (Exception ex)
             {
@@ -102,10 +99,7 @@ namespace ProyectoSoplado_1._0_.Formularios
                         FormAdministrarUsua.Lmiembros = (List<Miembro>)formatter.Deserialize(stream);
                     }
                 }
-                else
-                {
-                    MessageBox.Show("No se encontró el archivo de usuarios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                
             }
             catch (Exception ex)
             {
@@ -129,10 +123,7 @@ namespace ProyectoSoplado_1._0_.Formularios
                     }
 
                 }
-                else
-                {
-                    MessageBox.Show("No se encontró el archivo de pagos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+               
             }
             catch (Exception ex)
             {

@@ -32,19 +32,19 @@
             this.dgvReporteAsistencias = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.GbReportes = new System.Windows.Forms.GroupBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnPDF = new System.Windows.Forms.Button();
             this.btnExcel = new System.Windows.Forms.Button();
             this.btnReporte = new System.Windows.Forms.Button();
             this.gBFiltrado = new System.Windows.Forms.GroupBox();
-            this.CbFiltros = new System.Windows.Forms.ComboBox();
             this.btnFiltrar = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.CbFiltros = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReporteAsistencias)).BeginInit();
             this.GbReportes.SuspendLayout();
-            this.gBFiltrado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.gBFiltrado.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvReporteAsistencias
@@ -53,7 +53,7 @@
             this.dgvReporteAsistencias.Location = new System.Drawing.Point(220, 83);
             this.dgvReporteAsistencias.Name = "dgvReporteAsistencias";
             this.dgvReporteAsistencias.RowHeadersWidth = 51;
-            this.dgvReporteAsistencias.Size = new System.Drawing.Size(513, 377);
+            this.dgvReporteAsistencias.Size = new System.Drawing.Size(272, 377);
             this.dgvReporteAsistencias.TabIndex = 0;
             this.dgvReporteAsistencias.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -80,6 +80,26 @@
             this.GbReportes.TabIndex = 2;
             this.GbReportes.TabStop = false;
             this.GbReportes.Text = "Reportes";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::ProyectoSoplado_1._0_.Properties.Resources.archivo_pdf;
+            this.pictureBox2.Location = new System.Drawing.Point(148, 110);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(44, 30);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 29;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProyectoSoplado_1._0_.Properties.Resources.archivo_excel;
+            this.pictureBox1.Location = new System.Drawing.Point(148, 75);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(44, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 28;
+            this.pictureBox1.TabStop = false;
             // 
             // btnPDF
             // 
@@ -134,16 +154,6 @@
             this.gBFiltrado.TabStop = false;
             this.gBFiltrado.Text = "Filtrado";
             // 
-            // CbFiltros
-            // 
-            this.CbFiltros.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CbFiltros.FormattingEnabled = true;
-            this.CbFiltros.Location = new System.Drawing.Point(20, 31);
-            this.CbFiltros.Name = "CbFiltros";
-            this.CbFiltros.Size = new System.Drawing.Size(152, 21);
-            this.CbFiltros.TabIndex = 0;
-            this.CbFiltros.SelectedIndexChanged += new System.EventHandler(this.CbFiltros_SelectedIndexChanged);
-            // 
             // btnFiltrar
             // 
             this.btnFiltrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(151)))), ((int)(((byte)(166)))));
@@ -157,25 +167,15 @@
             this.btnFiltrar.Text = "Filtrar";
             this.btnFiltrar.UseVisualStyleBackColor = false;
             // 
-            // pictureBox2
+            // CbFiltros
             // 
-            this.pictureBox2.Image = global::ProyectoSoplado_1._0_.Properties.Resources.archivo_pdf;
-            this.pictureBox2.Location = new System.Drawing.Point(148, 110);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(44, 30);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 29;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ProyectoSoplado_1._0_.Properties.Resources.archivo_excel;
-            this.pictureBox1.Location = new System.Drawing.Point(148, 75);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(44, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 28;
-            this.pictureBox1.TabStop = false;
+            this.CbFiltros.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbFiltros.FormattingEnabled = true;
+            this.CbFiltros.Location = new System.Drawing.Point(20, 31);
+            this.CbFiltros.Name = "CbFiltros";
+            this.CbFiltros.Size = new System.Drawing.Size(152, 21);
+            this.CbFiltros.TabIndex = 0;
+            this.CbFiltros.SelectedIndexChanged += new System.EventHandler(this.CbFiltros_SelectedIndexChanged);
             // 
             // FormReporteAsistencia
             // 
@@ -193,9 +193,9 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvReporteAsistencias)).EndInit();
             this.GbReportes.ResumeLayout(false);
-            this.gBFiltrado.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.gBFiltrado.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
