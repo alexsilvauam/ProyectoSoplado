@@ -19,7 +19,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAdministrarUsua));
             this.gbPanelControl = new System.Windows.Forms.GroupBox();
-            this.btnGuardarArchivo = new System.Windows.Forms.Button();
             this.rbtnCifCed = new System.Windows.Forms.RadioButton();
             this.rbtnId = new System.Windows.Forms.RadioButton();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -40,14 +39,22 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.lblID = new System.Windows.Forms.Label();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbPanelControl.SuspendLayout();
             this.gbRegistro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // gbPanelControl
             // 
-            this.gbPanelControl.Controls.Add(this.btnGuardarArchivo);
+            this.gbPanelControl.Controls.Add(this.pictureBox3);
+            this.gbPanelControl.Controls.Add(this.pictureBox2);
+            this.gbPanelControl.Controls.Add(this.pictureBox1);
             this.gbPanelControl.Controls.Add(this.rbtnCifCed);
             this.gbPanelControl.Controls.Add(this.rbtnId);
             this.gbPanelControl.Controls.Add(this.btnBuscar);
@@ -56,24 +63,10 @@
             this.gbPanelControl.Controls.Add(this.btnEditar);
             this.gbPanelControl.Location = new System.Drawing.Point(7, 303);
             this.gbPanelControl.Name = "gbPanelControl";
-            this.gbPanelControl.Size = new System.Drawing.Size(209, 196);
+            this.gbPanelControl.Size = new System.Drawing.Size(209, 201);
             this.gbPanelControl.TabIndex = 25;
             this.gbPanelControl.TabStop = false;
             this.gbPanelControl.Text = "Panel de control";
-            // 
-            // btnGuardarArchivo
-            // 
-            this.btnGuardarArchivo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(151)))), ((int)(((byte)(166)))));
-            this.btnGuardarArchivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.btnGuardarArchivo.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarArchivo.Location = new System.Drawing.Point(3, 160);
-            this.btnGuardarArchivo.Margin = new System.Windows.Forms.Padding(2);
-            this.btnGuardarArchivo.Name = "btnGuardarArchivo";
-            this.btnGuardarArchivo.Size = new System.Drawing.Size(201, 31);
-            this.btnGuardarArchivo.TabIndex = 14;
-            this.btnGuardarArchivo.Text = "Guardar";
-            this.btnGuardarArchivo.UseVisualStyleBackColor = false;
-            this.btnGuardarArchivo.Click += new System.EventHandler(this.btnGuardarArchivo_Click);
             // 
             // rbtnCifCed
             // 
@@ -104,7 +97,7 @@
             this.btnBuscar.Location = new System.Drawing.Point(34, 92);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(134, 29);
+            this.btnBuscar.Size = new System.Drawing.Size(120, 29);
             this.btnBuscar.TabIndex = 11;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
@@ -116,7 +109,7 @@
             this.txtBusqueda.Location = new System.Drawing.Point(34, 41);
             this.txtBusqueda.Margin = new System.Windows.Forms.Padding(2);
             this.txtBusqueda.Name = "txtBusqueda";
-            this.txtBusqueda.Size = new System.Drawing.Size(134, 20);
+            this.txtBusqueda.Size = new System.Drawing.Size(155, 20);
             this.txtBusqueda.TabIndex = 8;
             // 
             // btnEliminar
@@ -126,7 +119,7 @@
             this.btnEliminar.Location = new System.Drawing.Point(34, 125);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(67, 28);
+            this.btnEliminar.Size = new System.Drawing.Size(120, 28);
             this.btnEliminar.TabIndex = 12;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -136,10 +129,10 @@
             // 
             this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(151)))), ((int)(((byte)(166)))));
             this.btnEditar.ForeColor = System.Drawing.Color.Transparent;
-            this.btnEditar.Location = new System.Drawing.Point(106, 125);
+            this.btnEditar.Location = new System.Drawing.Point(34, 157);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(62, 28);
+            this.btnEditar.Size = new System.Drawing.Size(120, 28);
             this.btnEditar.TabIndex = 13;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
@@ -194,7 +187,7 @@
             // 
             this.lblCifCed.AutoSize = true;
             this.lblCifCed.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCifCed.Location = new System.Drawing.Point(12, 131);
+            this.lblCifCed.Location = new System.Drawing.Point(16, 132);
             this.lblCifCed.Name = "lblCifCed";
             this.lblCifCed.Size = new System.Drawing.Size(68, 14);
             this.lblCifCed.TabIndex = 18;
@@ -206,7 +199,7 @@
             this.lblApellido.AutoSize = true;
             this.lblApellido.Cursor = System.Windows.Forms.Cursors.Cross;
             this.lblApellido.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellido.Location = new System.Drawing.Point(22, 93);
+            this.lblApellido.Location = new System.Drawing.Point(26, 94);
             this.lblApellido.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(55, 14);
@@ -230,7 +223,7 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(22, 60);
+            this.lblNombre.Location = new System.Drawing.Point(26, 61);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(54, 14);
@@ -287,6 +280,7 @@
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(133, 20);
             this.txtID.TabIndex = 1;
+            this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             // 
             // lblID
             // 
@@ -320,6 +314,36 @@
             this.dgvUsuarios.TabStop = false;
             this.dgvUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::ProyectoSoplado_1._0_.Properties.Resources.buscar;
+            this.pictureBox3.Location = new System.Drawing.Point(159, 95);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(42, 26);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 16;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::ProyectoSoplado_1._0_.Properties.Resources.editar1;
+            this.pictureBox2.Location = new System.Drawing.Point(161, 159);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(42, 26);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 15;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProyectoSoplado_1._0_.Properties.Resources.quitar_usuario;
+            this.pictureBox1.Location = new System.Drawing.Point(161, 125);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(42, 28);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormAdministrarUsua
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -338,6 +362,9 @@
             this.gbRegistro.ResumeLayout(false);
             this.gbRegistro.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -362,8 +389,10 @@
         private System.Windows.Forms.ComboBox cmbCifCed;
         private System.Windows.Forms.Label lblCifCed;
         private System.Windows.Forms.TextBox txtCifCed;
-        private System.Windows.Forms.Button btnGuardarArchivo;
         private System.Windows.Forms.RadioButton rbtnCifCed;
         private System.Windows.Forms.RadioButton rbtnId;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

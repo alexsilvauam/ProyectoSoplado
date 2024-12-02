@@ -43,11 +43,14 @@
             this.lblID = new System.Windows.Forms.Label();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.txtCifCed);
             this.groupBox1.Controls.Add(this.cmbCifCed);
             this.groupBox1.Controls.Add(this.lblCifCed);
@@ -94,7 +97,7 @@
             // 
             this.lblCifCed.AutoSize = true;
             this.lblCifCed.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCifCed.Location = new System.Drawing.Point(4, 134);
+            this.lblCifCed.Location = new System.Drawing.Point(28, 137);
             this.lblCifCed.Name = "lblCifCed";
             this.lblCifCed.Size = new System.Drawing.Size(55, 15);
             this.lblCifCed.TabIndex = 18;
@@ -105,7 +108,7 @@
             this.lblApellido.AutoSize = true;
             this.lblApellido.Cursor = System.Windows.Forms.Cursors.Cross;
             this.lblApellido.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellido.Location = new System.Drawing.Point(22, 92);
+            this.lblApellido.Location = new System.Drawing.Point(28, 92);
             this.lblApellido.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(55, 15);
@@ -131,7 +134,7 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(22, 59);
+            this.lblNombre.Location = new System.Drawing.Point(28, 59);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(55, 15);
@@ -142,7 +145,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(4, 181);
+            this.label1.Location = new System.Drawing.Point(8, 184);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 15);
             this.label1.TabIndex = 16;
@@ -180,7 +183,7 @@
             this.lblID.AutoSize = true;
             this.lblID.Cursor = System.Windows.Forms.Cursors.Cross;
             this.lblID.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(56, 24);
+            this.lblID.Location = new System.Drawing.Point(63, 20);
             this.lblID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(21, 15);
@@ -215,6 +218,16 @@
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProyectoSoplado_1._0_.Properties.Resources.editar;
+            this.pictureBox1.Location = new System.Drawing.Point(150, 206);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(64, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormEditarMiembro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -229,6 +242,7 @@
             this.Load += new System.EventHandler(this.FormEditarMiembro_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -249,5 +263,6 @@
         private System.Windows.Forms.Label lblCifCed;
         private System.Windows.Forms.TextBox txtCifCed;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

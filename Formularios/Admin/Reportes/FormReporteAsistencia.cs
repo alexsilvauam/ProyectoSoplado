@@ -20,10 +20,19 @@ namespace ProyectoSoplado_1._0_.Formularios
         public FormReporteAsistencia()
         {
             InitializeComponent();
+            // Agregar opciones al ComboBox de filtros
+            CbFiltros.Items.Add("Diario");
+            CbFiltros.Items.Add("Semanal");
+            CbFiltros.Items.Add("Mensual");
+            // Asignar evento al cambiar la selección del ComboBox
+            CbFiltros.SelectedIndexChanged += CbFiltros_SelectedIndexChanged;
         }
 
         #region Metodos
 
+        /// <summary>
+        /// Actualiza el DataGridView con los datos de asistencia.
+        /// </summary>
         public void ActualizarAsistencia()
         {
             dgvReporteAsistencias.DataSource = null;
@@ -33,6 +42,9 @@ namespace ProyectoSoplado_1._0_.Formularios
             dgvReporteAsistencias.Columns["HoraAcceso"].HeaderText = "Hora de Acceso";
         }
 
+        /// <summary>
+        /// Exporta el informe de asistencia a un archivo Excel.
+        /// </summary>
         private void ExportarAExcel()
         {
             try
@@ -82,8 +94,11 @@ namespace ProyectoSoplado_1._0_.Formularios
             {
                 MessageBox.Show($"Error al generar el informe: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
+
+        /// <summary>
+        /// Exporta el informe de asistencia a un archivo PDF.
+        /// </summary>
         private void ExportarAPdf()
         {
             try
@@ -132,6 +147,10 @@ namespace ProyectoSoplado_1._0_.Formularios
             }
         }
 
+        /// <summary>
+        /// Crea un DataTable con los encabezados y datos de asistencia.
+        /// </summary>
+        /// <returns>DataTable con los datos de asistencia.</returns>
         private DataTable CrearDataTableConEncabezados()
         {
             DataTable dt = new DataTable();
@@ -151,10 +170,51 @@ namespace ProyectoSoplado_1._0_.Formularios
             return dt;
         }
 
+        /// <summary>
+        /// Filtra la lista de asistencias según el filtro seleccionado en el ComboBox.
+        /// </summary>
+        private void FiltrarAsistencia()
+        {
+            string selectedFilter = CbFiltros.SelectedItem.ToString();
+            DateTime now = DateTime.Now;
+            List<Asistencia> filteredList = new List<Asistencia>();
+
+            switch (selectedFilter)
+            {
+                case "Diario":
+                    filteredList = FormPrincipal.RegistroAsistencia.Where(a => a.FechaAcceso.Date == now.Date).ToList();
+                    break;
+                case "Semanal":
+                    // Ajustar el cálculo del inicio de la semana
+                    DateTime startOfWeek = now.AddDays(-(int)now.DayOfWeek + (int)DayOfWeek.Monday);
+                    if (startOfWeek > now)
+                    {
+                        startOfWeek = startOfWeek.AddDays(-7);
+                    }
+                    filteredList = FormPrincipal.RegistroAsistencia.Where(a => a.FechaAcceso >= startOfWeek && a.FechaAcceso <= now).ToList();
+                    break;
+                case "Mensual":
+                    DateTime startOfMonth = new DateTime(now.Year, now.Month, 1);
+                    filteredList = FormPrincipal.RegistroAsistencia.Where(a => a.FechaAcceso >= startOfMonth && a.FechaAcceso <= now).ToList();
+                    break;
+            }
+
+            dgvReporteAsistencias.DataSource = null;
+            dgvReporteAsistencias.DataSource = filteredList;
+
+            // Cambiar los nombres de las columnas
+            dgvReporteAsistencias.Columns["NombreUsuario"].HeaderText = "Nombre de Usuario";
+            dgvReporteAsistencias.Columns["FechaAcceso"].HeaderText = "Fecha de Acceso";
+            dgvReporteAsistencias.Columns["HoraAcceso"].HeaderText = "Hora de Acceso";
+        }
+
         #endregion
 
         #region Botones con metodo
 
+        /// <summary>
+        /// Genera y muestra el informe de asistencia en un formulario.
+        /// </summary>
         private void btnReporte_Click(object sender, EventArgs e)
         {
             try
@@ -174,10 +234,17 @@ namespace ProyectoSoplado_1._0_.Formularios
             }
         }
 
+        /// <summary>
+        /// Llama al método para exportar el informe a Excel.
+        /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
             ExportarAExcel();
         }
+
+        /// <summary>
+        /// Llama al método para exportar el informe a PDF.
+        /// </summary>
         private void btnPDF_Click(object sender, EventArgs e)
         {
             ExportarAPdf();
@@ -187,21 +254,33 @@ namespace ProyectoSoplado_1._0_.Formularios
 
         #region Botones sin metodo
 
+        /// <summary>
+        /// Evento que se ejecuta al cargar el formulario.
+        /// </summary>
         private void Form1_Load(object sender, EventArgs e)
         {
             ActualizarAsistencia();
         }
 
+        /// <summary>
+        /// Evento que se ejecuta al cargar el formulario de reporte de asistencia.
+        /// </summary>
         private void FormReporteAsistencia_Load(object sender, EventArgs e)
         {
             ActualizarAsistencia();
         }
 
+        /// <summary>
+        /// Evento que se ejecuta al hacer clic en el label de inicio de sesión.
+        /// </summary>
         private void lbl_InicioSesion_Click(object sender, EventArgs e)
         {
 
         }
 
+        /// <summary>
+        /// Evento que se ejecuta al hacer clic en una celda del DataGridView.
+        /// </summary>
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -209,6 +288,12 @@ namespace ProyectoSoplado_1._0_.Formularios
 
         #endregion
 
-       
+        /// <summary>
+        /// Evento que se ejecuta al cambiar la selección del ComboBox de filtros.
+        /// </summary>
+        private void CbFiltros_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FiltrarAsistencia();
+        }
     }
 }

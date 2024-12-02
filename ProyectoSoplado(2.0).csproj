@@ -181,11 +181,11 @@
     <Compile Include="Formularios\Admin\AdminHijos\FormVerificacionSolvencia.Designer.cs">
       <DependentUpon>FormVerificacionSolvencia.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\frmEditarAdmin.cs">
+    <Compile Include="Formularios\FormEditarAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\frmEditarAdmin.Designer.cs">
-      <DependentUpon>frmEditarAdmin.cs</DependentUpon>
+    <Compile Include="Formularios\FormEditarAdmin.Designer.cs">
+      <DependentUpon>FormEditarAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\GestionarAdmins.cs">
       <SubType>Form</SubType>
@@ -233,8 +233,8 @@
     <EmbeddedResource Include="Formularios\Admin\AdminHijos\FormVerificacionSolvencia.resx">
       <DependentUpon>FormVerificacionSolvencia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\frmEditarAdmin.resx">
-      <DependentUpon>frmEditarAdmin.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\FormEditarAdmin.resx">
+      <DependentUpon>FormEditarAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\GestionarAdmins.resx">
       <DependentUpon>GestionarAdmins.cs</DependentUpon>
@@ -304,6 +304,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="jaguaruamico.ico" />
+    <None Include="Resources\admin-con-ruedas-dentadas.png" />
+    <None Include="Resources\admin-con-ruedas-dentadas1.png" />
+    <None Include="Resources\administracion.png" />
+    <None Include="Resources\archivo-excel.png" />
+    <None Include="Resources\archivo-pdf.png" />
+    <None Include="Resources\periodico.png" />
+    <None Include="Resources\editar.png" />
+    <None Include="Resources\quitar-usuario.png" />
+    <None Include="Resources\editar1.png" />
+    <None Include="Resources\buscar.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

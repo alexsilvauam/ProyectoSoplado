@@ -15,13 +15,17 @@ using ProyectoSoplado_1._0_.Modelo_de_datos.Usuario;
 
 namespace ProyectoSoplado_1._0_.Formularios
 {
-    public partial class GestionarAdmins : Form
+    public partial class frmGestionarAdmins : Form
     {
-        public GestionarAdmins()
+        // Constructor del formulario
+        public frmGestionarAdmins()
         {
             InitializeComponent();
         }
 
+        #region Eventos de Botones
+
+        // Evento del botón Buscar
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             if (!verificar())
@@ -29,7 +33,7 @@ namespace ProyectoSoplado_1._0_.Formularios
                 return;
             }
             string usuario = txtUsuario.Text;
-            bool encontrado =FormIniciarAdmin.admins.Any(admin => admin.Usuario == usuario);
+            bool encontrado = FormIniciarAdmin.admins.Any(admin => admin.Usuario == usuario);
 
             if (encontrado)
             {
@@ -40,40 +44,9 @@ namespace ProyectoSoplado_1._0_.Formularios
             {
                 MessageBox.Show($"Admin {usuario} no encontrado.", "Busqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
-
-
-        } 
-
-        
-        public bool verificar()
-        {
-            if (string.IsNullOrWhiteSpace(txtUsuario.Text))
-            {
-                MessageBox.Show("Por favor, ingresa el usuario del admin.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-            return true;
         }
 
-        
-     public void actualizargrid()
-        {
-            dgvAdmins.DataSource = null;
-            dgvAdmins.DataSource = dgvAdmins.DataSource = FormIniciarAdmin.admins.Select(admin => new { Usuario = admin.Usuario, Contraseña = admin.Contraseña }).ToList();
-
-        }
-
-        private void dgvUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
-
-        private void GestionarAdmins_Load(object sender, EventArgs e)
-        {
-            actualizargrid();
-        }
-
+        // Evento del botón Eliminar
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             if (!verificar())
@@ -95,9 +68,9 @@ namespace ProyectoSoplado_1._0_.Formularios
             {
                 MessageBox.Show($"Usuario '{usuario}' no encontrado.", "Resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
         }
 
+        // Evento del botón Guardar Archivo
         private void btnGuardarArchivo_Click(object sender, EventArgs e)
         {
             string carpetaArchivos = Path.Combine(Directory.GetCurrentDirectory(), "ArchivosBIN");
@@ -114,9 +87,9 @@ namespace ProyectoSoplado_1._0_.Formularios
                 BinaryFormatter formatter = new BinaryFormatter();
                 formatter.Serialize(fs, FormIniciarAdmin.admins);
             }
-
         }
 
+        // Evento del botón Editar
         private void btnEditar_Click(object sender, EventArgs e)
         {
             if (!verificar())
@@ -130,7 +103,7 @@ namespace ProyectoSoplado_1._0_.Formularios
 
             if (adminExistente.Usuario != null)
             {
-                using (frmEditarAdmin formEditar = new frmEditarAdmin(adminExistente.Usuario, adminExistente.Contraseña))
+                using (FormEditarAdmin formEditar = new FormEditarAdmin(adminExistente.Usuario, adminExistente.Contraseña))
                 {
                     if (formEditar.ShowDialog() == DialogResult.OK)
                     {
@@ -149,9 +122,47 @@ namespace ProyectoSoplado_1._0_.Formularios
             }
         }
 
+        #endregion
 
+        #region Métodos
+
+        // Método para verificar si el campo de usuario está vacío
+        public bool verificar()
+        {
+            if (string.IsNullOrWhiteSpace(txtUsuario.Text))
+            {
+                MessageBox.Show("Por favor, ingresa el usuario del admin.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
+        }
+
+        // Método para actualizar el DataGridView
+        public void actualizargrid()
+        {
+            dgvAdmins.DataSource = null;
+            dgvAdmins.DataSource = FormIniciarAdmin.admins.Select(admin => new { Usuario = admin.Usuario, Contraseña = admin.Contraseña }).ToList();
+        }
+
+        #endregion
+
+        #region Eventos del DataGridView
+
+        // Evento del DataGridView (actualmente no utilizado)
+        private void dgvUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+
+        #endregion
+
+        #region Eventos del Formulario
+
+        // Evento de carga del formulario
+        private void GestionarAdmins_Load(object sender, EventArgs e)
+        {
+            actualizargrid();
+        }
+
+        #endregion
     }
 }
-
-
-

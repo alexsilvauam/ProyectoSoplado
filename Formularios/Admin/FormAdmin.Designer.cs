@@ -45,6 +45,7 @@
             this.panelContenedorHijos = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAdminLogin = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelReportes.SuspendLayout();
             this.panelUsuarios.SuspendLayout();
@@ -57,6 +58,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(150)))), ((int)(((byte)(166)))));
+            this.panelMenu.Controls.Add(this.btnAdminLogin);
             this.panelMenu.Controls.Add(this.button1);
             this.panelMenu.Controls.Add(this.lblAviso);
             this.panelMenu.Controls.Add(this.panelReportes);
@@ -275,6 +277,22 @@
             this.panel1.Size = new System.Drawing.Size(930, 100);
             this.panel1.TabIndex = 7;
             // 
+            // btnAdminLogin
+            // 
+            this.btnAdminLogin.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAdminLogin.FlatAppearance.BorderSize = 0;
+            this.btnAdminLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdminLogin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnAdminLogin.Location = new System.Drawing.Point(0, 662);
+            this.btnAdminLogin.Name = "btnAdminLogin";
+            this.btnAdminLogin.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnAdminLogin.Size = new System.Drawing.Size(312, 54);
+            this.btnAdminLogin.TabIndex = 6;
+            this.btnAdminLogin.Text = "Gestionar Administradores";
+            this.btnAdminLogin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdminLogin.UseVisualStyleBackColor = true;
+            this.btnAdminLogin.Click += new System.EventHandler(this.btnAdminLogin_Click);
+            // 
             // FormAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -325,5 +343,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAdminLogin;
     }
 }

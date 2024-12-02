@@ -3,9 +3,8 @@
     "",
     "\\Formularios",
     "\\Formularios\\Admin",
-    "\\Formularios\\Admin\\AdminHijos",
-    "\\Formularios\\Admin\\Reportes"
+    "\\Formularios\\Admin\\AdminHijos"
   ],
-  "SelectedNode": "\\Formularios\\Admin\\Reportes\\FormReporteAsistencia.cs",
+  "SelectedNode": "\\Formularios\\Admin\\AdminHijos\\FormIniciarAdmin.cs",
   "PreviewInSolutionExplorer": false
 }

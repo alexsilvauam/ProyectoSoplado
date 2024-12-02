@@ -294,3 +294,5 @@ C:\Users\solis\OneDrive\Escritorio\PROYECTOSOLPLADO\ProyectoSoplado\obj\Debug\Pr
 C:\Users\solis\OneDrive\Escritorio\PROYECTOSOLPLADO\ProyectoSoplado\obj\Debug\Proyecto.29232D67.Up2Date
 C:\Users\solis\OneDrive\Escritorio\PROYECTOSOLPLADO\ProyectoSoplado\obj\Debug\ProyectoSoplado_1._0_.Formularios.GestionarAdmins.resources
 C:\Users\solis\OneDrive\Escritorio\PROYECTOSOLPLADO\ProyectoSoplado\obj\Debug\ProyectoSoplado_1._0_.Formularios.frmEditarAdmin.resources
+C:\Users\Alex\Documents\GitHub\ProyectoSoplado\obj\Debug\ProyectoSoplado_1._0_.Formularios.FormEditarAdmin.resources
+C:\Users\Alex\Documents\GitHub\ProyectoSoplado\obj\Debug\ProyectoSoplado_1._0_.Formularios.frmGestionarAdmins.resources

@@ -32,11 +32,19 @@
             this.dgvReporteAsistencias = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.GbReportes = new System.Windows.Forms.GroupBox();
+            this.btnPDF = new System.Windows.Forms.Button();
             this.btnExcel = new System.Windows.Forms.Button();
             this.btnReporte = new System.Windows.Forms.Button();
-            this.btnPDF = new System.Windows.Forms.Button();
+            this.gBFiltrado = new System.Windows.Forms.GroupBox();
+            this.CbFiltros = new System.Windows.Forms.ComboBox();
+            this.btnFiltrar = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReporteAsistencias)).BeginInit();
             this.GbReportes.SuspendLayout();
+            this.gBFiltrado.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvReporteAsistencias
@@ -61,6 +69,8 @@
             // 
             // GbReportes
             // 
+            this.GbReportes.Controls.Add(this.pictureBox2);
+            this.GbReportes.Controls.Add(this.pictureBox1);
             this.GbReportes.Controls.Add(this.btnPDF);
             this.GbReportes.Controls.Add(this.btnExcel);
             this.GbReportes.Controls.Add(this.btnReporte);
@@ -71,15 +81,29 @@
             this.GbReportes.TabStop = false;
             this.GbReportes.Text = "Reportes";
             // 
+            // btnPDF
+            // 
+            this.btnPDF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(151)))), ((int)(((byte)(166)))));
+            this.btnPDF.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btnPDF.ForeColor = System.Drawing.Color.White;
+            this.btnPDF.Location = new System.Drawing.Point(9, 110);
+            this.btnPDF.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPDF.Name = "btnPDF";
+            this.btnPDF.Size = new System.Drawing.Size(134, 33);
+            this.btnPDF.TabIndex = 23;
+            this.btnPDF.Text = "Exportar en PDF";
+            this.btnPDF.UseVisualStyleBackColor = false;
+            this.btnPDF.Click += new System.EventHandler(this.btnPDF_Click);
+            // 
             // btnExcel
             // 
             this.btnExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(151)))), ((int)(((byte)(166)))));
             this.btnExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnExcel.ForeColor = System.Drawing.Color.White;
-            this.btnExcel.Location = new System.Drawing.Point(9, 71);
+            this.btnExcel.Location = new System.Drawing.Point(9, 72);
             this.btnExcel.Margin = new System.Windows.Forms.Padding(2);
             this.btnExcel.Name = "btnExcel";
-            this.btnExcel.Size = new System.Drawing.Size(183, 34);
+            this.btnExcel.Size = new System.Drawing.Size(134, 33);
             this.btnExcel.TabIndex = 22;
             this.btnExcel.Text = "Exportar en Excel";
             this.btnExcel.UseVisualStyleBackColor = false;
@@ -99,25 +123,66 @@
             this.btnReporte.UseVisualStyleBackColor = false;
             this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 
-            // btnPDF
+            // gBFiltrado
             // 
-            this.btnPDF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(151)))), ((int)(((byte)(166)))));
-            this.btnPDF.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.btnPDF.ForeColor = System.Drawing.Color.White;
-            this.btnPDF.Location = new System.Drawing.Point(9, 109);
-            this.btnPDF.Margin = new System.Windows.Forms.Padding(2);
-            this.btnPDF.Name = "btnPDF";
-            this.btnPDF.Size = new System.Drawing.Size(183, 34);
-            this.btnPDF.TabIndex = 23;
-            this.btnPDF.Text = "Exportar en PDF";
-            this.btnPDF.UseVisualStyleBackColor = false;
-            this.btnPDF.Click += new System.EventHandler(this.btnPDF_Click);
+            this.gBFiltrado.Controls.Add(this.btnFiltrar);
+            this.gBFiltrado.Controls.Add(this.CbFiltros);
+            this.gBFiltrado.Location = new System.Drawing.Point(14, 360);
+            this.gBFiltrado.Name = "gBFiltrado";
+            this.gBFiltrado.Size = new System.Drawing.Size(192, 100);
+            this.gBFiltrado.TabIndex = 3;
+            this.gBFiltrado.TabStop = false;
+            this.gBFiltrado.Text = "Filtrado";
+            // 
+            // CbFiltros
+            // 
+            this.CbFiltros.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbFiltros.FormattingEnabled = true;
+            this.CbFiltros.Location = new System.Drawing.Point(20, 31);
+            this.CbFiltros.Name = "CbFiltros";
+            this.CbFiltros.Size = new System.Drawing.Size(152, 21);
+            this.CbFiltros.TabIndex = 0;
+            this.CbFiltros.SelectedIndexChanged += new System.EventHandler(this.CbFiltros_SelectedIndexChanged);
+            // 
+            // btnFiltrar
+            // 
+            this.btnFiltrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(151)))), ((int)(((byte)(166)))));
+            this.btnFiltrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btnFiltrar.ForeColor = System.Drawing.Color.White;
+            this.btnFiltrar.Location = new System.Drawing.Point(20, 61);
+            this.btnFiltrar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFiltrar.Name = "btnFiltrar";
+            this.btnFiltrar.Size = new System.Drawing.Size(152, 34);
+            this.btnFiltrar.TabIndex = 24;
+            this.btnFiltrar.Text = "Filtrar";
+            this.btnFiltrar.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::ProyectoSoplado_1._0_.Properties.Resources.archivo_pdf;
+            this.pictureBox2.Location = new System.Drawing.Point(148, 110);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(44, 30);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 29;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProyectoSoplado_1._0_.Properties.Resources.archivo_excel;
+            this.pictureBox1.Location = new System.Drawing.Point(148, 75);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(44, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 28;
+            this.pictureBox1.TabStop = false;
             // 
             // FormReporteAsistencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(745, 472);
+            this.Controls.Add(this.gBFiltrado);
             this.Controls.Add(this.GbReportes);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvReporteAsistencias);
@@ -128,6 +193,9 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvReporteAsistencias)).EndInit();
             this.GbReportes.ResumeLayout(false);
+            this.gBFiltrado.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,5 +209,10 @@
         private System.Windows.Forms.Button btnReporte;
         private System.Windows.Forms.Button btnExcel;
         private System.Windows.Forms.Button btnPDF;
+        private System.Windows.Forms.GroupBox gBFiltrado;
+        private System.Windows.Forms.Button btnFiltrar;
+        private System.Windows.Forms.ComboBox CbFiltros;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
