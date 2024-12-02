@@ -144,6 +144,21 @@ namespace ProyectoSoplado_1._0_.Formularios
             dgvAdmins.DataSource = FormIniciarAdmin.admins.Select(admin => new { Usuario = admin.Usuario, Contraseña = admin.Contraseña }).ToList();
         }
 
+        public void ocultar()
+        {
+            gbPanelControl.Hide();
+            pictureBox1.Hide();
+            dgvAdmins.Hide();
+            gpLogin.Show();
+        }
+        public void iniciar()
+        {
+            gbPanelControl.Show();
+            pictureBox1.Show();
+            dgvAdmins.Show();
+            gpLogin.Hide();
+        }
+
         #endregion
 
         #region Eventos del DataGridView
@@ -160,9 +175,25 @@ namespace ProyectoSoplado_1._0_.Formularios
         // Evento de carga del formulario
         private void GestionarAdmins_Load(object sender, EventArgs e)
         {
+            ocultar();
             actualizargrid();
         }
 
         #endregion
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            string contraseña = txtLogin.Text;
+            string contraseñaCorrecta = "1234abcd";
+            if(contraseñaCorrecta == contraseña)
+            {
+                iniciar();
+            }
+            else
+            {
+                MessageBox.Show("Contraseña incorrecta. Por favor, inténtelo de nuevo.", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
     }
 }

@@ -38,9 +38,15 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.dgvAdmins = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.gpLogin = new System.Windows.Forms.GroupBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.lblCifCed = new System.Windows.Forms.Label();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.txtLogin = new System.Windows.Forms.TextBox();
             this.gbPanelControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdmins)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.gpLogin.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbPanelControl
@@ -136,7 +142,7 @@
             this.dgvAdmins.AllowUserToDeleteRows = false;
             this.dgvAdmins.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAdmins.Enabled = false;
-            this.dgvAdmins.Location = new System.Drawing.Point(264, 39);
+            this.dgvAdmins.Location = new System.Drawing.Point(264, 30);
             this.dgvAdmins.Margin = new System.Windows.Forms.Padding(2);
             this.dgvAdmins.Name = "dgvAdmins";
             this.dgvAdmins.ReadOnly = true;
@@ -158,11 +164,57 @@
             this.pictureBox1.TabIndex = 29;
             this.pictureBox1.TabStop = false;
             // 
+            // gpLogin
+            // 
+            this.gpLogin.Controls.Add(this.txtLogin);
+            this.gpLogin.Controls.Add(this.btnLogin);
+            this.gpLogin.Controls.Add(this.lblCifCed);
+            this.gpLogin.Location = new System.Drawing.Point(249, 130);
+            this.gpLogin.Name = "gpLogin";
+            this.gpLogin.Size = new System.Drawing.Size(338, 145);
+            this.gpLogin.TabIndex = 30;
+            this.gpLogin.TabStop = false;
+            this.gpLogin.Text = "Login";
+            // 
+            // lblCifCed
+            // 
+            this.lblCifCed.AutoSize = true;
+            this.lblCifCed.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCifCed.Location = new System.Drawing.Point(65, 16);
+            this.lblCifCed.Name = "lblCifCed";
+            this.lblCifCed.Size = new System.Drawing.Size(74, 14);
+            this.lblCifCed.TabIndex = 19;
+            this.lblCifCed.Text = "Contraseña:";
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(151)))), ((int)(((byte)(166)))));
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Location = new System.Drawing.Point(68, 86);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(174, 33);
+            this.btnLogin.TabIndex = 20;
+            this.btnLogin.Text = "Desbloquear";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // txtLogin
+            // 
+            this.txtLogin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtLogin.Location = new System.Drawing.Point(68, 46);
+            this.txtLogin.Name = "txtLogin";
+            this.txtLogin.PasswordChar = '*';
+            this.txtLogin.Size = new System.Drawing.Size(174, 20);
+            this.txtLogin.TabIndex = 21;
+            // 
             // frmGestionarAdmins
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(718, 431);
+            this.Controls.Add(this.gpLogin);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.gbPanelControl);
             this.Controls.Add(this.dgvAdmins);
@@ -175,6 +227,8 @@
             this.gbPanelControl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdmins)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.gpLogin.ResumeLayout(false);
+            this.gpLogin.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -190,5 +244,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnGuardarArchivo;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.GroupBox gpLogin;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Label lblCifCed;
+        private System.Windows.Forms.TextBox txtLogin;
+        private System.Windows.Forms.Button btnLogin;
     }
 }

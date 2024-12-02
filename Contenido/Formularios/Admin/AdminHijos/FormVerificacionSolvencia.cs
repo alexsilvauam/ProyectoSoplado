@@ -264,6 +264,26 @@ namespace ProyectoSoplado_1._0_
                 {
                     MessageBox.Show($"Ocurrió un error al guardar los pagos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                //guarda la solvencia en el miembro
+                try
+                {
+                    string directoryPath = Path.Combine(Directory.GetCurrentDirectory(), "ArchivosBIN");
+                    if (!Directory.Exists(directoryPath))
+                    {
+                        Directory.CreateDirectory(directoryPath);
+                    }
+                    string filePath = Path.Combine(directoryPath, "Usuarios.bin");
+                    BinaryFormatter formatter = new BinaryFormatter();
+                    using (FileStream stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        formatter.Serialize(stream,FormAdministrarUsua.Lmiembros);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error al guardar el archivo: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
             }
         }
 
