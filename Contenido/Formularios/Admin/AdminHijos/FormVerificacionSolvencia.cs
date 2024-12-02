@@ -44,9 +44,16 @@ namespace ProyectoSoplado_1._0_
             }
             else
             {
-                int id = int.Parse(txtBuscarMiembro.Text);
-                Miembro Miembro = FormAdministrarUsua.Lmiembros.FirstOrDefault(x => x.IDusuario == id);
-                return Miembro;
+                if (int.TryParse(txtBuscarMiembro.Text, out int id))
+                {
+                    Miembro Miembro = FormAdministrarUsua.Lmiembros.FirstOrDefault(x => x.IDusuario == id);
+                    return Miembro;
+                }
+                else
+                {
+                    MessageBox.Show("El Id de Miembro tiene que ser un número entero.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return null;
+                }
             }
         }
 
@@ -213,65 +220,136 @@ namespace ProyectoSoplado_1._0_
             {
                 Pago pago = new Pago();
 
-                int Idmiembro = int.Parse(txtBuscarMiembro.Text);
                 int idpago = int.Parse(txtIdpago.Text);
-                DateTime Date_FechaActual = DateTime.Now.Date;
+                DateTime fechaActual = DateTime.Now.Date;
                 double montoPago = double.Parse(txtmontopago.Text);
 
                 pago.id_pago = idpago;
-                pago.fecha_pago = Date_FechaActual;
+                pago.fecha_pago = fechaActual;
                 pago.Fecha_Vencimiento = AsignarFecha();
                 pago.monto_pago = montoPago;
 
                 RegistroPagos.Add(pago);
 
                 MiembroExistente.Solvencia = true;
+
+                // Actualizar los campos de fecha y monto de pago
+                txtFechaInicio.Text = fechaActual.ToString("dd/MM/yyyy");
+                txtFechaVencimieto.Text = pago.Fecha_Vencimiento.ToString("dd/MM/yyyy");
+                txtmontopago.Text = montoPago.ToString("F2");
+
                 limpiarCampos();
-                MessageBox.Show("Pago registrado correctamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Pago registrado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 // Guardar los datos en el archivo binario
                 try
                 {
-                    // Ruta del directorio
                     string directoryPath = Path.Combine(Directory.GetCurrentDirectory(), "ArchivosBIN");
 
-                    // Verificar o crear el directorio
                     if (!Directory.Exists(directoryPath))
                     {
                         Directory.CreateDirectory(directoryPath);
                     }
 
-                    // Ruta del archivo
                     string filePath = Path.Combine(directoryPath, "Pagos.bin");
 
-                    // Serializar la lista de pagos
                     BinaryFormatter formatter = new BinaryFormatter();
                     using (FileStream stream = new FileStream(filePath, FileMode.Create))
                     {
                         formatter.Serialize(stream, RegistroPagos);
                     }
 
-                    // Notificar éxito al usuario
-                    MessageBox.Show("Los pagos se han guardado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
-                    // Manejar errores
                     MessageBox.Show($"Ocurrió un error al guardar los pagos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
 
+
+
+
         #endregion
 
         // Métodos y eventos adicionales (cuerpos eliminados para brevedad)
-        private void btnBuscar_Click(object sender, EventArgs e) { }
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            if (!verificar())
+            {
+                return;
+            }
+
+            MiembroExistente = buscarVerificarMiembro();
+
+            if (MiembroExistente != null)
+            {
+                if (MiembroExistente.Solvencia)
+                {
+                    MessageBox.Show($"El miembro {MiembroExistente.Nombre} {MiembroExistente.Apellido} ya ha realizado el pago.", "Información de pago", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtverificar.Clear();
+                }
+                else
+                {
+                    MessageBox.Show($"El miembro {MiembroExistente.Nombre} {MiembroExistente.Apellido} no ha realizado el pago.", "Información de pago", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show($"No existe un miembro con la búsqueda {txtverificar.Text}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void btnguardar_Click(object sender, EventArgs e) { }
         private void FormVerificacionSolvencia_Load(object sender, EventArgs e) { }
         private void label4_Click(object sender, EventArgs e) { }
         private void txtmontopago_TextChanged(object sender, EventArgs e) { }
-        private void txtIdMiembro_TextChanged(object sender, EventArgs e) { }
-        private void cmbModalidad_SelectedIndexChanged(object sender, EventArgs e) { }
+        private void txtIdMiembro_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtBuscarMiembro.Text))
+            {
+                return;
+            }
+
+            MiembroExistente = buscarMiembro();
+            if (MiembroExistente != null)
+            {
+                string rolUsuario = MiembroExistente.RolUsuario;
+                asignarMonto(rolUsuario, cmbModalidad.SelectedItem?.ToString());
+            }
+            else
+            {
+                txtmontopago.Clear();
+            }
+        }
+
+        private void cmbModalidad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtBuscarMiembro.Text))
+            {
+                return;
+            }
+
+            if (MiembroExistente != null)
+            {
+                string rolUsuario = MiembroExistente.RolUsuario;
+                asignarMonto(rolUsuario, cmbModalidad.SelectedItem?.ToString());
+            }
+            txtFechaInicio.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            txtFechaVencimieto.Text = AsignarFecha().ToString("dd/MM/yyyy");
+        }
+
+
         private void groupBox2_Enter(object sender, EventArgs e) { }
+
+        private void txtFechaInicio_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtFechaVencimieto_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

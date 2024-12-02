@@ -43,6 +43,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.rbtnCifCed = new System.Windows.Forms.RadioButton();
             this.rbtnID = new System.Windows.Forms.RadioButton();
             this.txtFechaInicio = new System.Windows.Forms.TextBox();
             this.txtFechaVencimieto = new System.Windows.Forms.TextBox();
@@ -50,8 +52,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.lblModalidad = new System.Windows.Forms.Label();
             this.cmbModalidad = new System.Windows.Forms.ComboBox();
-            this.rbtnCifCed = new System.Windows.Forms.RadioButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -224,6 +224,26 @@
             this.groupBox2.Text = "Registrar Pago";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProyectoSoplado_1._0_.Properties.Resources.periodico;
+            this.pictureBox1.Location = new System.Drawing.Point(107, 233);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(43, 31);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 35;
+            this.pictureBox1.TabStop = false;
+            // 
+            // rbtnCifCed
+            // 
+            this.rbtnCifCed.AutoSize = true;
+            this.rbtnCifCed.Location = new System.Drawing.Point(226, 48);
+            this.rbtnCifCed.Name = "rbtnCifCed";
+            this.rbtnCifCed.Size = new System.Drawing.Size(61, 17);
+            this.rbtnCifCed.TabIndex = 3;
+            this.rbtnCifCed.Text = "Cif/Ced";
+            this.rbtnCifCed.UseVisualStyleBackColor = true;
+            // 
             // rbtnID
             // 
             this.rbtnID.AutoSize = true;
@@ -245,6 +265,7 @@
             this.txtFechaInicio.ReadOnly = true;
             this.txtFechaInicio.Size = new System.Drawing.Size(154, 20);
             this.txtFechaInicio.TabIndex = 6;
+            this.txtFechaInicio.TextChanged += new System.EventHandler(this.txtFechaInicio_TextChanged);
             // 
             // txtFechaVencimieto
             // 
@@ -255,6 +276,7 @@
             this.txtFechaVencimieto.ReadOnly = true;
             this.txtFechaVencimieto.Size = new System.Drawing.Size(154, 20);
             this.txtFechaVencimieto.TabIndex = 7;
+            this.txtFechaVencimieto.TextChanged += new System.EventHandler(this.txtFechaVencimieto_TextChanged);
             // 
             // label6
             // 
@@ -302,26 +324,6 @@
             this.cmbModalidad.Size = new System.Drawing.Size(153, 21);
             this.cmbModalidad.TabIndex = 5;
             this.cmbModalidad.SelectedIndexChanged += new System.EventHandler(this.cmbModalidad_SelectedIndexChanged);
-            // 
-            // rbtnCifCed
-            // 
-            this.rbtnCifCed.AutoSize = true;
-            this.rbtnCifCed.Location = new System.Drawing.Point(226, 48);
-            this.rbtnCifCed.Name = "rbtnCifCed";
-            this.rbtnCifCed.Size = new System.Drawing.Size(61, 17);
-            this.rbtnCifCed.TabIndex = 3;
-            this.rbtnCifCed.Text = "Cif/Ced";
-            this.rbtnCifCed.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ProyectoSoplado_1._0_.Properties.Resources.periodico;
-            this.pictureBox1.Location = new System.Drawing.Point(107, 233);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(43, 31);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 35;
-            this.pictureBox1.TabStop = false;
             // 
             // FormVerificacionSolvencia
             // 

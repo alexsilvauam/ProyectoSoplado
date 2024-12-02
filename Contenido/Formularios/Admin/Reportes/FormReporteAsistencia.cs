@@ -175,6 +175,12 @@ namespace ProyectoSoplado_1._0_.Formularios
         /// </summary>
         private void FiltrarAsistencia()
         {
+            if (CbFiltros.SelectedItem == null)
+            {
+                MessageBox.Show("Por favor, seleccione un filtro.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             string selectedFilter = CbFiltros.SelectedItem.ToString();
             DateTime now = DateTime.Now;
             List<Asistencia> filteredList = new List<Asistencia>();
@@ -185,17 +191,17 @@ namespace ProyectoSoplado_1._0_.Formularios
                     filteredList = FormPrincipal.RegistroAsistencia.Where(a => a.FechaAcceso.Date == now.Date).ToList();
                     break;
                 case "Semanal":
-                    // Ajustar el cálculo del inicio de la semana
+                    // Ajustar el cálculo del inicio de la semana para incluir el día actual
                     DateTime startOfWeek = now.AddDays(-(int)now.DayOfWeek + (int)DayOfWeek.Monday);
-                    if (startOfWeek > now)
+                    if (now.DayOfWeek == DayOfWeek.Sunday)
                     {
                         startOfWeek = startOfWeek.AddDays(-7);
                     }
-                    filteredList = FormPrincipal.RegistroAsistencia.Where(a => a.FechaAcceso >= startOfWeek && a.FechaAcceso <= now).ToList();
+                    filteredList = FormPrincipal.RegistroAsistencia.Where(a => a.FechaAcceso.Date >= startOfWeek.Date && a.FechaAcceso.Date <= now.Date).ToList();
                     break;
                 case "Mensual":
                     DateTime startOfMonth = new DateTime(now.Year, now.Month, 1);
-                    filteredList = FormPrincipal.RegistroAsistencia.Where(a => a.FechaAcceso >= startOfMonth && a.FechaAcceso <= now).ToList();
+                    filteredList = FormPrincipal.RegistroAsistencia.Where(a => a.FechaAcceso.Date >= startOfMonth.Date && a.FechaAcceso.Date <= now.Date).ToList();
                     break;
             }
 
@@ -207,6 +213,9 @@ namespace ProyectoSoplado_1._0_.Formularios
             dgvReporteAsistencias.Columns["FechaAcceso"].HeaderText = "Fecha de Acceso";
             dgvReporteAsistencias.Columns["HoraAcceso"].HeaderText = "Hora de Acceso";
         }
+
+
+
 
         #endregion
 

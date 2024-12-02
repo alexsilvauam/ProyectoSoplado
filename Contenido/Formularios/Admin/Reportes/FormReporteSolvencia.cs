@@ -285,21 +285,20 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
                     filteredList = FormVerificacionSolvencia.RegistroPagos.Where(p => p.fecha_pago.Date == now.Date).ToList();
                     break;
                 case "Semanal":
-                    // Ajustar el cálculo del inicio de la semana
+                    // Ajustar el cálculo del inicio de la semana para incluir el día actual
                     DateTime startOfWeek = now.AddDays(-(int)now.DayOfWeek + (int)DayOfWeek.Monday);
                     if (startOfWeek > now)
                     {
                         startOfWeek = startOfWeek.AddDays(-7);
                     }
-                    filteredList = FormVerificacionSolvencia.RegistroPagos.Where(p => p.fecha_pago >= startOfWeek && p.fecha_pago <= now).ToList();
+                    filteredList = FormVerificacionSolvencia.RegistroPagos.Where(p => p.fecha_pago.Date >= startOfWeek.Date && p.fecha_pago.Date <= now.Date).ToList();
                     break;
                 case "Mensual":
                     DateTime startOfMonth = new DateTime(now.Year, now.Month, 1);
-                    filteredList = FormVerificacionSolvencia.RegistroPagos.Where(p => p.fecha_pago >= startOfMonth && p.fecha_pago <= now).ToList();
+                    filteredList = FormVerificacionSolvencia.RegistroPagos.Where(p => p.fecha_pago.Date >= startOfMonth.Date && p.fecha_pago.Date <= now.Date).ToList();
                     break;
             }
 
-            // Actualizar el DataGridView con la lista filtrada
             dgvRegistroPagos.DataSource = null;
             dgvRegistroPagos.DataSource = filteredList;
 
