@@ -37,11 +37,8 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
             txtID.Enabled = false;
         }
 
-        private void FormEditarMiembro_Load(object sender, EventArgs e)
-        {
 
-        }
-
+        #region Botones con Metodo
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtNombre.Text) || string.IsNullOrWhiteSpace(txtApellido.Text))
@@ -59,11 +56,13 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
             this.Close();
         }
 
-        private void cmbRolUsuario_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
+        #endregion
 
+        #region Metodos
         private void txtCifCed_TextChanged(object sender, EventArgs e)
         {
             if (cmbCifCed.SelectedItem == null)
@@ -80,15 +79,23 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
                 txtCifCed.SelectionStart = txtCifCed.Text.Length;
             }
         }
+        #endregion
+
+        #region Botones sin Metodo
+        private void FormEditarMiembro_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbRolUsuario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
 
         private void cmbCifCed_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        #endregion
     }
 }

@@ -18,22 +18,25 @@ namespace ProyectoSoplado_1._0_
         {
             InitializeComponent();
             personalizarDiseño();
-
         }
-        // Diseños del submenu
-        public void personalizarDiseño() {
-            panelReportes.Visible = false;
 
+        #region Metodos
+
+        // Diseños del submenu
+        public void personalizarDiseño()
+        {
+            panelReportes.Visible = false;
             panelUsuarios.Visible = false;
         }
 
         public void ocultarSubmenu()
         {
             if (panelUsuarios.Visible == true)
-                panelUsuarios.Visible = false;            
+                panelUsuarios.Visible = false;
             if (panelReportes.Visible == true)
                 panelReportes.Visible = false;
         }
+
         public void mostrarSubmenu(Panel submenu)
         {
             if (submenu.Visible == false)
@@ -45,56 +48,34 @@ namespace ProyectoSoplado_1._0_
                 submenu.Visible = false;
         }
 
-        //Termina.
-
-        private void btnad_Click(object sender, EventArgs e)
+        public void abrirMinisForms(Form hijo)
         {
-
+            if (activeform != null)
+                activeform.Close();
+            activeform = hijo;
+            hijo.TopLevel = false;
+            hijo.FormBorderStyle = FormBorderStyle.None;
+            hijo.Dock = DockStyle.Fill;
+            panelContenedorHijos.Controls.Add(hijo);
+            panelContenedorHijos.Tag = hijo;
+            hijo.BringToFront();
+            hijo.Show();
         }
 
-        private void PlLogo_Paint(object sender, PaintEventArgs e)
-        {
+        #endregion
 
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
+        #region Botones con metodo
 
         private void button3_Click(object sender, EventArgs e)
         {
             abrirMinisForms(new FormAdministrarUsua());
             ocultarSubmenu();
-
         }
-
 
         private void button4_Click(object sender, EventArgs e)
         {
             abrirMinisForms(new FormVerificacionSolvencia());
             ocultarSubmenu();
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void FormAdmin_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panelMenu_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void btnPanelUsuarios_Click(object sender, EventArgs e)
@@ -105,16 +86,13 @@ namespace ProyectoSoplado_1._0_
         private void btnRepAsistencia_Click(object sender, EventArgs e)
         {
             abrirMinisForms(new FormReporteAsistencia());
-
             ocultarSubmenu();
-
         }
 
         private void btnRepSolvencia_Click(object sender, EventArgs e)
         {
             abrirMinisForms(new FormReporteSolvencia());
             ocultarSubmenu();
-
         }
 
         private void btnReportes_Click(object sender, EventArgs e)
@@ -122,43 +100,39 @@ namespace ProyectoSoplado_1._0_
             mostrarSubmenu(panelReportes);
         }
 
-        private void FormAdmin_Load_1(object sender, EventArgs e)
-        {
-        
-        }
-
-        private void lblAviso_Click(object sender, EventArgs e)
-        {
-
-        }
-        public Form activeform = null;
-        public void abrirMinisForms(Form hijo)
-        {
-            if (activeform != null)
-                activeform.Close();
-            activeform= hijo;
-            hijo.TopLevel = false;
-            hijo.FormBorderStyle = FormBorderStyle.None;
-            hijo.Dock = DockStyle.Fill;
-            panelContenedorHijos.Controls.Add(hijo);
-            panelContenedorHijos.Tag = hijo;
-            hijo.BringToFront();
-            hijo.Show();
-        }
-
-        private void panel1_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-          
-        }
-
         private void button1_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }
+
+        #endregion
+
+        #region Botones sin metodo
+
+        private void btnad_Click(object sender, EventArgs e) { }
+
+        private void PlLogo_Paint(object sender, PaintEventArgs e) { }
+
+        private void pictureBox1_Click(object sender, EventArgs e) { }
+
+        private void button5_Click(object sender, EventArgs e) { }
+
+        private void panel1_Paint(object sender, PaintEventArgs e) { }
+
+        private void FormAdmin_Load(object sender, EventArgs e) { }
+
+        private void panelMenu_Paint(object sender, PaintEventArgs e) { }
+
+        private void FormAdmin_Load_1(object sender, EventArgs e) { }
+
+        private void lblAviso_Click(object sender, EventArgs e) { }
+
+        private void panel1_Paint_1(object sender, PaintEventArgs e) { }
+
+        private void button1_Click(object sender, EventArgs e) { }
+
+        #endregion
+
+        public Form activeform = null;
     }
 }

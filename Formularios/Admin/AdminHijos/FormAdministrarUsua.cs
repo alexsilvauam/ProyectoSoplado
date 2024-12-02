@@ -11,13 +11,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace ProyectoSoplado_1._0_.Formularios.Admin
 {
-
     public partial class FormAdministrarUsua : Form
     {
-
         public static List<Miembro> Lmiembros = new List<Miembro>();
         Miembro MiembroExistente;
 
@@ -25,29 +22,10 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
         {
             InitializeComponent();
             dgvUsuarios.CellFormatting += dgvUsuarios_CellFormatting;
-
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-        }
-
-        private void txtBusqueda_TextChanged(object sender, EventArgs e)
-        {
-        }
-
+        #region Botones con Metodo
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-           
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void lblBUsuario_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -60,21 +38,243 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
             string apellido = txtApellido.Text;
             string rolUsuario = cmbRolUsuario.SelectedItem.ToString();
             string cifCed = txtCifCed.Text;
-     
+
             int id = int.Parse(txtID.Text);
 
             Random random = new Random();
-            int codigoQR = random.Next(1, 1000); 
-           
+            int codigoQR = random.Next(1, 1000);
 
-            Lmiembros.Add(new Miembro(id, rolUsuario, nombre, apellido,codigoQR, cifCed));
+            Lmiembros.Add(new Miembro(id, rolUsuario, nombre, apellido, codigoQR, cifCed));
 
             actualizarGrid();
             LimpiarCampos();
             MessageBox.Show("Miembro agregado correctamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
         }
 
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (verificarBuscar() == false)
+            {
+                return;
+            }
+            MiembroExistente = buscarMiembro();
+
+            string BuscarId = txtBusqueda.Text;
+
+            if (MiembroExistente != null)
+            {
+                Lmiembros.Remove(MiembroExistente);
+                actualizarGrid();
+                txtBusqueda.Clear();
+                MessageBox.Show("Miembro eliminado correctamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show($"No se encontró ningún miembro la busqueda {BuscarId}.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            if (verificarBuscar() == false)
+            {
+                return;
+            }
+
+            MiembroExistente = buscarMiembro();
+
+            string BuscarId = txtBusqueda.Text;
+
+            if (MiembroExistente != null)
+            {
+                using (FormEditarMiembro formEditar = new FormEditarMiembro(MiembroExistente))
+                {
+                    if (formEditar.ShowDialog() == DialogResult.OK)
+                    {
+                        actualizarGrid();
+                        txtBusqueda.Clear();
+                        MessageBox.Show("El miembro ha sido editado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show($"No se encontró ningún miembro con la busqueda {BuscarId}.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnBuscar_Click_1(object sender, EventArgs e)
+        {
+            if (verificarBuscar() == false)
+            {
+                return;
+            }
+            string searchText = txtBusqueda.Text;
+
+            MiembroExistente = buscarMiembro();
+            if (MiembroExistente != null)
+            {
+                MessageBox.Show($"Se encontró el miembro con la busqueda {searchText}", "Busqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtBusqueda.Clear();
+            }
+            else
+            {
+                MessageBox.Show($"No se encontro el miembro con la busqueda {searchText}.", "Búsqueda", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnGuardarArchivo_Click(object sender, EventArgs e)
+        {
+            string directoryPath = Path.Combine(Directory.GetCurrentDirectory(), "ArchivosBIN");
+            if (!Directory.Exists(directoryPath))
+            {
+                Directory.CreateDirectory(directoryPath);
+            }
+            string filePath = Path.Combine(directoryPath, "Usuarios.bin");
+            BinaryFormatter formatter = new BinaryFormatter();
+            using (FileStream stream = new FileStream(filePath, FileMode.Create))
+            {
+                formatter.Serialize(stream, Lmiembros);
+            }
+            MessageBox.Show("Los datos se han guardado correctamente en el archivo.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btnLeerArchivo_Click(object sender, EventArgs e)
+        {
+        }
+        #endregion
+        #region Metodos
+       
+
+        public void actualizarGrid()
+        {
+            dgvUsuarios.DataSource = null;
+            dgvUsuarios.DataSource = Lmiembros;
+        }
+
+        public void LimpiarCampos()
+        {
+            txtNombre.Clear();
+            txtApellido.Clear();
+            cmbRolUsuario.SelectedIndex = -1;
+            cmbCifCed.SelectedIndex = -1;
+            txtID.Clear();
+        }
+
+        public bool verificarBuscar()
+        {
+            if (string.IsNullOrEmpty(txtBusqueda.Text))
+            {
+                MessageBox.Show("El campo de busqueda no puede estar vacío.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if (rbtnId.Checked)
+            {
+                if (!int.TryParse(txtBusqueda.Text, out _))
+                {
+                    MessageBox.Show("El ID debe ser un número entero.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        public Miembro buscarMiembro()
+        {
+            if (rbtnCifCed.Checked)
+            {
+                string cifced = txtBusqueda.Text;
+                Miembro Miembro = Lmiembros.FirstOrDefault(x => x.CifCed == cifced);
+                return Miembro;
+            }
+            else
+            {
+                int id = int.Parse(txtBusqueda.Text);
+                Miembro Miembro = Lmiembros.FirstOrDefault(x => x.IDusuario == id);
+                return Miembro;
+            }
+        }
+
+        private void FormAdministrarUsua_Load(object sender, EventArgs e)
+        {
+            actualizarGrid();
+        }
+
+        private void cmbCifCed_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtCifCed.Clear();
+        }
+
+        private void txtCifCed_TextChanged(object sender, EventArgs e)
+        {
+            if (cmbCifCed.SelectedItem == null)
+            {
+                return;
+            }
+
+            string selectedType = cmbCifCed.SelectedItem.ToString();
+            int maxLength = selectedType == "CIF" ? 8 : 16;
+
+            if (txtCifCed.Text.Length > maxLength)
+            {
+                txtCifCed.Text = txtCifCed.Text.Substring(0, maxLength);
+                txtCifCed.SelectionStart = txtCifCed.Text.Length;
+            }
+        }
+
+        private void dgvUsuarios_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dgvUsuarios.Columns[e.ColumnIndex].Name == "Solvencia")
+            {
+                bool solvencia = (bool)e.Value;
+                if (solvencia)
+                {
+                    e.CellStyle.BackColor = Color.Green;
+                    e.CellStyle.ForeColor = Color.White;
+                }
+                else
+                {
+                    e.CellStyle.BackColor = Color.Red;
+                    e.CellStyle.ForeColor = Color.White;
+                }
+            }
+        }
+        #endregion
+        #region Botones sin Metodo
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+
+        private void txtBusqueda_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void lblBUsuario_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void lblBUsuario_Click_1(object sender, EventArgs e)
+        {
+        }
+
+        private void lblID_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void gbRegistro_Enter(object sender, EventArgs e)
+        {
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+        }
+        #endregion
+        #region Validaciones
         public bool verificarCampos()
         {
             if (string.IsNullOrWhiteSpace(txtNombre.Text))
@@ -139,219 +339,7 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
 
             return true;
         }
-
-
-        public void actualizarGrid()
-        {
-            dgvUsuarios.DataSource = null;
-            dgvUsuarios.DataSource = Lmiembros;
-        }
-        public void LimpiarCampos()
-        {
-            txtNombre.Clear();
-            txtApellido.Clear();
-            cmbRolUsuario.SelectedIndex = -1;
-            cmbCifCed.SelectedIndex = -1;
-            txtID.Clear();
-        }
-
-        public bool verificarBuscar()
-        {
-            if (string.IsNullOrEmpty(txtBusqueda.Text))
-            {
-                MessageBox.Show("El campo de busqueda no puede estar vacío.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-            if (rbtnId.Checked)
-            {
-                if (!int.TryParse(txtBusqueda.Text, out _))
-                {
-                    MessageBox.Show("El ID debe ser un número entero.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return false;
-                }
-            }
-           
-            return true;
-        }
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            if (verificarBuscar() == false)
-            {
-                return;
-            }
-            MiembroExistente = buscarMiembro();
-
-            string BuscarId = txtBusqueda.Text;
-
-            if (MiembroExistente != null)
-            {
-                Lmiembros.Remove(MiembroExistente);
-                actualizarGrid();
-                txtBusqueda.Clear();
-                MessageBox.Show("Miembro eliminado correctamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            }
-            else
-            {
-                MessageBox.Show($"No se encontró ningún miembro la busqueda {BuscarId}.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
-        }
-
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-            if (verificarBuscar() == false)
-            {
-                return;
-            }
-
-            MiembroExistente = buscarMiembro();
-
-           string BuscarId = txtBusqueda.Text;
-
-            if (MiembroExistente != null)
-            {
-                using (FormEditarMiembro formEditar = new FormEditarMiembro(MiembroExistente))
-                {
-                    if (formEditar.ShowDialog() == DialogResult.OK)
-                    {
-                        actualizarGrid();
-                        txtBusqueda.Clear();
-
-                        MessageBox.Show("El miembro ha sido editado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                }
-            }
-            else
-            {
-                MessageBox.Show($"No se encontró ningún miembro con la busqueda {BuscarId}.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-        }
-        
-      
-
-        public Miembro buscarMiembro()
-        {
-            if (rbtnCifCed.Checked)
-            {
-                string cifced = txtBusqueda.Text;
-                Miembro Miembro = Lmiembros.FirstOrDefault(x => x.CifCed == cifced);
-                return Miembro;
-            }
-            else
-            {
-                int id = int.Parse(txtBusqueda.Text);
-                Miembro Miembro = Lmiembros.FirstOrDefault(x => x.IDusuario == id);
-                return Miembro;
-            }
-        }
-
-
-        private void btnBuscar_Click_1(object sender, EventArgs e)
-        {
-            if (verificarBuscar() == false)
-            {
-                return;
-            }
-            string searchText = txtBusqueda.Text;
-
-            MiembroExistente = buscarMiembro();
-            if (MiembroExistente != null)
-            {
-                MessageBox.Show($"Se encontró el miembro con la busqueda {searchText}", "Busqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtBusqueda.Clear();
-            }
-            else
-            {
-                MessageBox.Show($"No se encontro el miembro con la busqueda {searchText}.", "Búsqueda", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void FormAdministrarUsua_Load(object sender, EventArgs e)
-        {
-            actualizarGrid();
-        }
-
-        private void lblBUsuario_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblID_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void gbRegistro_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmbCifCed_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            txtCifCed.Clear();
-
-        }
-
-        private void txtCifCed_TextChanged(object sender, EventArgs e)
-        {
-            if (cmbCifCed.SelectedItem == null)
-            {
-                return;
-            }
-
-            string selectedType = cmbCifCed.SelectedItem.ToString();
-            int maxLength = selectedType == "CIF" ? 8 : 16;
-
-            if (txtCifCed.Text.Length > maxLength)
-            {
-                txtCifCed.Text = txtCifCed.Text.Substring(0, maxLength);
-                txtCifCed.SelectionStart = txtCifCed.Text.Length;
-            }
-        }
-        private void dgvUsuarios_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            if (dgvUsuarios.Columns[e.ColumnIndex].Name == "Solvencia")
-            {
-                bool solvencia = (bool)e.Value;
-                if (solvencia)
-                {
-                    e.CellStyle.BackColor = Color.Green;
-                    e.CellStyle.ForeColor = Color.White;
-                }
-                else
-                {
-                    e.CellStyle.BackColor = Color.Red;
-                    e.CellStyle.ForeColor = Color.White;
-                }
-            }
-        }
-
-        private void btnGuardarArchivo_Click(object sender, EventArgs e)
-        {
-            string directoryPath = Path.Combine(Directory.GetCurrentDirectory(), "ArchivosBIN");
-            if (!Directory.Exists(directoryPath))
-            {
-                Directory.CreateDirectory(directoryPath);
-            }
-            string filePath = Path.Combine(directoryPath, "Usuarios.bin");
-            BinaryFormatter formatter = new BinaryFormatter();
-            using (FileStream stream = new FileStream(filePath, FileMode.Create))
-            {
-                formatter.Serialize(stream, Lmiembros);
-            }
-            MessageBox.Show("Los datos se han guardado correctamente en el archivo.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void btnLeerArchivo_Click(object sender, EventArgs e)
-        {
-            
-        }
+        #endregion
     }
+
 }

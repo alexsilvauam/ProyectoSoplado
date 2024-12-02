@@ -19,8 +19,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAdministrarUsua));
             this.gbPanelControl = new System.Windows.Forms.GroupBox();
+            this.rbtnCifCed = new System.Windows.Forms.RadioButton();
+            this.rbtnId = new System.Windows.Forms.RadioButton();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.lblBUsuario = new System.Windows.Forms.Label();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
@@ -39,8 +40,6 @@
             this.lblID = new System.Windows.Forms.Label();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
             this.btnGuardarArchivo = new System.Windows.Forms.Button();
-            this.rbtnId = new System.Windows.Forms.RadioButton();
-            this.rbtnCifCed = new System.Windows.Forms.RadioButton();
             this.gbPanelControl.SuspendLayout();
             this.gbRegistro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
@@ -48,19 +47,41 @@
             // 
             // gbPanelControl
             // 
+            this.gbPanelControl.Controls.Add(this.btnGuardarArchivo);
             this.gbPanelControl.Controls.Add(this.rbtnCifCed);
             this.gbPanelControl.Controls.Add(this.rbtnId);
             this.gbPanelControl.Controls.Add(this.btnBuscar);
-            this.gbPanelControl.Controls.Add(this.lblBUsuario);
             this.gbPanelControl.Controls.Add(this.txtBusqueda);
             this.gbPanelControl.Controls.Add(this.btnEliminar);
             this.gbPanelControl.Controls.Add(this.btnEditar);
             this.gbPanelControl.Location = new System.Drawing.Point(7, 316);
             this.gbPanelControl.Name = "gbPanelControl";
-            this.gbPanelControl.Size = new System.Drawing.Size(209, 173);
+            this.gbPanelControl.Size = new System.Drawing.Size(209, 196);
             this.gbPanelControl.TabIndex = 25;
             this.gbPanelControl.TabStop = false;
             this.gbPanelControl.Text = "Panel de control";
+            // 
+            // rbtnCifCed
+            // 
+            this.rbtnCifCed.AutoSize = true;
+            this.rbtnCifCed.Location = new System.Drawing.Point(93, 66);
+            this.rbtnCifCed.Name = "rbtnCifCed";
+            this.rbtnCifCed.Size = new System.Drawing.Size(61, 17);
+            this.rbtnCifCed.TabIndex = 10;
+            this.rbtnCifCed.Text = "Cif/Ced";
+            this.rbtnCifCed.UseVisualStyleBackColor = true;
+            // 
+            // rbtnId
+            // 
+            this.rbtnId.AutoSize = true;
+            this.rbtnId.Checked = true;
+            this.rbtnId.Location = new System.Drawing.Point(51, 66);
+            this.rbtnId.Name = "rbtnId";
+            this.rbtnId.Size = new System.Drawing.Size(36, 17);
+            this.rbtnId.TabIndex = 9;
+            this.rbtnId.TabStop = true;
+            this.rbtnId.Text = "ID";
+            this.rbtnId.UseVisualStyleBackColor = true;
             // 
             // btnBuscar
             // 
@@ -70,21 +91,10 @@
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(134, 29);
-            this.btnBuscar.TabIndex = 9;
+            this.btnBuscar.TabIndex = 11;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
-            // 
-            // lblBUsuario
-            // 
-            this.lblBUsuario.AutoSize = true;
-            this.lblBUsuario.Location = new System.Drawing.Point(31, 26);
-            this.lblBUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblBUsuario.Name = "lblBUsuario";
-            this.lblBUsuario.Size = new System.Drawing.Size(13, 13);
-            this.lblBUsuario.TabIndex = 0;
-            this.lblBUsuario.Text = "a";
-            this.lblBUsuario.Click += new System.EventHandler(this.lblBUsuario_Click_1);
             // 
             // txtBusqueda
             // 
@@ -103,7 +113,7 @@
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(67, 28);
-            this.btnEliminar.TabIndex = 10;
+            this.btnEliminar.TabIndex = 12;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -116,7 +126,7 @@
             this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(62, 28);
-            this.btnEditar.TabIndex = 11;
+            this.btnEditar.TabIndex = 13;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
@@ -301,43 +311,20 @@
             this.btnGuardarArchivo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(151)))), ((int)(((byte)(166)))));
             this.btnGuardarArchivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnGuardarArchivo.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarArchivo.Location = new System.Drawing.Point(400, 429);
+            this.btnGuardarArchivo.Location = new System.Drawing.Point(3, 160);
             this.btnGuardarArchivo.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardarArchivo.Name = "btnGuardarArchivo";
             this.btnGuardarArchivo.Size = new System.Drawing.Size(201, 31);
-            this.btnGuardarArchivo.TabIndex = 19;
+            this.btnGuardarArchivo.TabIndex = 14;
             this.btnGuardarArchivo.Text = "Guardar";
             this.btnGuardarArchivo.UseVisualStyleBackColor = false;
             this.btnGuardarArchivo.Click += new System.EventHandler(this.btnGuardarArchivo_Click);
-            // 
-            // rbtnId
-            // 
-            this.rbtnId.AutoSize = true;
-            this.rbtnId.Checked = true;
-            this.rbtnId.Location = new System.Drawing.Point(51, 66);
-            this.rbtnId.Name = "rbtnId";
-            this.rbtnId.Size = new System.Drawing.Size(36, 17);
-            this.rbtnId.TabIndex = 12;
-            this.rbtnId.TabStop = true;
-            this.rbtnId.Text = "ID";
-            this.rbtnId.UseVisualStyleBackColor = true;
-            // 
-            // rbtnCifCed
-            // 
-            this.rbtnCifCed.AutoSize = true;
-            this.rbtnCifCed.Location = new System.Drawing.Point(93, 66);
-            this.rbtnCifCed.Name = "rbtnCifCed";
-            this.rbtnCifCed.Size = new System.Drawing.Size(61, 17);
-            this.rbtnCifCed.TabIndex = 13;
-            this.rbtnCifCed.Text = "Cif/Ced";
-            this.rbtnCifCed.UseVisualStyleBackColor = true;
             // 
             // FormAdministrarUsua
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(919, 516);
-            this.Controls.Add(this.btnGuardarArchivo);
             this.Controls.Add(this.gbPanelControl);
             this.Controls.Add(this.gbRegistro);
             this.Controls.Add(this.dgvUsuarios);
@@ -358,7 +345,6 @@
         #endregion
         private System.Windows.Forms.GroupBox gbPanelControl;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.Label lblBUsuario;
         private System.Windows.Forms.TextBox txtBusqueda;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;

@@ -3,8 +3,9 @@
     "",
     "\\Formularios",
     "\\Formularios\\Admin",
-    "\\Formularios\\Admin\\AdminHijos"
+    "\\Formularios\\Admin\\AdminHijos",
+    "\\Formularios\\Admin\\Reportes"
   ],
-  "SelectedNode": "\\Formularios\\Admin\\AdminHijos\\FormVerificacionSolvencia.cs",
+  "SelectedNode": "\\Formularios\\Admin\\Reportes\\FormReporteAsistencia.cs",
   "PreviewInSolutionExplorer": false
 }
