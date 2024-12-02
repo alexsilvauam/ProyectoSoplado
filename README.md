@@ -36,4 +36,9 @@ Este proyecto es un sistema de registro de asistencia para el Jaguar Gym. Permit
 - [Alex Jean Carlos Silva Altamirano](https://github.com/alexsilvauam) / CIF: 23020024
 - [Enrique Miguel Solís Sandoval](https://github.com/Enrique00007-uam) / CIF: 24010171
 - [Jeff Antonie Walters Rocha](https://github.com/jwalters63) / CIF: 23020084
-- Ibrahim Ben Moez (???) / CIF: TBA
+- Ibrahim Ben Moez Ben Tlili Barhoumi García (???) / CIF: TBA
+
+## Docentes
+- José Duran (Análisis y Diseño de Sistemas)
+- César Marin (Metodología y Programación Estructurada)
+- Silvia Ticay (Metodología y Programación Estructurada)
