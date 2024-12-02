@@ -181,6 +181,18 @@
     <Compile Include="Formularios\Admin\AdminHijos\FormVerificacionSolvencia.Designer.cs">
       <DependentUpon>FormVerificacionSolvencia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmEditarAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmEditarAdmin.Designer.cs">
+      <DependentUpon>frmEditarAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\GestionarAdmins.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\GestionarAdmins.Designer.cs">
+      <DependentUpon>GestionarAdmins.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modelo de datos\Asistencia\Asistencia.cs" />
     <Compile Include="Modelo de datos\Pago\Pago.cs" />
     <Compile Include="Modelo de datos\Reportes\Reportes.cs" />
@@ -220,6 +232,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Admin\AdminHijos\FormVerificacionSolvencia.resx">
       <DependentUpon>FormVerificacionSolvencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmEditarAdmin.resx">
+      <DependentUpon>frmEditarAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\GestionarAdmins.resx">
+      <DependentUpon>GestionarAdmins.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

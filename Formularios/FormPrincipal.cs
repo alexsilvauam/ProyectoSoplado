@@ -298,5 +298,10 @@ namespace ProyectoSoplado_1._0_.Formularios
         }
 
         #endregion
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

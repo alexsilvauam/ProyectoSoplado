@@ -34,7 +34,6 @@
             this.lblContraseña = new System.Windows.Forms.Label();
             this.btnIngresar = new System.Windows.Forms.Button();
             this.txtNombreUsuario = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.plLogo = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAdmin = new System.Windows.Forms.Button();
@@ -44,9 +43,11 @@
             this.lblNota = new System.Windows.Forms.Label();
             this.btnRegistrarAdm = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.plLogo.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // lblID
@@ -107,17 +108,6 @@
             this.txtNombreUsuario.Size = new System.Drawing.Size(189, 20);
             this.txtNombreUsuario.TabIndex = 1;
             this.txtNombreUsuario.TextChanged += new System.EventHandler(this.txtNombreUsuario_TextChanged);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::ProyectoSoplado_1._0_.Properties.Resources._71732;
-            this.pictureBox2.Location = new System.Drawing.Point(113, -2);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(130, 92);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 23;
-            this.pictureBox2.TabStop = false;
             // 
             // plLogo
             // 
@@ -242,11 +232,33 @@
             this.btnVolver.Visible = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::ProyectoSoplado_1._0_.Properties.Resources._71732;
+            this.pictureBox2.Location = new System.Drawing.Point(113, -2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(130, 92);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 23;
+            this.pictureBox2.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(113, 118);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(149, 23);
+            this.button1.TabIndex = 32;
+            this.button1.Text = "GestionAdmin(luegoeliminar)";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FormIniciarAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(364, 493);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnRegistrarAdm);
             this.Controls.Add(this.lblNota);
@@ -264,9 +276,9 @@
             this.Name = "FormIniciarAdmin";
             this.Text = "Iniciar Admin";
             this.Load += new System.EventHandler(this.FormIniciarAdmin_Load_1);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.plLogo.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -289,5 +301,6 @@
         private System.Windows.Forms.Label lblNota;
         private System.Windows.Forms.Button btnRegistrarAdm;
         private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.Button button1;
     }
 }

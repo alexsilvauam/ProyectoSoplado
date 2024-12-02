@@ -19,6 +19,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAdministrarUsua));
             this.gbPanelControl = new System.Windows.Forms.GroupBox();
+            this.btnGuardarArchivo = new System.Windows.Forms.Button();
             this.rbtnCifCed = new System.Windows.Forms.RadioButton();
             this.rbtnId = new System.Windows.Forms.RadioButton();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -39,7 +40,6 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.lblID = new System.Windows.Forms.Label();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
-            this.btnGuardarArchivo = new System.Windows.Forms.Button();
             this.gbPanelControl.SuspendLayout();
             this.gbRegistro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
@@ -54,12 +54,26 @@
             this.gbPanelControl.Controls.Add(this.txtBusqueda);
             this.gbPanelControl.Controls.Add(this.btnEliminar);
             this.gbPanelControl.Controls.Add(this.btnEditar);
-            this.gbPanelControl.Location = new System.Drawing.Point(7, 316);
+            this.gbPanelControl.Location = new System.Drawing.Point(7, 303);
             this.gbPanelControl.Name = "gbPanelControl";
             this.gbPanelControl.Size = new System.Drawing.Size(209, 196);
             this.gbPanelControl.TabIndex = 25;
             this.gbPanelControl.TabStop = false;
             this.gbPanelControl.Text = "Panel de control";
+            // 
+            // btnGuardarArchivo
+            // 
+            this.btnGuardarArchivo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(151)))), ((int)(((byte)(166)))));
+            this.btnGuardarArchivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btnGuardarArchivo.ForeColor = System.Drawing.Color.White;
+            this.btnGuardarArchivo.Location = new System.Drawing.Point(3, 160);
+            this.btnGuardarArchivo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGuardarArchivo.Name = "btnGuardarArchivo";
+            this.btnGuardarArchivo.Size = new System.Drawing.Size(201, 31);
+            this.btnGuardarArchivo.TabIndex = 14;
+            this.btnGuardarArchivo.Text = "Guardar";
+            this.btnGuardarArchivo.UseVisualStyleBackColor = false;
+            this.btnGuardarArchivo.Click += new System.EventHandler(this.btnGuardarArchivo_Click);
             // 
             // rbtnCifCed
             // 
@@ -145,7 +159,7 @@
             this.gbRegistro.Controls.Add(this.txtApellido);
             this.gbRegistro.Controls.Add(this.txtID);
             this.gbRegistro.Controls.Add(this.lblID);
-            this.gbRegistro.Location = new System.Drawing.Point(2, 25);
+            this.gbRegistro.Location = new System.Drawing.Point(2, 12);
             this.gbRegistro.Name = "gbRegistro";
             this.gbRegistro.Size = new System.Drawing.Size(219, 276);
             this.gbRegistro.TabIndex = 24;
@@ -294,7 +308,7 @@
             this.dgvUsuarios.AllowUserToDeleteRows = false;
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUsuarios.Enabled = false;
-            this.dgvUsuarios.Location = new System.Drawing.Point(226, 62);
+            this.dgvUsuarios.Location = new System.Drawing.Point(226, 49);
             this.dgvUsuarios.Margin = new System.Windows.Forms.Padding(2);
             this.dgvUsuarios.Name = "dgvUsuarios";
             this.dgvUsuarios.ReadOnly = true;
@@ -305,20 +319,6 @@
             this.dgvUsuarios.TabIndex = 0;
             this.dgvUsuarios.TabStop = false;
             this.dgvUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // btnGuardarArchivo
-            // 
-            this.btnGuardarArchivo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(151)))), ((int)(((byte)(166)))));
-            this.btnGuardarArchivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.btnGuardarArchivo.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarArchivo.Location = new System.Drawing.Point(3, 160);
-            this.btnGuardarArchivo.Margin = new System.Windows.Forms.Padding(2);
-            this.btnGuardarArchivo.Name = "btnGuardarArchivo";
-            this.btnGuardarArchivo.Size = new System.Drawing.Size(201, 31);
-            this.btnGuardarArchivo.TabIndex = 14;
-            this.btnGuardarArchivo.Text = "Guardar";
-            this.btnGuardarArchivo.UseVisualStyleBackColor = false;
-            this.btnGuardarArchivo.Click += new System.EventHandler(this.btnGuardarArchivo_Click);
             // 
             // FormAdministrarUsua
             // 

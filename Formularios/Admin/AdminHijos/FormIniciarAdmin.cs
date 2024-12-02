@@ -1,4 +1,5 @@
-﻿using ProyectoSoplado_1._0_.Modelo_de_datos.Usuario;
+﻿using ProyectoSoplado_1._0_.Formularios;
+using ProyectoSoplado_1._0_.Modelo_de_datos.Usuario;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,7 +16,7 @@ namespace ProyectoSoplado_1._0_
 {
     public partial class FormIniciarAdmin : Form
     {
-        private List<(string Usuario, string Contraseña)> admins = new List<(string, string)>();
+      static public List<(string Usuario, string Contraseña)> admins = new List<(string, string)>();
         public string carpetaArchivos = Path.Combine(Directory.GetCurrentDirectory(), "ArchivosBIN");
         public const string archivoAdmins = "admins.bin";
 
@@ -232,6 +233,17 @@ namespace ProyectoSoplado_1._0_
 
         }
         #endregion
+
+        private void btnGestionarAdmin_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            GestionarAdmins frm = new GestionarAdmins();
+            frm.Show();
+        }
     }
 }
 

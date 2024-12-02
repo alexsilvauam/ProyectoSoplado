@@ -101,6 +101,7 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
             {
                 MessageBox.Show($"No se encontró ningún miembro con la busqueda {BuscarId}.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
 
         private void btnBuscar_Click_1(object sender, EventArgs e)
