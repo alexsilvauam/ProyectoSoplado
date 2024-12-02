@@ -1,19 +1,12 @@
 ﻿using ProyectoSoplado_1._0_.Modelo_de_datos.Pago;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProyectoSoplado_1._0_.Modelo_de_datos.Usuario;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using ProyectoSoplado_1._0_.Formularios.Admin;
-
 
 namespace ProyectoSoplado_1._0_
 {
@@ -26,6 +19,8 @@ namespace ProyectoSoplado_1._0_
         {
             InitializeComponent();
         }
+
+        #region Metodos
 
         public Miembro buscarMiembro()
         {
@@ -58,51 +53,7 @@ namespace ProyectoSoplado_1._0_
                 return Miembro;
             }
         }
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            if (!VerificarCampos())
-            {
-                return;
-            }
 
-            
-
-
-
-
-            MiembroExistente = buscarMiembro();
-            if (MiembroExistente == null)
-            {
-                MessageBox.Show($"No existe un miembro con el id {txtBuscarMiembro.Text}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-
-            }
-            else
-            {
-                Pago pago = new Pago();
-                
-                int Idmiembro = int.Parse(txtBuscarMiembro.Text);
-                int idpago = int.Parse(txtIdpago.Text);
-                DateTime Date_FechaActual = DateTime.Now.Date;
-                double montoPago = double.Parse(txtmontopago.Text);
-
-                
-                pago.id_pago = idpago;
-                pago.fecha_pago = Date_FechaActual;
-                pago.Fecha_Vencimiento = AsignarFecha();
-                pago.monto_pago = montoPago;
-               
-
-
-                RegistroPagos.Add(pago);
-
-                MiembroExistente.Solvencia = true;
-                limpiarCampos();
-                MessageBox.Show("Pago registrado correctamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-
-
-        }
         public bool VerificarCampos()
         {
             if (string.IsNullOrWhiteSpace(txtBuscarMiembro.Text))
@@ -117,7 +68,6 @@ namespace ProyectoSoplado_1._0_
                 return false;
             }
 
-            
             if (cmbModalidad.SelectedIndex == -1)
             {
                 MessageBox.Show("Debe seleccionar una modalidad.", "Completa el campo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -157,7 +107,6 @@ namespace ProyectoSoplado_1._0_
             return true;
         }
 
-
         public void limpiarCampos()
         {
             txtBuscarMiembro.Clear();
@@ -166,10 +115,7 @@ namespace ProyectoSoplado_1._0_
             cmbModalidad.SelectedIndex = -1;
             txtFechaInicio.Clear();
             txtFechaVencimieto.Clear();
-
         }
-
-
 
         public bool verificar()
         {
@@ -177,7 +123,6 @@ namespace ProyectoSoplado_1._0_
             {
                 MessageBox.Show("El campo de buscar miembro no puede estar vacío.", "Completa el campo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
-
             }
             if (rbtnVerificarID.Checked)
             {
@@ -187,53 +132,8 @@ namespace ProyectoSoplado_1._0_
                     return false;
                 }
             }
-       
+
             return true;
-
-        }
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            if (!verificar())
-            {
-                return;
-            }
-
-            int ID = int.Parse(txtverificar.Text);
-            MiembroExistente = buscarVerificarMiembro();
-
-            if (MiembroExistente != null)
-            {
-                
-                if (MiembroExistente.Solvencia)
-                {
-                    MessageBox.Show($"El miembro {MiembroExistente.Nombre} {MiembroExistente.Apellido} ya ha realizado el pago.", "Información de pago", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtverificar.Clear();
-                }
-                else
-                {
-                    MessageBox.Show($"El miembro {MiembroExistente.Nombre} {MiembroExistente.Apellido} no ha realizado el pago.", "Información de pago", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else
-            {
-                MessageBox.Show($"No existe un miembro con la busqueda {ID}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-
-        private void FormVerificacionSolvencia_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtmontopago_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void asignarMonto(string rolUsuario, string modalidad)
@@ -263,18 +163,144 @@ namespace ProyectoSoplado_1._0_
 
             txtmontopago.Text = monto.ToString("F2");
         }
+
+        public DateTime AsignarFecha()
+        {
+            if (cmbModalidad.SelectedItem.ToString() == "Mes")
+            {
+                return DateTime.Now.AddMonths(1).Date;
+            }
+            else
+            {
+                return DateTime.Now.AddDays(1).Date;
+            }
+        }
+
+        #endregion
+
+        #region Botones con metodo
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            if (!VerificarCampos())
+            {
+                return;
+            }
+
+            MiembroExistente = buscarMiembro();
+            if (MiembroExistente == null)
+            {
+                MessageBox.Show($"No existe un miembro con el id {txtBuscarMiembro.Text}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                Pago pago = new Pago();
+
+                int Idmiembro = int.Parse(txtBuscarMiembro.Text);
+                int idpago = int.Parse(txtIdpago.Text);
+                DateTime Date_FechaActual = DateTime.Now.Date;
+                double montoPago = double.Parse(txtmontopago.Text);
+
+                pago.id_pago = idpago;
+                pago.fecha_pago = Date_FechaActual;
+                pago.Fecha_Vencimiento = AsignarFecha();
+                pago.monto_pago = montoPago;
+
+                RegistroPagos.Add(pago);
+
+                MiembroExistente.Solvencia = true;
+                limpiarCampos();
+                MessageBox.Show("Pago registrado correctamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            if (!verificar())
+            {
+                return;
+            }
+
+            int ID = int.Parse(txtverificar.Text);
+            MiembroExistente = buscarVerificarMiembro();
+
+            if (MiembroExistente != null)
+            {
+                if (MiembroExistente.Solvencia)
+                {
+                    MessageBox.Show($"El miembro {MiembroExistente.Nombre} {MiembroExistente.Apellido} ya ha realizado el pago.", "Información de pago", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtverificar.Clear();
+                }
+                else
+                {
+                    MessageBox.Show($"El miembro {MiembroExistente.Nombre} {MiembroExistente.Apellido} no ha realizado el pago.", "Información de pago", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show($"No existe un miembro con la busqueda {ID}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnguardar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Ruta del directorio
+                string directoryPath = Path.Combine(Directory.GetCurrentDirectory(), "ArchivosBIN");
+
+                // Verificar o crear el directorio
+                if (!Directory.Exists(directoryPath))
+                {
+                    Directory.CreateDirectory(directoryPath);
+                }
+
+                // Ruta del archivo
+                string filePath = Path.Combine(directoryPath, "Pagos.bin");
+
+                // Serializar la lista de pagos
+                BinaryFormatter formatter = new BinaryFormatter();
+                using (FileStream stream = new FileStream(filePath, FileMode.Create))
+                {
+                    formatter.Serialize(stream, RegistroPagos);
+                }
+
+                // Notificar éxito al usuario
+                MessageBox.Show("Los pagos se han guardado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                // Manejar errores
+                MessageBox.Show($"Ocurrió un error al guardar los pagos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        #endregion
+
+        #region Botones sin metodo
+
+        private void FormVerificacionSolvencia_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtmontopago_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void txtIdMiembro_TextChanged(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtBuscarMiembro.Text))
             {
                 return;
             }
-
-            //if (!int.TryParse(txtBuscarMiembro.Text, out int id))
-          //  {
-            //    MessageBox.Show("El campo Id Miembro tiene que ser un número entero.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-             //   return;
-            //}
 
             MiembroExistente = buscarMiembro();
             if (MiembroExistente != null)
@@ -295,66 +321,15 @@ namespace ProyectoSoplado_1._0_
                 return;
             }
 
-           
             if (MiembroExistente != null)
             {
                 string rolUsuario = MiembroExistente.RolUsuario;
                 asignarMonto(rolUsuario, cmbModalidad.SelectedItem?.ToString());
-
-
-
             }
             txtFechaInicio.Text = DateTime.Now.ToString("dd/MM/yyyy");
             txtFechaVencimieto.Text = AsignarFecha().ToString("dd/MM/yyyy");
-
         }
 
-        public DateTime AsignarFecha()
-        {
-            if (cmbModalidad.SelectedItem.ToString() == "Mes")
-            {
-                return DateTime.Now.AddMonths(1).Date;
-            }
-            else
-            {
-                return DateTime.Now.AddDays(1).Date;
-            }
-        }
-
-        private void btnguardar_Click(object sender, EventArgs e)
-        {
-            try
-        {
-            // Ruta del directorio
-            string directoryPath = Path.Combine(Directory.GetCurrentDirectory(), "ArchivosBIN");
-            
-            // Verificar o crear el directorio
-            if (!Directory.Exists(directoryPath))
-            {
-                Directory.CreateDirectory(directoryPath);
-            }
-
-            // Ruta del archivo
-            string filePath = Path.Combine(directoryPath, "Pagos.bin");
-
-            // Serializar la lista de pagos
-            BinaryFormatter formatter = new BinaryFormatter();
-            using (FileStream stream = new FileStream(filePath, FileMode.Create))
-            {
-                formatter.Serialize(stream, RegistroPagos);
-            }
-
-            // Notificar éxito al usuario
-            MessageBox.Show("Los pagos se han guardado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-        catch (Exception ex)
-        {
-            // Manejar errores
-            MessageBox.Show($"Ocurrió un error al guardar los pagos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
+        #endregion
     }
-
-        }
-    }
-
-
+}

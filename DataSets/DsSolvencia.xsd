@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsSolvencia" targetNamespace="http://tempuri.org/DsSolvencia.xsd" xmlns:mstns="http://tempuri.org/DsSolvencia.xsd" xmlns="http://tempuri.org/DsSolvencia.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsSolvencia" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DsSolvencia" msprop:Generator_DataSetName="DsSolvencia">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DtSolvencia" msprop:Generator_RowEvHandlerName="DtSolvenciaRowChangeEventHandler" msprop:Generator_RowDeletedName="DtSolvenciaRowDeleted" msprop:Generator_RowDeletingName="DtSolvenciaRowDeleting" msprop:Generator_RowEvArgName="DtSolvenciaRowChangeEvent" msprop:Generator_TablePropName="DtSolvencia" msprop:Generator_RowChangedName="DtSolvenciaRowChanged" msprop:Generator_RowChangingName="DtSolvenciaRowChanging" msprop:Generator_TableClassName="DtSolvenciaDataTable" msprop:Generator_RowClassName="DtSolvenciaRow" msprop:Generator_TableVarName="tableDtSolvencia" msprop:Generator_UserTableName="DtSolvencia">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_pago" msprop:Generator_ColumnPropNameInRow="id_pago" msprop:Generator_ColumnPropNameInTable="id_pagoColumn" msprop:Generator_ColumnVarNameInTable="columnid_pago" msprop:Generator_UserColumnName="id_pago" type="xs:string" minOccurs="0" />
+              <xs:element name="fecha_pago" msdata:DataType="System.DateTimeOffset" msprop:Generator_ColumnPropNameInRow="fecha_pago" msprop:Generator_ColumnPropNameInTable="fecha_pagoColumn" msprop:Generator_ColumnVarNameInTable="columnfecha_pago" msprop:Generator_UserColumnName="fecha_pago" type="xs:anyType" minOccurs="0" />
+              <xs:element name="Fecha_Vencimiento" msdata:DataType="System.DateTimeOffset" msprop:Generator_ColumnPropNameInRow="Fecha_Vencimiento" msprop:Generator_ColumnPropNameInTable="Fecha_VencimientoColumn" msprop:Generator_ColumnVarNameInTable="columnFecha_Vencimiento" msprop:Generator_UserColumnName="Fecha_Vencimiento" type="xs:anyType" minOccurs="0" />
+              <xs:element name="monto_pago" msprop:Generator_ColumnPropNameInRow="monto_pago" msprop:Generator_ColumnPropNameInTable="monto_pagoColumn" msprop:Generator_ColumnVarNameInTable="columnmonto_pago" msprop:Generator_UserColumnName="monto_pago" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

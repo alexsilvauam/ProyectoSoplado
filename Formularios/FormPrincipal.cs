@@ -15,9 +15,6 @@ using ProyectoSoplado_1._0_.Modelo_de_datos.Pago;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
-
-
-
 namespace ProyectoSoplado_1._0_.Formularios
 {
     public partial class FormPrincipal : Form
@@ -36,55 +33,141 @@ namespace ProyectoSoplado_1._0_.Formularios
             cargarAsistencia();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
+        #region Metodos
 
+        public void GuardarAsistencia()
+        {
+            try
+            {
+                string directoryPath = Path.Combine(Directory.GetCurrentDirectory(), "ArchivosBIN");
+                if (!Directory.Exists(directoryPath))
+                {
+                    Directory.CreateDirectory(directoryPath);
+                }
+
+                string filePath = Path.Combine(directoryPath, "Asistencia.bin");
+
+                BinaryFormatter formatter = new BinaryFormatter();
+                using (FileStream stream = new FileStream(filePath, FileMode.Create))
+                {
+                    formatter.Serialize(stream, RegistroAsistencia);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        private void plUsuario_Paint(object sender, PaintEventArgs e)
+        public void cargarAsistencia()
         {
+            try
+            {
+                string directoryPath = Path.Combine(Directory.GetCurrentDirectory(), "ArchivosBIN");
+                string filePath = Path.Combine(directoryPath, "Asistencia.bin");
 
+                if (File.Exists(filePath))
+                {
+                    BinaryFormatter formatter = new BinaryFormatter();
+                    using (FileStream stream = new FileStream(filePath, FileMode.Open))
+                    {
+                        RegistroAsistencia = (List<Asistencia>)formatter.Deserialize(stream);
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró el archivo de asistencia.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        private void plAdmin_Paint(object sender, PaintEventArgs e)
+        public void cargarMiembros()
         {
+            try
+            {
+                string directoryPath = Path.Combine(Directory.GetCurrentDirectory(), "ArchivosBIN");
+                string filePath = Path.Combine(directoryPath, "Usuarios.bin");
 
+                if (File.Exists(filePath))
+                {
+                    BinaryFormatter formatter = new BinaryFormatter();
+                    using (FileStream stream = new FileStream(filePath, FileMode.Open))
+                    {
+                        FormAdministrarUsua.Lmiembros = (List<Miembro>)formatter.Deserialize(stream);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró el archivo de usuarios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void cargarpagos()
         {
+            try
+            {
+                string directoryPath = Path.Combine(Directory.GetCurrentDirectory(), "ArchivosBIN");
+                string filePath = Path.Combine(directoryPath, "Pagos.bin");
 
+                if (File.Exists(filePath))
+                {
+                    BinaryFormatter formatter = new BinaryFormatter();
+                    using (FileStream stream = new FileStream(filePath, FileMode.Open))
+                    {
+                        FormVerificacionSolvencia.RegistroPagos = (List<Pago>)formatter.Deserialize(stream);
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró el archivo de pagos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
+        #endregion
+          
+        #region Botones con Metodo
 
         private void button2_Click(object sender, EventArgs e)
         {
             FormIniciarAdmin formAdmin = new FormIniciarAdmin();
             formAdmin.Show();
-           // this.Hide();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            // this.Hide();
         }
 
         private void btnMarcar_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtUsuarioLogin.Text))
             {
-                MessageBox.Show("El Nombre de usuario no puede estar vacio.","Complete el campo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("El Nombre de usuario no puede estar vacio.", "Complete el campo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             string usuario = txtUsuarioLogin.Text;
-            
+
             //para el mensaje
             string fechaActual = DateTime.Now.ToString("dd/MM/yyyy");
             string horaActual = DateTime.Now.ToString("HH:mm");
             //para la lista
             DateTime Date_FechaActual = DateTime.Now.Date;
-           
-                Miembro MiembroExistente = FormAdministrarUsua.Lmiembros.FirstOrDefault(x => x.CifCed == usuario);
+
+            Miembro MiembroExistente = FormAdministrarUsua.Lmiembros.FirstOrDefault(x => x.CifCed == usuario);
             if (MiembroExistente != null)
             {
                 string Nombreusuario = MiembroExistente.Nombre + " " + MiembroExistente.Apellido;
@@ -107,13 +190,9 @@ namespace ProyectoSoplado_1._0_.Formularios
             {
                 MessageBox.Show($"El miembro no ha sido encontrado", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-
         }
 
-    
-
-    private void button1_Click_1(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
             btnMarcar.Hide();
             lblIngrese.Hide();
@@ -123,7 +202,6 @@ namespace ProyectoSoplado_1._0_.Formularios
             lblQR.Show();
             btncodigoQr.Show();
             btnIngresarconusuario.Show();
-
         }
 
         private void btncodigoQr_Click(object sender, EventArgs e)
@@ -167,8 +245,6 @@ namespace ProyectoSoplado_1._0_.Formularios
             {
                 MessageBox.Show($"No hay un miembro con ese codigo QR.", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-
         }
 
         private void btnIngresarconusuario_Click(object sender, EventArgs e)
@@ -181,6 +257,33 @@ namespace ProyectoSoplado_1._0_.Formularios
             txtQR.Hide();
             lblQR.Hide();
             btncodigoQr.Hide();
+        }
+
+        #endregion
+        #region Botones sin Metodo
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void plUsuario_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void plAdmin_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
 
         }
 
@@ -194,112 +297,6 @@ namespace ProyectoSoplado_1._0_.Formularios
 
         }
 
-        public void GuardarAsistencia()
-        {
-            try
-            {
-                string directoryPath = Path.Combine(Directory.GetCurrentDirectory(), "ArchivosBIN");
-                if (!Directory.Exists(directoryPath))
-                {
-                    Directory.CreateDirectory(directoryPath); 
-                }
-
-                string filePath = Path.Combine(directoryPath, "Asistencia.bin");
-
-                BinaryFormatter formatter = new BinaryFormatter();
-                using (FileStream stream = new FileStream(filePath, FileMode.Create))
-                {
-                    formatter.Serialize(stream, RegistroAsistencia); 
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-        }
-
-        public void cargarAsistencia() {
-            try
-            {
-                string directoryPath = Path.Combine(Directory.GetCurrentDirectory(), "ArchivosBIN");
-                string filePath = Path.Combine(directoryPath, "Asistencia.bin");
-
-                if (File.Exists(filePath))
-                {
-                    BinaryFormatter formatter = new BinaryFormatter();
-                    using (FileStream stream = new FileStream(filePath, FileMode.Open))
-                    {
-                       RegistroAsistencia = (List<Asistencia>)formatter.Deserialize(stream);
-                    }
-
-                }
-                else
-                {
-                    MessageBox.Show("No se encontró el archivo de asistencia.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        public void cargarMiembros()
-        {
-            try
-            {
-                string directoryPath = Path.Combine(Directory.GetCurrentDirectory(), "ArchivosBIN");
-                string filePath = Path.Combine(directoryPath, "Usuarios.bin");
-
-                if (File.Exists(filePath))
-                {
-                    BinaryFormatter formatter = new BinaryFormatter();
-                    using (FileStream stream = new FileStream(filePath, FileMode.Open))
-                    {
-                        FormAdministrarUsua.Lmiembros = (List<Miembro>)formatter.Deserialize(stream);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("No se encontró el archivo de usuarios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            catch (Exception ex)
-            {
-                
-                MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-
-        }
-        public void cargarpagos()
-        {
-            try
-            {
-                string directoryPath = Path.Combine(Directory.GetCurrentDirectory(), "ArchivosBIN");
-                string filePath = Path.Combine(directoryPath, "Pagos.bin");
-
-                if (File.Exists(filePath))
-                {
-                    BinaryFormatter formatter = new BinaryFormatter();
-                    using (FileStream stream = new FileStream(filePath, FileMode.Open))
-                    {
-                        FormVerificacionSolvencia.RegistroPagos = (List<Pago>)formatter.Deserialize(stream);
-                    }
-
-                }
-                else
-                {
-                    MessageBox.Show("No se encontró el archivo de pagos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Ocurrió un error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-        }
+        #endregion
     }
 }

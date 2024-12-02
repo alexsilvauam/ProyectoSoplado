@@ -18,29 +18,13 @@ namespace ProyectoSoplado_1._0_
         private List<(string Usuario, string Contraseña)> admins = new List<(string, string)>();
         public string carpetaArchivos = Path.Combine(Directory.GetCurrentDirectory(), "ArchivosBIN");
         public const string archivoAdmins = "admins.bin";
-        
 
         public FormIniciarAdmin()
         {
             InitializeComponent();
             CargarAdministradores();
-        }
-
-        private void lbl_InicioSesion_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnIngresar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblContraseña_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        }               
+        #region Botones con Metodo
         private void btnIngresar_Click_1(object sender, EventArgs e)
         {
             string usuario = txtNombreUsuario.Text;
@@ -96,31 +80,6 @@ namespace ProyectoSoplado_1._0_
             }
         }
 
-        private void txtcontraseña_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblContraseña_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNombreUsuario_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FormIniciarAdmin_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnAdmin_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -134,16 +93,6 @@ namespace ProyectoSoplado_1._0_
             btnRegistrarAdm.Visible = true;
             btnVolver.Visible = true;
             lblNota.Visible = true;
-        }
-
-        private void txtPIN_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblPIN_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnRegistrarAdm_Click(object sender, EventArgs e)
@@ -200,7 +149,8 @@ namespace ProyectoSoplado_1._0_
             btnIngresar.Visible = true;
             lblNota.Visible = false;
         }
-
+        #endregion
+        #region Metodos
         public void CargarAdministradores()
         {
             string rutaCompleta = Path.Combine(carpetaArchivos, archivoAdmins);
@@ -230,5 +180,58 @@ namespace ProyectoSoplado_1._0_
                 formatter.Serialize(fs, admins);
             }
         }
+        #endregion
+        #region Botones sin Metodo
+        private void lbl_InicioSesion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblContraseña_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtcontraseña_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblContraseña_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNombreUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormIniciarAdmin_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPIN_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblPIN_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
     }
 }
+

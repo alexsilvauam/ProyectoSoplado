@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Formularios",
+    "\\Formularios\\Admin",
+    "\\Formularios\\Admin\\AdminHijos",
+    "\\Formularios\\Admin\\Reportes"
   ],
-  "SelectedNode": "\\ProyectoSoplado(2.0).sln",
+  "SelectedNode": "\\Formularios\\Admin\\Reportes\\FormReporteAsistencia.cs",
   "PreviewInSolutionExplorer": false
 }

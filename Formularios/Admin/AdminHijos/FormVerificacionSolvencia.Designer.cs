@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormVerificacionSolvencia));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rbtnVerificarID = new System.Windows.Forms.RadioButton();
+            this.rbtnVerificarCifCed = new System.Windows.Forms.RadioButton();
             this.lblIdMiembro = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtverificar = new System.Windows.Forms.TextBox();
@@ -50,8 +52,6 @@
             this.lblModalidad = new System.Windows.Forms.Label();
             this.cmbModalidad = new System.Windows.Forms.ComboBox();
             this.btnguardar = new System.Windows.Forms.Button();
-            this.rbtnVerificarID = new System.Windows.Forms.RadioButton();
-            this.rbtnVerificarCifCed = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -69,6 +69,28 @@
             this.groupBox1.TabIndex = 27;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Verificar Solvencia";
+            // 
+            // rbtnVerificarID
+            // 
+            this.rbtnVerificarID.AutoSize = true;
+            this.rbtnVerificarID.Checked = true;
+            this.rbtnVerificarID.Location = new System.Drawing.Point(139, 58);
+            this.rbtnVerificarID.Name = "rbtnVerificarID";
+            this.rbtnVerificarID.Size = new System.Drawing.Size(36, 17);
+            this.rbtnVerificarID.TabIndex = 11;
+            this.rbtnVerificarID.TabStop = true;
+            this.rbtnVerificarID.Text = "ID";
+            this.rbtnVerificarID.UseVisualStyleBackColor = true;
+            // 
+            // rbtnVerificarCifCed
+            // 
+            this.rbtnVerificarCifCed.AutoSize = true;
+            this.rbtnVerificarCifCed.Location = new System.Drawing.Point(204, 58);
+            this.rbtnVerificarCifCed.Name = "rbtnVerificarCifCed";
+            this.rbtnVerificarCifCed.Size = new System.Drawing.Size(61, 17);
+            this.rbtnVerificarCifCed.TabIndex = 12;
+            this.rbtnVerificarCifCed.Text = "Cif/Ced";
+            this.rbtnVerificarCifCed.UseVisualStyleBackColor = true;
             // 
             // lblIdMiembro
             // 
@@ -89,7 +111,7 @@
             this.btnBuscar.Location = new System.Drawing.Point(129, 92);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(146, 30);
-            this.btnBuscar.TabIndex = 7;
+            this.btnBuscar.TabIndex = 13;
             this.btnBuscar.Text = "Verificar";
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -100,7 +122,7 @@
             this.txtverificar.Location = new System.Drawing.Point(129, 32);
             this.txtverificar.Name = "txtverificar";
             this.txtverificar.Size = new System.Drawing.Size(146, 20);
-            this.txtverificar.TabIndex = 6;
+            this.txtverificar.TabIndex = 10;
             // 
             // label3
             // 
@@ -129,7 +151,7 @@
             this.btnAgregar.Location = new System.Drawing.Point(156, 233);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(152, 31);
-            this.btnAgregar.TabIndex = 5;
+            this.btnAgregar.TabIndex = 9;
             this.btnAgregar.Text = "Registrar";
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -144,7 +166,7 @@
             this.txtmontopago.Name = "txtmontopago";
             this.txtmontopago.ReadOnly = true;
             this.txtmontopago.Size = new System.Drawing.Size(152, 20);
-            this.txtmontopago.TabIndex = 4;
+            this.txtmontopago.TabIndex = 8;
             this.txtmontopago.TextChanged += new System.EventHandler(this.txtmontopago_TextChanged);
             // 
             // txtIdpago
@@ -153,7 +175,7 @@
             this.txtIdpago.Location = new System.Drawing.Point(155, 80);
             this.txtIdpago.Name = "txtIdpago";
             this.txtIdpago.Size = new System.Drawing.Size(152, 20);
-            this.txtIdpago.TabIndex = 2;
+            this.txtIdpago.TabIndex = 4;
             // 
             // label2
             // 
@@ -177,6 +199,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnguardar);
             this.groupBox2.Controls.Add(this.rbtnCifCed);
             this.groupBox2.Controls.Add(this.rbtnID);
             this.groupBox2.Controls.Add(this.txtFechaInicio);
@@ -194,7 +217,7 @@
             this.groupBox2.Controls.Add(this.btnAgregar);
             this.groupBox2.Location = new System.Drawing.Point(23, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(326, 301);
+            this.groupBox2.Size = new System.Drawing.Size(326, 320);
             this.groupBox2.TabIndex = 28;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Registrar Pago";
@@ -205,7 +228,7 @@
             this.rbtnCifCed.Location = new System.Drawing.Point(226, 48);
             this.rbtnCifCed.Name = "rbtnCifCed";
             this.rbtnCifCed.Size = new System.Drawing.Size(61, 17);
-            this.rbtnCifCed.TabIndex = 39;
+            this.rbtnCifCed.TabIndex = 3;
             this.rbtnCifCed.Text = "Cif/Ced";
             this.rbtnCifCed.UseVisualStyleBackColor = true;
             // 
@@ -216,7 +239,7 @@
             this.rbtnID.Location = new System.Drawing.Point(166, 48);
             this.rbtnID.Name = "rbtnID";
             this.rbtnID.Size = new System.Drawing.Size(36, 17);
-            this.rbtnID.TabIndex = 38;
+            this.rbtnID.TabIndex = 2;
             this.rbtnID.TabStop = true;
             this.rbtnID.Text = "ID";
             this.rbtnID.UseVisualStyleBackColor = true;
@@ -229,7 +252,7 @@
             this.txtFechaInicio.Name = "txtFechaInicio";
             this.txtFechaInicio.ReadOnly = true;
             this.txtFechaInicio.Size = new System.Drawing.Size(152, 20);
-            this.txtFechaInicio.TabIndex = 37;
+            this.txtFechaInicio.TabIndex = 6;
             // 
             // txtFechaVencimieto
             // 
@@ -239,7 +262,7 @@
             this.txtFechaVencimieto.Name = "txtFechaVencimieto";
             this.txtFechaVencimieto.ReadOnly = true;
             this.txtFechaVencimieto.Size = new System.Drawing.Size(152, 20);
-            this.txtFechaVencimieto.TabIndex = 36;
+            this.txtFechaVencimieto.TabIndex = 7;
             // 
             // label6
             // 
@@ -279,13 +302,13 @@
             this.cmbModalidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbModalidad.FormattingEnabled = true;
             this.cmbModalidad.Items.AddRange(new object[] {
-            "Mes",
-            "Dia"});
+            "Dia",
+            "Mes"});
             this.cmbModalidad.Location = new System.Drawing.Point(155, 111);
             this.cmbModalidad.Margin = new System.Windows.Forms.Padding(2);
             this.cmbModalidad.Name = "cmbModalidad";
             this.cmbModalidad.Size = new System.Drawing.Size(152, 21);
-            this.cmbModalidad.TabIndex = 3;
+            this.cmbModalidad.TabIndex = 5;
             this.cmbModalidad.SelectedIndexChanged += new System.EventHandler(this.cmbModalidad_SelectedIndexChanged);
             // 
             // btnguardar
@@ -293,42 +316,19 @@
             this.btnguardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(150)))), ((int)(((byte)(166)))));
             this.btnguardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnguardar.ForeColor = System.Drawing.Color.White;
-            this.btnguardar.Location = new System.Drawing.Point(406, 430);
+            this.btnguardar.Location = new System.Drawing.Point(156, 270);
             this.btnguardar.Name = "btnguardar";
-            this.btnguardar.Size = new System.Drawing.Size(146, 30);
-            this.btnguardar.TabIndex = 11;
+            this.btnguardar.Size = new System.Drawing.Size(152, 30);
+            this.btnguardar.TabIndex = 14;
             this.btnguardar.Text = "Guardar";
             this.btnguardar.UseVisualStyleBackColor = false;
             this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
-            // 
-            // rbtnVerificarID
-            // 
-            this.rbtnVerificarID.AutoSize = true;
-            this.rbtnVerificarID.Checked = true;
-            this.rbtnVerificarID.Location = new System.Drawing.Point(139, 58);
-            this.rbtnVerificarID.Name = "rbtnVerificarID";
-            this.rbtnVerificarID.Size = new System.Drawing.Size(36, 17);
-            this.rbtnVerificarID.TabIndex = 40;
-            this.rbtnVerificarID.TabStop = true;
-            this.rbtnVerificarID.Text = "ID";
-            this.rbtnVerificarID.UseVisualStyleBackColor = true;
-            // 
-            // rbtnVerificarCifCed
-            // 
-            this.rbtnVerificarCifCed.AutoSize = true;
-            this.rbtnVerificarCifCed.Location = new System.Drawing.Point(204, 58);
-            this.rbtnVerificarCifCed.Name = "rbtnVerificarCifCed";
-            this.rbtnVerificarCifCed.Size = new System.Drawing.Size(61, 17);
-            this.rbtnVerificarCifCed.TabIndex = 41;
-            this.rbtnVerificarCifCed.Text = "Cif/Ced";
-            this.rbtnVerificarCifCed.UseVisualStyleBackColor = true;
             // 
             // FormVerificacionSolvencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(657, 521);
-            this.Controls.Add(this.btnguardar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

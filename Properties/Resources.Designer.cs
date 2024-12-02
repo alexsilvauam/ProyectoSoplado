@@ -101,6 +101,16 @@ namespace ProyectoSoplado_1._0_.Properties {
         }
         
         /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] uam_jaguar_jpg {
+            get {
+                object obj = ResourceManager.GetObject("uam_jaguar_jpg", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap universidad_americana_2020 {
