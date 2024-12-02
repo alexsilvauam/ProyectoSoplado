@@ -1,4 +1,4 @@
-# Sistema de Registro de Asistencia para el Jaguar Gym
+# GymPass UAM
 
 ## Descripción
 Este proyecto es un sistema de registro de asistencia para el Jaguar Gym. Permite gestionar la asistencia de los usuarios, controlar su solvencia y generar reportes detallados. Incluye funcionalidades avanzadas como el guardado automático de información en archivos binarios y un sistema de inicio de sesión seguro para administradores.
