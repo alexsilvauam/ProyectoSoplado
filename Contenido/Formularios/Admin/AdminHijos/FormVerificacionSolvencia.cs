@@ -322,7 +322,9 @@ namespace ProyectoSoplado_1._0_
         }
 
         private void btnguardar_Click(object sender, EventArgs e) { }
-        private void FormVerificacionSolvencia_Load(object sender, EventArgs e) { }
+        private void FormVerificacionSolvencia_Load(object sender, EventArgs e)
+        {
+        }
         private void label4_Click(object sender, EventArgs e) { }
         private void txtmontopago_TextChanged(object sender, EventArgs e) { }
         private void txtIdMiembro_TextChanged(object sender, EventArgs e)

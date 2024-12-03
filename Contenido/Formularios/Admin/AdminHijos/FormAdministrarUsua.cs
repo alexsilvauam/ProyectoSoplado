@@ -65,19 +65,7 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
             LimpiarCampos();
             MessageBox.Show("Miembro agregado correctamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            // Guardar los datos en el archivo binario
-            string directoryPath = Path.Combine(Directory.GetCurrentDirectory(), "ArchivosBIN");
-            if (!Directory.Exists(directoryPath))
-            {
-                Directory.CreateDirectory(directoryPath);
-            }
-            string filePath = Path.Combine(directoryPath, "Usuarios.bin");
-            BinaryFormatter formatter = new BinaryFormatter();
-            using (FileStream stream = new FileStream(filePath, FileMode.Create))
-            {
-                formatter.Serialize(stream, Lmiembros);
-            }
-            MessageBox.Show("Los datos se han guardado correctamente en el archivo.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            GuardarDatosEnArchivo();
         }
 
         // Evento del botón Eliminar
@@ -96,7 +84,9 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
                 Lmiembros.Remove(MiembroExistente);
                 actualizarGrid();
                 txtBusqueda.Clear();
+                GuardarDatosEnArchivo();
                 MessageBox.Show("Miembro eliminado correctamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
             else
             {
@@ -125,6 +115,7 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
                         actualizarGrid();
                         txtBusqueda.Clear();
                         MessageBox.Show("El miembro ha sido editado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        GuardarDatosEnArchivo();
                     }
                 }
             }
@@ -365,4 +356,28 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
         {
         }
     }
+
+    private void GuardarDatosEnArchivo()
+        {
+            string directoryPath = Path.Combine(Directory.GetCurrentDirectory(), "ArchivosBIN");
+            if (!Directory.Exists(directoryPath))
+            {
+                Directory.CreateDirectory(directoryPath);
+            }
+            string filePath = Path.Combine(directoryPath, "Usuarios.bin");
+            try
+            {
+                BinaryFormatter formatter = new BinaryFormatter();
+                using (FileStream stream = new FileStream(filePath, FileMode.Create))
+                {
+                    formatter.Serialize(stream, Lmiembros);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al guardar el archivo: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+    } 
 }
