@@ -224,6 +224,7 @@ namespace ProyectoSoplado_1._0_
                 DateTime fechaActual = DateTime.Now.Date;
                 double montoPago = double.Parse(txtmontopago.Text);
 
+                pago.id_miembro = MiembroExistente.IDusuario;
                 pago.id_pago = idpago;
                 pago.fecha_pago = fechaActual;
                 pago.Fecha_Vencimiento = AsignarFecha();

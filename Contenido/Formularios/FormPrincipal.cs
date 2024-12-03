@@ -31,6 +31,7 @@ namespace ProyectoSoplado_1._0_.Formularios
             cargarMiembros();
             cargarpagos();
             cargarAsistencia();
+            verificarSolvencia(FormVerificacionSolvencia.RegistroPagos);
         }
 
         #region Metodos
@@ -131,8 +132,43 @@ namespace ProyectoSoplado_1._0_.Formularios
             }
         }
 
+        public void verificarSolvencia(List<Pago> pagos)
+        {
+            foreach (Pago pago in pagos)
+            {
+                if (pago.Fecha_Vencimiento <= DateTime.Now)
+                {
+                    Miembro miembro = FormAdministrarUsua.Lmiembros.FirstOrDefault(m => m.IDusuario == pago.id_miembro);
+                    if (miembro != null)
+                    {
+                        miembro.Solvencia = false;
+
+                        try
+                        {
+                            string directoryPath = Path.Combine(Directory.GetCurrentDirectory(), "ArchivosBIN");
+                            if (!Directory.Exists(directoryPath))
+                            {
+                                Directory.CreateDirectory(directoryPath);
+                            }
+                            string filePath = Path.Combine(directoryPath, "Usuarios.bin");
+                            BinaryFormatter formatter = new BinaryFormatter();
+                            using (FileStream stream = new FileStream(filePath, FileMode.Create))
+                            {
+                                formatter.Serialize(stream, FormAdministrarUsua.Lmiembros);
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Ocurrió un error al guardar la información: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+
+            }
+        }
+
         #endregion
-          
+
         #region Botones con Metodo
 
         private void button2_Click(object sender, EventArgs e)

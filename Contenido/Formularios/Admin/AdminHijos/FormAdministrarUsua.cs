@@ -146,7 +146,14 @@ namespace ProyectoSoplado_1._0_.Formularios.Admin
             MiembroExistente = buscarMiembro();
             if (MiembroExistente != null)
             {
-                MessageBox.Show($"Se encontró el miembro con la busqueda {searchText}", "Busqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                string infoMiembro = $"ID: {MiembroExistente.IDusuario}\n" +
+                             $"Nombre: {MiembroExistente.Nombre} {MiembroExistente.Apellido}\n" +
+                             $"Rol: {MiembroExistente.RolUsuario}\n" +
+                             $"CIF/Cédula: {MiembroExistente.CifCed}\n" +
+                             $"Código QR: {MiembroExistente.CodigoQR}\n" +
+                             $"Solvencia: {(MiembroExistente.Solvencia ? "Solvente" : "No Solvente")}";
+
+                MessageBox.Show($"Se encontró el miembro con la búsqueda {searchText}:\n\n{infoMiembro}", "Búsqueda", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtBusqueda.Clear();
             }
             else
